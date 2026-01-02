@@ -1,0 +1,63 @@
+{
+    "creators": [
+        {
+            "name": "Köster, Jan",
+            "orcid": "0000-0002-1825-0097",
+            "affiliation": "Berlin-Brandenburg Academy of Sciences and Humanities",
+            "type": "ProjectMember"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Peter, Ulrike",
+            "orcid": "0000-0003-0954-4322",
+            "affiliation": "Berlin-Brandenburg Academy of Sciences and Humanities",
+            "type": "ProjectLeader"
+        },
+        {
+            "name": "Haug, Annette",
+            "orcid": "0000-0003-4271-1188",
+            "affiliation": "Kiel University",
+            "type": "ProjectLeader"
+        },
+        {
+            "name": "Franke, Claus",
+            "orcid": "0000-0003-3371-6163",
+            "affiliation": "Berlin-Brandenburg Academy of Sciences and Humanities",
+            "type": "ProjectMember"
+        },
+        {
+            "name": "Tolle, Karsten",
+            "orcid": "0000-0002-9953-7638",
+            "affiliation": "Goethe University Frankfurt",
+            "type": "Researcher"
+        },
+        {
+            "name": "Berlin-Brandenburg Academy of Sciences and Humanities",
+            "orcid": "https://ror.org/05jgq9443",
+            "type": "HostingInstitution"
+        },
+        {
+            "name": "Union der deutschen Akademien der Wissenschaften",
+            "orcid": "https://ror.org/04bvdz568",
+            "type": "Funder"
+        }
+    ],
+    "title": "IDEA: A Graph Framework for Describing Visual Compositions and Modelling Uncertainty",
+    "version": "0.9.0",
+    "access_right": "open",
+    "keywords": [
+        "Graph Database", 
+        "Digital Humanities", 
+        "Epistemology", 
+        "Iconography", 
+        "Neo4j", 
+        "Numismatics"
+    ],
+    "license": "Apache-2.0",
+    "upload_type": "software",
+    "language": "eng",
+    "communities": [
+        {"identifier": "digitalhumanities"}
+    ]
+}

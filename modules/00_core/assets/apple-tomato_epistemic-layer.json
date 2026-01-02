@@ -1,0 +1,684 @@
+{
+  "style": {
+    "font-family": "Nunito Sans",
+    "background-color": "#F2F2F2",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#ffffff",
+    "label-background-color": "#848484",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#848484",
+    "type-background-color": "#F2F2F2",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 5036.037767305868,
+        "y": 1324.567964548687
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-at-tomato",
+        "certainty": "0.5",
+        "reasoning_statement": "Tomato texture, uncommon shape",
+        "timestamp": "2025-12-22",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 4338.945388265913,
+        "y": 1324.567964548687
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-at-apple",
+        "certainty": "0.4",
+        "reasoning_statement": "apple shape, but no stem, uncommon texture",
+        "timestamp": "2025-12-22",
+        "status": "Alternative"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 5559.674559139401,
+        "y": 1324.567964548687
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-at-apple-color",
+        "certainty": "1.0",
+        "reasoning_statement": "The image has no color cast",
+        "timestamp": "2025-12-22",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 2879.5159658917337,
+        "y": 1324.567964548687
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "RelationInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-at-holding",
+        "certainty": "0.9",
+        "reasoning_statement": "Stationary posture suggests passive action",
+        "timestamp": "2025-12-22",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 1505.8443954617155,
+        "y": 1324.567964548687
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-at-human",
+        "certainty": "1.0",
+        "reasoning_statement": "Skin texture and morphology indicate a human body",
+        "timestamp": "2025-12-22",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 765.9497298138567,
+        "y": 1324.567964548687
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-at-human-visual-scope",
+        "certainty": "1.0",
+        "reasoning_statement": "Obvious cropping of the subject at the right edge of the frame.",
+        "timestamp": "2025-12-22",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 2214.6434098573086,
+        "y": 1324.567964548687
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "ModifierInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-at-using-right-hand",
+        "certainty": "1.0",
+        "reasoning_statement": "Arrangement of fingers/thumb indicates the right hand",
+        "timestamp": "2025-12-22",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": 3588.893891134508,
+        "y": 1324.567964548687
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EventInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-at-presentation",
+        "certainty": "0.75",
+        "reasoning_statement": "Composition is designed to maximize the visibility of the object",
+        "timestamp": "2025-12-22",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 112.5,
+        "y": 1324.567964548687
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "ContextInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-at-functional-demo",
+        "certainty": "1.0",
+        "reasoning_statement": "Defined by pulication context",
+        "timestamp": "2025-12-22",
+        "status": "Primary"
+      },
+      "style": {
+        "outside-position": "bottom",
+        "node-color": "#ab149e"
+      }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 2879.5159658917337,
+        "y": 1841.5293842955077
+      },
+      "caption": "",
+      "labels": [
+        "Agent",
+        "HumanAgent"
+      ],
+      "properties": {
+        "agent_id": "agent-human"
+      },
+      "style": {
+        "node-color": "#7b64ff",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n10",
+      "position": {
+        "x": 4809.7959396469405,
+        "y": 932.7056242461814
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-ambiguity"
+      },
+      "style": {
+        "outside-position": "top",
+        "node-color": "#4C8EDA"
+      }
+    },
+    {
+      "id": "n11",
+      "position": {
+        "x": 2910.1684081577005,
+        "y": 932.7056242461686
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-logical-deduction"
+      },
+      "style": {
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n12",
+      "position": {
+        "x": 2910.1684081577005,
+        "y": 587.9324446366356
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-epistemic-mode"
+      },
+      "style": {
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n13",
+      "position": {
+        "x": 4667.077383790633,
+        "y": 631.0768566527227
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-source-of-uncertainty"
+      },
+      "style": {
+        "node-color": "#4C8EDA"
+      }
+    },
+    {
+      "id": "n14",
+      "position": {
+        "x": 4524.358827934324,
+        "y": 932.7056242461814
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-missing-attribute"
+      },
+      "style": {
+        "outside-position": "bottom",
+        "node-color": "#4C8EDA"
+      }
+    },
+    {
+      "id": "n15",
+      "position": {
+        "x": 3419.204821303085,
+        "y": 932.7056242461686
+      },
+      "caption": "",
+      "labels": [
+        "SourceReference"
+      ],
+      "properties": {
+        "source_reference_id": "reference-at-apple-concurring",
+        "refrence_statement": "matching reference image of apple",
+        "reference": "img-at-apple-concurring"
+      },
+      "style": {
+        "outside-position": "bottom",
+        "node-color": "#16a5a5"
+      }
+    },
+    {
+      "id": "n16",
+      "position": {
+        "x": 4192.998497324494,
+        "y": 932.7056242461814
+      },
+      "caption": "",
+      "labels": [
+        "SourceReference"
+      ],
+      "properties": {
+        "source_reference_id": "reference-at-apple-conflicting",
+        "refrence_statement": "apple reference image shows stem",
+        "reference": "img-at-apple-conflicting"
+      },
+      "style": {
+        "outside-position": "top",
+        "node-color": "#16a5a5"
+      }
+    },
+    {
+      "id": "n17",
+      "position": {
+        "x": 3806.1016593137856,
+        "y": 769.0682010694263
+      },
+      "caption": "",
+      "labels": [
+        "Source"
+      ],
+      "properties": {
+        "source_id": "source-at-reference-catalogue"
+      },
+      "style": {
+        "node-color": "#194d33"
+      }
+    },
+    {
+      "id": "n19",
+      "position": {
+        "x": 3636.829442377916,
+        "y": 514.9760622253606
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-concurring"
+      },
+      "style": {
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n20",
+      "position": {
+        "x": 3798.030190841128,
+        "y": 205.5518908223955
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-evidentiary-relationship"
+      },
+      "style": {
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n21",
+      "position": {
+        "x": 3951.8222222433087,
+        "y": 514.9760622253606
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-conflicting"
+      },
+      "style": {
+        "outside-position": "top"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "fromId": "n8",
+      "toId": "n9",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "fromId": "n5",
+      "toId": "n9",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "fromId": "n4",
+      "toId": "n9",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "fromId": "n6",
+      "toId": "n9",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n4",
+      "fromId": "n3",
+      "toId": "n9",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n5",
+      "fromId": "n7",
+      "toId": "n9",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n6",
+      "fromId": "n1",
+      "toId": "n9",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n7",
+      "fromId": "n0",
+      "toId": "n9",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "fromId": "n2",
+      "toId": "n9",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n9",
+      "fromId": "n1",
+      "toId": "n10",
+      "type": "IMPAIRED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n10",
+      "fromId": "n7",
+      "toId": "n11",
+      "type": "SUPPORTED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n11",
+      "fromId": "n11",
+      "toId": "n12",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n12",
+      "fromId": "n0",
+      "toId": "n10",
+      "type": "IMPAIRED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n13",
+      "fromId": "n10",
+      "toId": "n13",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n14",
+      "fromId": "n1",
+      "toId": "n14",
+      "type": "IMPAIRED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n15",
+      "fromId": "n14",
+      "toId": "n13",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n16",
+      "fromId": "n1",
+      "toId": "n15",
+      "type": "HAS_SOURCE_REFERENCE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n17",
+      "fromId": "n1",
+      "toId": "n16",
+      "type": "HAS_SOURCE_REFERENCE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n18",
+      "fromId": "n15",
+      "toId": "n17",
+      "type": "HAS_SOURCE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n20",
+      "fromId": "n15",
+      "toId": "n19",
+      "type": "HAS_EVIDENTIARY_RELATIONSHIP",
+      "properties": {},
+      "style": {
+        "type-font-size": 10
+      }
+    },
+    {
+      "id": "n21",
+      "fromId": "n19",
+      "toId": "n20",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n22",
+      "fromId": "n16",
+      "toId": "n21",
+      "type": "HAS_EVIDENTIARY_RELATIONSHIP",
+      "properties": {},
+      "style": {
+        "type-font-size": 10
+      }
+    },
+    {
+      "id": "n23",
+      "fromId": "n21",
+      "toId": "n20",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n24",
+      "type": "HAS_SOURCE",
+      "style": {},
+      "properties": {},
+      "fromId": "n16",
+      "toId": "n17"
+    }
+  ]
+}

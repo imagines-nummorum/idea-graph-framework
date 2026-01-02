@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite it as below."
+authors:
+  - family-names: "Köster"
+    given-names: "Jan"
+    affiliation: "Berlin-Brandenburg Academy of Sciences and Humanities"
+    orcid: "https://orcid.org/0000-0002-1825-0097"
+title: "IDEA: A Graph Framework for Describing Visual Compositions and Modelling Uncertainty"
+version: 0.9.0
+date-released: 2026-01-06
+license: Apache-2.0
+repository-code: "https://github.com/imagines-nummorum/idea-graph-framework"
+keywords:
+  - "Graph Database"
+  - "Digital Humanities"
+  - "Epistemology"
+  - "Iconography"
+  - "Neo4j"
+  - "Numismatics"

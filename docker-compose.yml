@@ -1,0 +1,77 @@
+services:
+  neo4j:
+    image: neo4j:2025.10.1
+    container_name: idea_neo4j_db
+    ports:
+      - "${NEO4J_HTTP_PORT:-7474}:7474"
+      - "${NEO4J_BOLT_PORT:-7687}:7687"
+    environment:
+      # Auth credentials, uses 'password' by default, or reads NEO4J_PASSWORD from env/shell if present
+      - NEO4J_AUTH=neo4j/${NEO4J_PASSWORD:-password}
+      # Plugin configuration
+      - NEO4J_PLUGINS=["apoc"]
+      # NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      # Heap sizing (adjust based on host resources)
+      - NEO4J_server_memory_heap_initial__size=512m
+      - NEO4J_server_memory_heap_max__size=1G
+      # APOC
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
+    volumes:
+      - idea_neo4j_data:/data
+      - idea_neo4j_logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider localhost:7474 || exit 1"]
+      interval: 10s
+      retries: 5
+      start_period: 20s
+      timeout: 10s
+
+  seeder:
+    image: neo4j:2025.10.1
+    container_name: idea_neo4j_seeder
+    depends_on:
+      neo4j:
+        condition: service_healthy
+    volumes:
+      # Map local directory containing .cypher files
+      - ./modules/00_core:/import-scripts
+    entrypoint:
+      - /bin/bash
+      - -c
+      - |
+        shopt -s nullglob
+
+        echo "================ Seeding DB ================"
+        echo "Waiting for Neo4j service stability..."
+        # Small buffer to ensure bolt is ready after HTTP healthcheck
+        sleep 4 
+        
+        echo "Starting import sequence..."
+        echo "--------------------------------------------"
+        sleep 1 
+
+        files=(/import-scripts/*.cypher)
+
+        if [ $${#files[@]} -eq 0 ]; then
+           echo "⚠️  No .cypher files found."
+        else
+           # Loop over sorted list
+           for file in $$(ls /import-scripts/*.cypher | sort); do
+             echo "Processing: $$file"
+             cypher-shell -a bolt://neo4j:7687 -u neo4j -p $${NEO4J_PASSWORD:-password} -f "$$file"
+           done
+
+           sleep 1
+           echo "--------------------------------------------"
+           echo "✅ Seeding completed successfully."
+
+           sleep 1
+           echo "Point your browser to: http://localhost:$${NEO4J_HTTP_PORT:-7474}"
+           echo "============================================"
+        fi
+
+volumes:
+  idea_neo4j_data:
+  idea_neo4j_logs:

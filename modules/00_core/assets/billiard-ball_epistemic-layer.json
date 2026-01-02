@@ -1,0 +1,1063 @@
+{
+  "style": {
+    "font-family": "Nunito Sans",
+    "background-color": "#F2F2F2",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#ffffff",
+    "label-background-color": "#848484",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#848484",
+    "type-background-color": "#F2F2F2",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 2796.0778279352553,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-sphere",
+        "certainty": "0.8",
+        "reasoning_statement": "Common Scheme, partly covered",
+        "timestamp": "2025-12-21",
+        "status": "Alternative"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 3141.6709443838145,
+        "y": 873.9353658584605
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-sphere-color",
+        "certainty": "0.9",
+        "reasoning_statement": "Distinct shade",
+        "timestamp": "2025-12-21",
+        "status": "Alternative"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 1737.9544036031805,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "RelationInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-holding",
+        "certainty": "0.8",
+        "reasoning_statement": "Common Scheme",
+        "timestamp": "2025-12-21",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 960.6975063121542,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-human",
+        "certainty": "0.9",
+        "reasoning_statement": "Common Scheme",
+        "timestamp": "2025-12-21",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 504.56198564665465,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-human-visual-scope",
+        "certainty": "0.95",
+        "reasoning_statement": "Cropped by frame",
+        "timestamp": "2025-12-21",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 1307.0356661426383,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "ModifierInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-using-right-hand",
+        "certainty": "0.9",
+        "reasoning_statement": "Common Scheme",
+        "timestamp": "2025-12-21",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 2145.8172952084205,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EventInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-presentation",
+        "certainty": "0.75",
+        "reasoning_statement": "Composition is designed to maximize the visibility of the object",
+        "timestamp": "2025-12-22",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": 112.5,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "ContextInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-functional-demo",
+        "certainty": "1.0",
+        "reasoning_statement": "Defined by pulication context",
+        "timestamp": "2025-12-21",
+        "status": "Primary"
+      },
+      "style": {
+        "outside-position": "bottom",
+        "node-color": "#ab149e"
+      }
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 5586.132133051252,
+        "y": 873.9353658584603
+      },
+      "caption": "",
+      "labels": [
+        "Reading"
+      ],
+      "properties": {
+        "reading_id": "reading-bb-l",
+        "certainty": "0.5",
+        "reasoning_statement": "Commen Scheme, but ambiguous",
+        "timestamp": "2025-12-21",
+        "status": "Rejected",
+        "read_string": "L",
+        "lang": "EN"
+      },
+      "style": {
+        "node-color": "#fa28ff",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 3487.2640608323736,
+        "y": 873.9353658584598
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-circle",
+        "certainty": "1.0",
+        "reasoning_statement": "Common Scheme",
+        "timestamp": "2025-12-21",
+        "status": "Alternative"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n10",
+      "position": {
+        "x": 5040.457493966999,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-glyph-7",
+        "certainty": "0.5",
+        "reasoning_statement": "Commen Scheme, but ambiguous",
+        "timestamp": "2025-12-21",
+        "status": "Alternative"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n11",
+      "position": {
+        "x": 4668.5621411199845,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-glyph-l",
+        "certainty": "0.5",
+        "reasoning_statement": "Commen Scheme, but ambiguous",
+        "timestamp": "2025-12-21",
+        "status": "Rejected"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n12",
+      "position": {
+        "x": 5335.939442109579,
+        "y": 873.9353658584603
+      },
+      "caption": "",
+      "labels": [
+        "Reading"
+      ],
+      "properties": {
+        "reading_id": "reading-bb-7",
+        "certainty": "0.5",
+        "reasoning_statement": "Commen Scheme, but ambiguous",
+        "timestamp": "2025-12-21",
+        "status": "Primary",
+        "read_string": "7",
+        "lang": "EN"
+      },
+      "style": {
+        "node-color": "#fa28ff",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n13",
+      "position": {
+        "x": 3767.688906778988,
+        "y": 873.9353658584598
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-circle-color",
+        "certainty": "1.0",
+        "reasoning_statement": "Distinct Shade",
+        "timestamp": "2025-12-21",
+        "status": "Alternative"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n14",
+      "position": {
+        "x": 4076.0328778892044,
+        "y": 873.9353658584603
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-glyph-color",
+        "certainty": "1.0",
+        "reasoning_statement": "Distinct Shade",
+        "timestamp": "2025-12-21",
+        "status": "Alternative"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n15",
+      "position": {
+        "x": 4361.7409620105445,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-glyph-case",
+        "certainty": "0.8",
+        "reasoning_statement": "Capitalized",
+        "timestamp": "2025-12-21",
+        "status": "Rejected"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n16",
+      "position": {
+        "x": 2470.947561571838,
+        "y": 873.9353658584607
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-billiard-ball",
+        "certainty": "1.0",
+        "reasoning_statement": "Object is clearly a billiard ball nr. 7",
+        "timestamp": "2025-12-22",
+        "status": "Primary"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n17",
+      "position": {
+        "x": 2470.147825868413,
+        "y": 2037.0475255842334
+      },
+      "caption": "",
+      "labels": [
+        "Agent",
+        "AIAgent"
+      ],
+      "properties": {
+        "agent_id": "agent-ai"
+      },
+      "style": {}
+    },
+    {
+      "id": "n18",
+      "position": {
+        "x": 2470.947561571838,
+        "y": 1574.3591003799766
+      },
+      "caption": "",
+      "labels": [
+        "Agent",
+        "HumanAgent"
+      ],
+      "properties": {
+        "agent_id": "agent-human"
+      },
+      "style": {}
+    },
+    {
+      "id": "n19",
+      "position": {
+        "x": 1860.5987295768966,
+        "y": 419.773179609534
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-logical-deduction"
+      },
+      "style": {
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n20",
+      "position": {
+        "x": 1860.5987295768966,
+        "y": 75
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-epistemic-mode"
+      },
+      "style": {
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n21",
+      "position": {
+        "x": 5127.347137085619,
+        "y": 419.773179609534
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-ambiguity"
+      },
+      "style": {
+        "outside-position": "top",
+        "node-color": "#4C8EDA"
+      }
+    },
+    {
+      "id": "n22",
+      "position": {
+        "x": 5127.347137085619,
+        "y": 75
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-source-of-uncertainty"
+      },
+      "style": {
+        "node-color": "#4C8EDA"
+      }
+    },
+    {
+      "id": "n23",
+      "position": {
+        "x": 2470.947561571838,
+        "y": 419.773179609534
+      },
+      "caption": "",
+      "labels": [
+        "SourceReference"
+      ],
+      "properties": {
+        "source_reference_id": "reference-bb-billiard-ball-concurring",
+        "refrence_statement": "matching reference image of a billiard ball",
+        "reference": "img-bb-ex"
+      },
+      "style": {
+        "outside-position": "bottom",
+        "node-color": "#16a5a5"
+      }
+    },
+    {
+      "id": "n24",
+      "position": {
+        "x": 2470.947561571838,
+        "y": 75
+      },
+      "caption": "",
+      "labels": [
+        "Source"
+      ],
+      "properties": {
+        "source_id": "source-bb-reference-catalogue"
+      },
+      "style": {
+        "node-color": "#194d33"
+      }
+    },
+    {
+      "id": "n25",
+      "position": {
+        "x": 3028.126710672518,
+        "y": 419.773179609534
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-concurring"
+      },
+      "style": {
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n26",
+      "position": {
+        "x": 3028.126710672518,
+        "y": 75
+      },
+      "caption": "",
+      "labels": [
+        "Architectonic",
+        "Methodology"
+      ],
+      "properties": {
+        "architectonic_id": "architectonic-evidentiary-relationship"
+      },
+      "style": {
+        "outside-position": "top"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "fromId": "n15",
+      "toId": "n11",
+      "type": "DEPENDS_ON",
+      "properties": {},
+      "style": {
+        "margin-start": 20,
+        "type-padding": 5
+      }
+    },
+    {
+      "id": "n1",
+      "fromId": "n4",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n2",
+      "fromId": "n3",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n3",
+      "fromId": "n5",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n4",
+      "fromId": "n2",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n5",
+      "fromId": "n6",
+      "toId": "n18",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n6",
+      "fromId": "n16",
+      "toId": "n18",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n7",
+      "fromId": "n0",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n8",
+      "fromId": "n1",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n9",
+      "fromId": "n9",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n10",
+      "fromId": "n13",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n11",
+      "fromId": "n14",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n12",
+      "fromId": "n15",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n13",
+      "fromId": "n11",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n14",
+      "fromId": "n10",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n15",
+      "fromId": "n12",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n16",
+      "fromId": "n8",
+      "toId": "n17",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "type-border-color": "#b3b3b3"
+      }
+    },
+    {
+      "id": "n17",
+      "fromId": "n4",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n18",
+      "fromId": "n3",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n19",
+      "fromId": "n5",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n20",
+      "fromId": "n2",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n21",
+      "fromId": "n0",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n22",
+      "fromId": "n1",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n23",
+      "fromId": "n9",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n24",
+      "fromId": "n13",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n25",
+      "fromId": "n14",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n26",
+      "fromId": "n15",
+      "toId": "n18",
+      "type": "REJECTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#d33115"
+      }
+    },
+    {
+      "id": "n27",
+      "fromId": "n11",
+      "toId": "n18",
+      "type": "REJECTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#d33115"
+      }
+    },
+    {
+      "id": "n28",
+      "fromId": "n10",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n29",
+      "fromId": "n12",
+      "toId": "n18",
+      "type": "ACCEPTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#68bc00"
+      }
+    },
+    {
+      "id": "n30",
+      "fromId": "n8",
+      "toId": "n18",
+      "type": "REJECTED_BY",
+      "properties": {},
+      "style": {
+        "arrow-color": "#d33115"
+      }
+    },
+    {
+      "id": "n31",
+      "fromId": "n7",
+      "toId": "n18",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n32",
+      "fromId": "n19",
+      "toId": "n20",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n33",
+      "fromId": "n6",
+      "toId": "n19",
+      "type": "SUPPORTED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n34",
+      "fromId": "n21",
+      "toId": "n22",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n35",
+      "fromId": "n12",
+      "toId": "n21",
+      "type": "IMPAIRED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n36",
+      "fromId": "n8",
+      "toId": "n21",
+      "type": "IMPAIRED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n37",
+      "fromId": "n11",
+      "toId": "n21",
+      "type": "IMPAIRED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n38",
+      "fromId": "n10",
+      "toId": "n21",
+      "type": "IMPAIRED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n39",
+      "fromId": "n23",
+      "toId": "n24",
+      "type": "HAS_SOURCE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n40",
+      "fromId": "n23",
+      "toId": "n25",
+      "type": "HAS_EVIDENTIARY_RELATIONSHIP",
+      "properties": {},
+      "style": {
+        "type-font-size": 21
+      }
+    },
+    {
+      "id": "n41",
+      "fromId": "n25",
+      "toId": "n26",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n42",
+      "fromId": "n16",
+      "toId": "n23",
+      "type": "HAS_SOURCE_REFERENCE",
+      "properties": {},
+      "style": {}
+    }
+  ]
+}
