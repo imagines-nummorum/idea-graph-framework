@@ -1,9 +1,25 @@
-# IDEA: Iconographical Definitional Epistemological Architecture (v0.9 Public Draft)
+<p align="center">
+  <img src="assets/idea-logo.svg" alt="Project Logo showing the Letters IDEA as an amalgam" width="150">
+</p>
+
+# IDEA: Iconographical Definitional Epistemological Architecture
 
 **Bridging the gap between flexible humanities research and high-performance data engineering.**
 
----
+ 
+## Repository Structure
 
+```text
+.
+├── docs/                # Detailed technical specifications (Architecture, Scaling, Concepts)
+├── modules/
+│   ├── 00_core/         # The domain-agnostic engine (Cypher Statements, Fixtures)
+│   ├── 05_ontology/     # Multi-language support and semantic metadata (WIP)
+│   └── 10_numismatics/  # Domain extension for ancient coinage (WIP)
+└── README.md            # This file
+
+```
+ 
 ## Why IDEA?
 
 To investigate and search hundreds of thousands of coin datasets for our **[Imagines Nummorum](https://www.imagines-nummorum.eu/en)** project in real-time, we required a high-performance, scalable solution.
@@ -12,8 +28,8 @@ While **CIDOC CRM** remains the academic gold standard for linked data in cultur
 
 **IDEA is our tool, not our goal.** It was born out of the necessity to achieve a comprehensive iconographical and semantic indexing of ancient Greek coinage. We invite the community to join us on this 25-year mission (2025–2050) and to adapt or evolve our architecture for their own research needs.
 
----
 
+ 
 ## Empowering Research: From Observation to Insight
 
 IDEA is designed to act as a semantic workbench for scholars in numismatics, archaeology, and visual studies. It transforms static image descriptions into a dynamic, multidimensional knowledge graph.
@@ -27,8 +43,8 @@ IDEA is designed to act as a semantic workbench for scholars in numismatics, arc
 * **Quantifying Similarity:** Utilize the Hub-and-Spoke model to identify and quantify "diffuse" similarities between compositions that are difficult to capture through traditional direct edges.
 * **Modular Extension Framework:** IDEA is designed as a "lean", domain-agnostic core engine that can be easily extended to suit your specific research field. You can develop your own domain-specific modules or feature-rich extensions to add custom labels and properties without breaking the underlying four-layer logic.
 
----
 
+ 
 ## Technical Highlights
 
 IDEA is engineered for production-grade reasoning, moving beyond "traditional" academic graphs to a robust, scalable architecture.
@@ -63,12 +79,12 @@ IDEA is designed as a strict **Read-Optimized Projection** of a normalized relat
 * **Integrity-First:** The graph layer acts as a high-performance materialized view, ensuring ACID compliance and formal data integrity at the source.
 * **Traceability:** Every node carries a unique identifier (`_id`) mapped directly from the relational SSoT primary keys.
 
----
 
+ 
 ## The Four-Layer Architecture
 
 ```mermaid
-graph TD
+graph LR
     %% Nodes
     A(Concrete)
     B(Abstract)
@@ -82,16 +98,6 @@ graph TD
     C --> D    
     D --> E
     E --> F
-
-    %% Styling for A and B
-    style A fill:none,stroke:none
-    style B fill:none,stroke:none
-
-    %% Styling Layer Nodes
-    style C fill:#d3d3d3,stroke:#333,stroke-width:2px
-    style D fill:#ffb347,stroke:#e67e22,stroke-width:2px
-    style E fill:#b39ddb,stroke:#5e35b1,stroke-width:2px,color:#fff
-    style F fill:#64b5f6,stroke:#1976d2,stroke-width:2px,color:#fff
 ```
 
 The framework distinguishes between observation and interpretation through a strict four-layer logic:
@@ -102,23 +108,7 @@ The framework distinguishes between observation and interpretation through a str
 | **II: Formal Analysis** | Structural Primitives (Neutral) | `Composition`, `Entity`, `Relation` ... |
 | **III: Epistemic** | Uncertainty & Reasoning | `Interpretation`, `Source`, `Agent`, `Comparison` |
 | **IV: Ontological** | Abstract Concepts (ThING) | `Concept` |
-
----
-
-## Repository Structure
-
-```text
-.
-├── docs/                # Detailed technical specifications (Architecture, Scaling, Concepts)
-├── modules/
-│   ├── 00_core/         # The domain-agnostic engine (Cypher Statements, Fixtures)
-│   ├── 05_ontology/     # Multi-language support and semantic metadata (WIP)
-│   └── 10_numismatics/  # Domain extension for ancient coinage (WIP)
-└── README.md            # This file
-
-```
-
----
+ 
 
 ## Getting Started
 
@@ -145,8 +135,7 @@ For a live demonstration of the IDEA framework, we provide a pre-configured Dock
 
 If you want to build some datasets on you own, we recommand reading at least **[how-to-annotate-using-idea.md](docs/03_how-to-annotate-using-idea.md)** and **[nodes-and-edges.md](modules/00_core/nodes-and-edges.md)**.
 
----
-
+ 
 ## Author & Governance
 
 IDEA is open-sourced software created and maintained by [Jan Köster](https://orcid.org/0000-0003-2713-5207) and licensed under the [Apache 2.0 license](LICENSE.txt) for the Academy Project ["Imagines Nummorum"](https://www.bbaw.de/en/research/imagines-nvmmorvm-thesaurus-iconographicus-nummorum-graecorum-online) at the [Berlin-Brandenburg Academy of Sciences and Humanities](https://www.bbaw.de/en/). This project  is part of the "Akademienprogramm", funded by German federal and state governments, which serves to preserve, secure and make present our cultural heritage.
@@ -154,8 +143,7 @@ It is coordinated by the [Union of German Academies of Sciences and Humanities](
 
 **Contact:** For any IDEA related topic we prefer direct communication on Github, for any contact to our initiative, see [Contact](https://www.imagines-nummorum.eu/en/contact)
 
----
-
+ 
 ## AI Transparency & Methodology
 
 In alignment with the epistemological focus of this project, transparency regarding the creation process is paramount. This graph model was developed with the assistance of **Google Gemini** (v2.5 Flash and 3 Pro), which served as an interactive dialogue partner and research tool.
