@@ -4,6 +4,7 @@
 
 # IDEA: Iconographical Definitional Epistemological Architecture
 
+**A Graph Framework for Describing Visual Compositions and Modelling Uncertainty.**  
 **Bridging the gap between flexible humanities research and high-performance data engineering.**
 
  
