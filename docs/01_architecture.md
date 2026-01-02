@@ -43,33 +43,6 @@ To maintain semantic precision across all layers, IDEA utilizes seven core categ
 
 The Four-Layer Architecture is the backbone of the IDEA Core
 
-```mermaid
-graph TD
-    %% Nodes
-    A(Concrete)
-    B(Abstract)
-    C(Object Layer)
-    D(Formal Analysis Layer)
-    E(Epistemic Layer)
-    F(Ontological Layer)
-
-    %% Edges
-    A ----> B
-    C --> D    
-    D --> E
-    E --> F
-
-    %% Styling for A and B
-    style A fill:none,stroke:none
-    style B fill:none,stroke:none
-
-    %% Styling Layer Nodes
-    style C fill:#d3d3d3,stroke:#333,stroke-width:2px
-    style D fill:#ffb347,stroke:#e67e22,stroke-width:2px
-    style E fill:#b39ddb,stroke:#5e35b1,stroke-width:2px,color:#fff
-    style F fill:#64b5f6,stroke:#1976d2,stroke-width:2px,color:#fff
-```
-
 ### Layer I: Object Layer
 
 Represents the physical or virtual object (e.g., a specific coin) which has one or more `Composition` (Layer II).
