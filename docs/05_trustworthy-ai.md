@@ -35,7 +35,7 @@ These are "pruned" LLMs—models with high reasoning capabilities but minimal "w
 
 The agent produces a grounded report, an *Numismatic Expert Agent* might answer like this:
 
-> "Based on the IDEA Graph, there are three competing interpretations due to Ambiguity for this scene. Interpretation A has a certainty of 0.8 (supported by Source X), while Interpretation B is a minority view (certainty 0.3) but is supported by a more recent publication. Moreover, there is an interesserting compositional parallel to another coin from the Thrace which implies a interpretation as Y with a certainty of 0.6."
+> "Based on the IDEA Graph, there are three competing interpretations due to ambiguity for this scene. Interpretation A has a certainty of 0.8 (supported by Source X), while Interpretation B is a minority view (certainty 0.3) but is supported by a more recent publication. Moreover, there is an interesserting compositional parallel to another coin from Thrace which implies an interpretation as Y with a certainty of 0.6."
 
 ### Step 4: Transparent Synthesis
 
