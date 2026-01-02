@@ -12,7 +12,7 @@
 
 ```text
 .
-├── docs/                # Detailed technical specifications (Architecture, Scaling, Concepts)
+├── docs/                # Detailed technical specifications (Architecture etc.)
 ├── modules/
 │   ├── 00_core/         # The domain-agnostic engine (Cypher Statements, Fixtures)
 │   ├── 05_ontology/     # Multi-language support and semantic metadata (WIP)
