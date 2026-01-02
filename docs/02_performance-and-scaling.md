@@ -1,4 +1,4 @@
-# IDEA: Graph Materialization & Performance Strategy (v0.1)
+# IDEA: Performance and Scaling
 
 > [!IMPORTANT]
 > **Architectural Status:** The infrastructure described in this document—specifically the **Postgres-as-Single-Source-of-Truth (SSoT)** and the automated **ETL Pipeline** — is currently a **conceptual design**. It serves as a roadmap for implementation and is not yet part of the active codebase.
