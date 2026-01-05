@@ -1,0 +1,81 @@
+site_name: IDEA Graph Framework
+site_description: A Graph Framework for Describing Visual Compositions and Modelling Uncertainty
+
+theme:
+  name: material
+  logo: assets/idea-logo-no-bg.svg
+  favicon: assets/idea-favicon.png
+  palette:
+    - scheme: slate
+      primary: blue grey
+      accent: cyan
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.tracking
+    - content.code.copy
+    - content.code.annotate
+
+extra_css:
+  - assets/css/extra.css
+
+exclude_docs: |
+  .wip/
+  *.yml
+  *.workspace
+  .gitignore
+  .env*
+  citation.cff
+  .zenodo.json
+  modules/README.md
+  docs/README.md
+  modules/00_core/assets/README.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+
+docs_dir: mkdocs
+
+nav:
+  - Home: README.md
+  - Docs: 
+      - Conceptual Framework: docs/00_conceptual-framework.md
+      - Architecture: docs/01_architecture.md
+      - Performance: docs/02_performance-and-scaling.md
+      - Known Issues: known-issues.md
+      - Glossary: docs/99_glossary.md
+  - Vision:
+      - Annotation Pipeline: docs/04_ai-annotation-pipeline.md
+      - Trustworthy AI: docs/05_trustworthy-ai.md
+      - Roadmap: roadmap.md
+      - Contributing: CONTRIBUTING.md
+  - Modules:
+      - Core:
+          - Architecture: modules/00_core/README.md
+          - Nodes & Edges: modules/00_core/nodes-and-edges.md
+          - Daten-Dictionary: modules/00_core/data-dictionary.md
+      - Ontology: modules/05_ontology/README.md
+      - Numismatics: modules/10_numismatics/README.md
+  - Hands on:
+      - How to annotate: docs/03_how-to-annotate-using-idea.md
+      - Fixtures: modules/00_core/fixtures.md
+      - Queries: modules/00_core/queries.md
+
+not_in_nav: |
+  .wip/**/*
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js

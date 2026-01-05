@@ -8,11 +8,10 @@ This pipeline is designed to solve the **Cold Start Problem**: transforming lega
 
 > **Note:** This pipeline is currently a conceptual blueprint and is in the early stages of implementation.
 
----
 
 ## 2. Pipeline Architecture
 
-### Phase 0: Ontological Grounding (ThING Integration)
+### Phase 1: Ontological Grounding (ThING Integration)
 
 The pipeline is anchored in the existing **Ontological Layer (Layer IV)**.
 
@@ -21,35 +20,35 @@ The pipeline is anchored in the existing **Ontological Layer (Layer IV)**.
 * **Mechanism:** Semantic Anchoring ensures that the AI does not "guess" but maps identified entities directly to existing `concept_id` values.
 * **Output:** A system-prompt-ready taxonomy that prevents "semantic drift" or the creation of redundant tags.
 
-### Phase 1: Pattern Distillation (Mass Processing)
+### Phase 2: Pattern Distillation (Mass Processing)
 
 Before annotating individual units, we define the iconographical "vocabulary" using legacy data.
 
 * **Input:** Legacy descriptions and metadata.
 * **Process:** * **NER & Relation Extraction:** LLMs extract entities and actions from text.
-* **Abstraction:** Identifying recurring motifs to create **Pattern** and **PatternEntity** nodes.
+* **Abstraction:** Identifying recurring motifs to create **Pattern** nodes.
 * **Output:** A robust graph populated with "blueprints" of common scenes.
 
-### Phase 2: Composition Drafting (Automated Mapping)
+### Phase 3: Composition Drafting (Automated Mapping)
 
 Using the distilled patterns, the system generates initial graph drafts for new objects.
 
 * **Input:** Single-unit descriptions and metadata.
 * **Process:** * **Pattern Matching:** The LLM identifies which existing `Pattern` matches the description.
-* **Layer II Generation:** The system automatically instantiates CompositionElement nodes based on the matched pattern.
+* **Layer II Generation:** The system automatically instantiates `CompositionElement` nodes based on the matched pattern.
 * **Output:** A "Silver Standard" graph without finalized certainty values.
 
-### Phase 3: Expert-in-the-Loop (Epistemic Enrichment)
+### Phase 4: Expert-in-the-Loop (Epistemic Enrichment)
 
 The crucial step where "data" becomes "scholarly knowledge."
 
-* **Process:** Experts review the AI-generated drafts via the IDEA Web Frontend.
+* **Process:** Experts review the AI-generated drafts via the future IDEA Web Frontend.
 * **Action:**
   * Validate or reject the `Interpretation` Nodes (no deletion to get feedback for the AI).
   * create new `Interpretation` nodes and link Methodology/Sources for complex interpretations.
 * **Output:** The **Gold Standard** dataset.
 
-### Phase 4: Scaling via RAG & Vector DB
+### Phase 5: Scaling via RAG & Vector DB
 
 As the Gold Standard grows, the system becomes self-improving.
 
@@ -59,7 +58,6 @@ As the Gold Standard grows, the system becomes self-improving.
   3. The LLM uses the most similar "Gold" examples as context (**Few-Shot RAG**) to generate high-quality Cypher drafts.
 * **Impact:** Drastic reduction in manual correction time over the project's lifespan.
 
----
 
 ## 3. Technical Stack
 
@@ -71,16 +69,14 @@ As the Gold Standard grows, the system becomes self-improving.
 | **Single Source of Truth** | PostgreSQL | Relational storage for all validated transactions. |
 | **Validation UI** | Vue.js | Expert interface for the Human-in-the-loop phase. |
 
----
 
 ## 4. Why this Approach?
 
-1. **Hallucination Control:** Grounding the LLM in Phase 0 (ThING) and Phase 1 (Patterns) prevents the AI from "inventing" iconographical concepts outside the defined ontology.
+1. **Hallucination Control:** Grounding the LLM in Phase 1 (ThING) and Phase 2 (Patterns) prevents the AI from "inventing" iconographical concepts outside the defined ontology.
 2. **Epistemic Transparency:** The AI proposes, but the human signs off on the `certainty`. The graph preserves the provenance via `Agent` nodes.
 3. **Efficiency:** Moving from *Generation* to *Verification* increases annotation speed by an estimated factor of 5 to 10.
 4. **Legacy Data Valorization:** It turns decades of unstructured text-based research into a machine-readable training set for future models.
 
----
 
 ## 5. Future Outlook: From Text-to-Graph to Image-to-Graph
 

@@ -2,7 +2,6 @@
 
 This document tracks identified architectural inconsistencies, simplified data representations in the fixtures, and planned structural refinements for future releases.
 
----
 
 ## 1. Non-Exhaustive Fixture Annotation
 
@@ -15,13 +14,13 @@ This document tracks identified architectural inconsistencies, simplified data r
 * **Technical Debt:** In a production environment, the rejection of a reading should trigger:
   1. The rejected `Reading` should be marked as `Rejected` (done).
   2. The remaining valid `Reading` needs to be set to `Outdated`, because the `certainty` changes, but a `Reading` cannot be changed (frozen in time)
-  r. A new "Primary" `Reading` should be generated with an updated (likely higher) `certainty` value replacing the `outdated` one.
+  3. A new "Primary" `Reading` should be generated with an updated (likely higher) `certainty` value replacing the outdated one.
 
 * **Reasoning:** This step was omitted in the fixtures to simplify the visual representation of the graph in the Neo4j Browser for first-time users.
 
 ## 3. Modeling Competing Interpretations
 
-* **Description:** While IDEA allows for multiple `Interpretation` nodes, the explicit relationship between *competing* hypotheses is currently handled only via the `status` property ("Primary", "Alternative", "Rejected").
+* **Description:** While IDEA allows for multiple `Interpretation` nodes, the explicit relationship between *competing* hypotheses is currently handled only via the `status` property ("Primary", "Alternative", "Rejected" etc.).
 * **Planned Research:** We are monitoring whether the current "status-only" approach is sufficient or if a dedicated edge type (e.g., `CONFLICTS_WITH`) is required to explicitly link mutually exclusive interpretations.
 * **Current Strategy:** To avoid "schema-less sprawl," we will observe this situation in controlled test cases before introducing new edge types to the IDEA Core.
 

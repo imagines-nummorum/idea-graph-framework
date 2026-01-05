@@ -5,7 +5,6 @@
 While the IDEA framework was originally developed for iconographical research, its core innovation lies in the **decoupling of domain-specific data from epistemic evaluation**. IDEA's Layer III addresses the "Hallucination of Certainty" in LLMs by moving interpretation from an implicit process into an explicit graph node. This separation allows for a universal thought pattern that can be applied to any field requiring high-stakes decision-making and uncertainty modeling.
 IDEA's Layer III provides the structural "glass box" for reasoning, uncertainty, and provenance that remains constant across disciplines.
 
----
 
 ## 2. The Core Mechanism
 
@@ -14,6 +13,7 @@ Instead of direct mapping, every link must pass through an **Interpretation Node
 1. **Attach Uncertainty:** Assign a `certainty` value (float) to any claim.
 2. **Model Methodology:** Use `Architectonic` nodes to define *how* a conclusion was reached (e.g., "Empirical Observation" vs. "LLM Inference").
 3. **Trace Agency:** Link every statement to an `Agent` (AI/Human) and a `Source`, ensuring accountability in agentic workflows.
+
 
 ## 3. The Agentic Workflow: Specialized Expert Agents
 
@@ -45,7 +45,6 @@ The Orchestrator presents the user with the full spectrum of expert findings (it
 
 By adopting IDEA's Layer III mechanics, we move from **Stochastic Generation** (guessing the next word) to **Structural Analysis** (navigating a graph of weighted interpretations). This pattern allows AI systems to participate in scientific discourse by respecting the "Maybe" and providing a verifiable audit trail for every conclusion.
 
----
 
 ## 4. Breaking the "Crystalline" Intelligence
 
@@ -55,13 +54,11 @@ Traditionally, an AI's knowledge is "frozen" after training. This setup allows f
 * **Self-Correction:** If an AI identifies a logical contradiction between two parts of the graph, it can flag these for human review, turning the database into a living, self-auditing organism.
 * **Avoid the Risk:** Of cause it needs a robust mechanism to ensure that an agent cannot break it's own graph. Since the graph should be a projection, any Write on the SSoT should be handled like a merge request which must be carefully evaluated.
 
----
 
 ## 5. Performance
 
 The "pruned" Agent Models are much smaller and require less resources. On the other hand the graph must be super performant. IDEA addresses this problem by growing in width, not in depth, by applying its similarity-centroid-solution and its performance optimizations. 
 
----
 
 ## 6. Project Scope and Future Outlook
 
@@ -69,10 +66,9 @@ The "pruned" Agent Models are much smaller and require less resources. On the ot
 The comprehensive implementation of the agentic backbone described above significantly transcends our research goals and financial resources. Nevertheless, we view it as our responsibility to present these structural potentials for broader discussion, especially since our own numismatic research workflows would gain substantial analytical rigor from such a specialized expert agent. While we provide the epistemic blueprint through Layer III, the large-scale technical realization of these autonomous reasoning systems remains a task for the wider AI research and engineering community.
 
 ### Risk Assessment and Intellectual Agency
-The practical realization of this architecture is not a technocratic "fix" for uncertainty; it demands a rigorous risk assessment and the intellectual agency (Mündigkeit) of the inquirer. IDEA is designed as an instrument for critical scientific discourse, not as a "truth machine" that replaces human judgment.
+The practical realization of this architecture is not a technocratic "fix" for uncertainty; it demands a rigorous risk assessment and the intellectual agency of the inquirer. IDEA is designed as an instrument for critical scientific discourse, not as a "truth machine" that replaces human judgment.
 
 To avoid a naive reliance on automated systems, every implementation must ensure that:
-
 * **Human Responsibility remains Central:** The final synthesis of complex, uncertain data cannot be offloaded to an algorithm without the constant vigilance of an informed human mind.
 * **Critical Evaluation is Mandatory:** Users are placed under the obligation to actively weigh the conflicting hypotheses and certainty scores provided by the Expert Agents.
 * **Integrity is Protected:** Robust mechanisms (such as the suggested "Merge Request" approach for SSoT writes) must prevent agents from undermining the structural foundation of the knowledge base.

@@ -8,7 +8,6 @@ This glossary provides shared definitions to bridge the gap between numismatic r
 * **[Corpus Nummorum](https://www.corpus-nummorum.eu/?lg=en):** Our previous research intiative, which we are still actively maintaining
 * **ThING (Thesaurus Iconographicus Nummorum Graecorum):** The central, multidimensional ontology (Tree of Concepts) that serves as the semantic backbone for our studies.
 
----
 
 ## 2. Technical Terms
 
@@ -17,7 +16,6 @@ This glossary provides shared definitions to bridge the gap between numismatic r
 * **Hub-and-Spoke (Centroid Model):** A design pattern where a central node (the Hub) connects multiple entities to avoid a quadratic explosion of direct relationships (Spokes).
 * **Materialized Path:** A performance optimization where the entire lineage of a concept is stored as an array (`concept_path_ids`) on the node itself to avoid recursive queries.
 
----
 
 ## 3. Architecture
 
@@ -32,7 +30,6 @@ This glossary provides shared definitions to bridge the gap between numismatic r
 * **Context:** References to external frameworks like mythology, history, or publication contexts.
 * **Group:** Logical containers or spatial regions (e.g., a text block or a logical arrangement). (no Concept)
 
----
 
 ## 4. Epistemic Terms
 

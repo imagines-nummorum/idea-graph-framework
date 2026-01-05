@@ -1,0 +1,31 @@
+name: Manual Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Install Dependencies
+        run: pip install mkdocs-material
+
+      - name: Build and Deploy
+        run: |
+          mkdir ../temp_workspace
+          cp -r . ../temp_workspace/mkdocs
+          mv ../temp_workspace/mkdocs/mkdocs.yml ../temp_workspace/mkdocs.yml
+          cd ../temp_workspace
+          mkdocs gh-deploy --force --config-file mkdocs.yml

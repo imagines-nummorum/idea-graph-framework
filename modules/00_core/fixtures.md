@@ -1,8 +1,8 @@
 # IDEA Fixtures: Sandbox Documentation
 
-This document describes the test datasets (fixtures) provided in the IDEA Core Docker container. These examples are designed to demonstrate the framework's ability to model **epistemic uncertainty**, **multimodal interpretations**, and **complex scene structures**.
+This document describes the test datasets (fixtures) provided in the IDEA Core Docker container. These examples are designed to demonstrate the framework's ability to model **epistemic uncertainty**, **multimodal interpretations**, and **complex scene structures**. If you want to know more about the annotation process, see [how-to-annotate-using-idea](../../docs/03_how-to-annotate-using-idea.md).
 
-## 0. Documentation Assets 
+## 1. Documentation Assets 
 
 To understand the structural logic of IDEA, we provide both static visual examples and interactive model diagrams.
 
@@ -18,15 +18,14 @@ The provided Neo4j Docker setup loads the fixtures directly into the database du
 * Patterns: [SVG](assets/patterns.svg) | [JSON](assets/patterns.json)
 * Comparisons: [SVG](assets/comparisons.svg) | [JSON](assets/comparisons.json)
 
-## 1. Design Principles of the Fixtures
+## 2. Design Principles of the Fixtures
 
 * **Pedagogical Simplification:** The images are intentionally AI-generated and only partially annotated. We focus on specific challenges (ambiguity, OCR, AI-vs-Human perception) rather than exhaustive description.
 * **Human-Readable IDs:** In this sandbox, we use string-based identifiers (e.g., `unit-apple-tomato`) for easier navigation in the Neo4j Browser. In production, these are mapped to `INT` keys.
 * **Domain Agnosticism:** While IDEA is rooted in numismatics, these fixtures use everyday objects to ensure the architectural logic is understood by non-experts.
 
----
 
-## 2. Case Study A: The "Apple-Tomato" (Epistemic Ambiguity)
+## 3. Case Study A: The "Apple-Tomato" (Epistemic Ambiguity)
 
 This case demonstrates how IDEA handles material ambiguity where an object cannot be clearly assigned to a single concept.
 
@@ -37,9 +36,8 @@ This case demonstrates how IDEA handles material ambiguity where an object canno
 * **Architectonic Linking:** Both interpretations are marked as `IMPAIRED_BY` the architectonic node `architectonic-ambiguity`.
 * **Evidence:** The interpretations are supported by conflicting and concurring `SourceReference` nodes (simulating reference catalogues).
 
----
 
-## 3. Case Study B: The "Billiard Ball" (AI vs. Human Perception)
+## 4. Case Study B: The "Billiard Ball" (AI vs. Human Perception)
 
 This case illustrates the difference between a "bottom-up" AI analysis (geometric decomposition) and a "top-down" human analysis (semantic identification), as well as character ambiguity.
 
@@ -59,9 +57,8 @@ The character on the ball is modeled via the `Reading` node.
 * **`reading-bb-l`**: Status "Rejected", stated by the AI but explicitly rejected by the human agent.
 * Both readings are linked to `architectonic-ambiguity`.
 
----
 
-### 4. Modeling Logic: The "Human Holding Object" Pattern
+### 5. Modeling Logic: The "Human Holding Object" Pattern
 
 IDEA distinguishes between what is *visible* and what is *represented* to maintain a clean ontological structure.
 
@@ -87,9 +84,8 @@ The "Hand" appears a second time in the logic, but as a **Modifier** of the acti
 
 Both cases manifest the abstract `pattern-human-holding-object`. This allows users to query for the general scene structure (Human → Holding → Object) regardless of specific attributes or the type of object held.
 
----
 
-## 5. Summary of Architectonic Nodes
+## 6. Summary of Architectonic Nodes
 
 The fixtures include several `Architectonic` nodes that define the "Why" behind an interpretation:
 

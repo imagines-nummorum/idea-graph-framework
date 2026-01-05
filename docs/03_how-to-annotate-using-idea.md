@@ -9,7 +9,6 @@ We recommand having the following files at hand:
 * [nodes-and-edges.md](../modules/00_core/nodes-and-edges.md)
 * [fixtures.md](../modules/00_core/fixtures.md)
 
----
 
 ## The Workflow: Vertical Stacking
 
@@ -27,7 +26,6 @@ Before describing content, establish the `Unit` and the visual container (`Compo
 * **Unit**: The physical/virtual object (e.g., `unit-apple-tomato`).
 * **Composition**: The specific view or side being analyzed (e.g., `composition-apple-tomato`).
 
----
 
 ### Step 1: Identify an Entity (The "Apple-Tomato")
 
@@ -35,7 +33,7 @@ Now, we describe the red object held in the hand.
 
 #### 1.1 The Formal Observation (Layer II)
 
-Create a `CompositionEntity`. At this stage, do not call it an "apple"; it is simply a "thing" in the image.
+Create a `CompositionEntity`. At this stage, do not think of it as an "apple"; it is simply a "thing" in the image.
 
 * **Node**: `(entity-at-apple-tomato:CompositionEntity)`
 
@@ -57,7 +55,6 @@ Connect each interpretation to the global `Concept` tree (ThING).
 * `Interpretation A` --IDENTIFIED_AS_CONCEPT--> `concept-tomato` 
 * `Interpretation B` --IDENTIFIED_AS_CONCEPT--> `concept-apple` 
 
----
 
 ### Step 2: Describe Features
 
@@ -76,7 +73,6 @@ Entities have attributes. Let's describe the color of our object.
 * **Interpretation**: Certainty 1.0 (it is definitely red).
 * **Concept**: `concept-red` 
 
----
 
 ### Step 3: Map Relations and Actions
 
@@ -102,7 +98,6 @@ Was it the right or left hand?
 * **Interpretation**: "Arrangement of fingers indicates the right hand." 
 * **Concept**: `concept-using-right-hand` 
 
----
 
 ### Step 4: Handling "The Hand" and Cropping (Visual Scope)
 
@@ -139,7 +134,6 @@ Finally, we link this to the ThING to enable queries like "Show me all human det
 
 > **Feature vs. Entity**: If it is a part of a larger being (like a hand, an eye, or a wing), model it as a **Feature** of that being. If it is a separate, moveable object (like a sword, a shield, or a tomato), model it as a separate **Entity**.
 
----
 
 ### Step 5: Justify with Methodology (Architectonics)
 
@@ -148,7 +142,6 @@ To make your uncertainty transparent, link your interpretations to methodologica
 * **Conflict**: If a reference image shows a stem but yours doesn't, use `architectonic-conflicting`. 
 * **Ambiguity**: If the shape is unclear, mark the interpretation as --`IMPAIRED_BY`--> `architectonic-ambiguity`. 
 
----
 
 ### Step 6: Abstract Meanings (CompositionContext)
 
@@ -161,7 +154,6 @@ Sometimes, a composition refers to something that isn't a physical "thing" in th
   2. **Epistemic**: Add an `Interpretation` (e.g., certainty 1.0, reasoning: "Defined by publication context").
   3. **Ontological**: Link to the abstract concept (e.g., `concept-functional-demo` or a historical event concept).
 
----
 
 ### Step 7: Dealing with Text (Reading & Groups)
 
@@ -173,7 +165,6 @@ To handle text (like the "7" on a billiard ball), IDEA uses a specific structure
   * **Properties**: In addition to `certainty`, a `Reading` includes `read_string` (the transcribed text) and `lang` (the language, e.g., "EN").
   * **Logic**: Just like interpretations, readings can be `STATED_BY` an agent or `IMPAIRED_BY` ambiguity (e.g., due to wear on a coin).
 
----
 
 ### Summary of the Path
 
@@ -183,7 +174,6 @@ When you are finished, a single "observation" (the red object) looks like this i
 
 > **Note**: This path might seem longer than a simple tag, but it allows IDEA to answer complex questions like: *"Show me all objects where the identification as 'Apple' was disputed due to 'Ambiguity'."*
 
----
 
 ### Important: Why no Graphical Annotations (Polygons)?
 
@@ -191,10 +181,9 @@ You might notice that there are no properties for coordinates or polygons (e.g.,
 
 * **Separation of Concerns**: IDEA follows a strict "Read-Optimized Projection" philosophy.
 * **Spatial Performance**: Complex spatial queries (e.g., "Is entity A inside the region of group B?") are handled much more efficiently in a relational database like **PostgreSQL** using spatial extensions.
-* **The Link**: We store the graphical coordinates (polygons) in the relational Single Source of Truth (SSoT). These are mapped to the unique `_id` of the `CompositionEntity` or `CompositionGroup`.
+* **The Link**: We will store the graphical coordinates (polygons) in the relational Single Source of Truth (SSoT). These are mapped to the unique `_id` of the `CompositionEntity` or `CompositionGroup`.
 * **The Result**: The graph stays lean and fast for semantic traversals, while the frontend fetches the visual coordinates from the SQL backend when it needs to draw them on the screen.
 
----
 
 ## Additional Structures:
 
@@ -213,10 +202,9 @@ Patterns serve a critical role in automated workflows, especially when dealing w
 
 * **Contextual Grounding**: Even if an AI agent cannot recognize a specific mythological or historical scene, a Pattern provides the necessary **structural scaffold**.
 * **Iconographical "Priors"**: Patterns act as visual archetypes (e.g., "Enthroned figure with scepter"). If the AI identifies a "Figure" and a "Scepter," the Pattern suggests the most probable relational structure, even if the specific identity of the deity remains unknown.
-* **Error Reduction**: By forcing the AI to align its findings with predefined `PatternEntity` and `PatternRelation` structures, we reduce the risk of "hallucinated" relations that do not exist in the iconographical record.
+* **Error Reduction**: By forcing the AI to align its findings with predefined `PatternEntity` and `PatternRelation` structures, we reduce the risk of "hallucinated" relations that do not exist in the iconographical record. Of cause we have to be careful with so far unknown scenes.
 * **Human-in-the-Loop**: The AI proposes a `PatternRecognition` based on these blueprints, which a human expert can then easily validate or refine by setting the `certainty` value in the Interpretation layer.
 
----
 
 ### Modeling Similarity (The Centroid Approach)
 

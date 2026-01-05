@@ -29,7 +29,6 @@ While **CIDOC CRM** remains the academic gold standard for linked data in cultur
 
 **IDEA is our tool, not our goal.** It was born out of the necessity to achieve a comprehensive iconographical and semantic indexing of ancient Greek coinage. We invite the community to join us on this 25-year mission (2025–2050) and to adapt or evolve our architecture for their own research needs.
 
-
  
 ## Empowering Research: From Observation to Insight
 
@@ -38,12 +37,11 @@ IDEA is designed to act as a semantic workbench for scholars in numismatics, arc
 ### What can researchers do with IDEA?
 * **Complex Iconographical Queries:** Perform advanced searches that go beyond simple keywords. You can query specific scene structures, such as: "Show me all units where a deity (Entity) is holding (Relation) a weapon (Object)".
 * **Modeling the "Maybe":** In the humanities, truth is rarely binary. IDEA allows you to capture uncertainty by assigning certainty values (0.0–1.0) and documenting conflicting hypotheses or expert reasoning for every identification.
-* **Separating Sight from Meaning:** Maintain a clean distinction between a neutral formal description (what is seen, the segment) and its epistemic interpretation (what it represents, e.g., "Zeus").
+* **Separating Sight from Meaning:** Maintain a clean distinction between a neutral formal description (what is seen, the segment) and its epistemic interpretation (what it represents, the Platonic idea).
 * **Tracking Provenance & Methodology:** Every statement is linked to an Agent (Human/AI), ensuring that the history of an interpretation is fully traceable and bibliographically grounded. Source References and Methological information enable detailled reasoning.
 * **Flexible Ontological Mapping:** The framework is architecturally agnostic. While it serves as the foundation for the upcoming ThING (Thesaurus Iconographicus Nummorum Graecorum), you can model and plug in any hierarchical classification system or domain-specific ontology to meet your research requirements.
 * **Quantifying Similarity:** Utilize the Hub-and-Spoke model to identify and quantify "diffuse" similarities between compositions that are difficult to capture through traditional direct edges.
 * **Modular Extension Framework:** IDEA is designed as a "lean", domain-agnostic core engine that can be easily extended to suit your specific research field. You can develop your own domain-specific modules or feature-rich extensions to add custom labels and properties without breaking the underlying four-layer logic.
-
 
  
 ## Technical Highlights
@@ -64,14 +62,14 @@ Standard graph models often suffer from unpredictable traversal costs due to dee
 
 * **O(1) Hierarchy Checks:** Ancestral lookups in the concept tree are converted into simple array-membership checks using the `concept_path_ids` property.
 * **Path-Length Invariant:** The distance from a physical `Unit` to its semantic `Concept` is structurally capped (e.g., 4 for Entities, 6 for Events).
-* **Performance Guarantee:** This ensures  *O*(1) or *O*(log n)  traversal complexity, making the model natively compatible with horizontally scalable graph engines-
+* **Performance Guarantee:** By fixing traversal depth and materializing hierarchical paths, the model achieves near-constant *O*(1) vertical traversal complexity relative to the schema depth and *O*(log n) lookup efficiency, ensuring native compatibility with horizontally scalable graph engines.
 
 ### 3. Linear Complexity Similarity (*O*(n) Scaling)
 
 To avoid the *O*(n²) "dense graph" trap where edges grow exponentially, IDEA utilizes a **Centroid-based Hub-and-Spoke model**:
 
 * **Topological Compression:** Diffuse similarity is managed via `CompositionParallel` hubs rather than direct edges between compositions.
-* **Resource Efficiency:** This reduces edge density by orders of magnitude, allowing the system to handle millions of compositions on commodity hardware without index collapse.
+* **Resource Efficiency:** This reduces edge density by orders of magnitude, allowing the system to handle many compositions on commodity hardware without index collapse.
 
 ### 4. Relational Single Source of Truth (SSoT)
 
@@ -79,7 +77,6 @@ IDEA is designed as a strict **Read-Optimized Projection** of a normalized relat
 
 * **Integrity-First:** The graph layer acts as a high-performance materialized view, ensuring ACID compliance and formal data integrity at the source.
 * **Traceability:** Every node carries a unique identifier (`_id`) mapped directly from the relational SSoT primary keys.
-
 
  
 ## The Four-Layer Architecture
@@ -144,17 +141,24 @@ It is coordinated by the [Union of German Academies of Sciences and Humanities](
 
 **Contact:** For any IDEA related topic we prefer direct communication on Github, for any contact to our initiative, see [Contact](https://www.imagines-nummorum.eu/en/contact)
 
- 
+
+### Documentation & Repository Access
+
+This project is optimized for an interactive documentation experience. 
+
+* **Zenodo Users:** For the full interactive experience, latest updates, and proper navigation, please switch to our [GitHub Repository](https://github.com/imagines-nummorum/idea-graph-framework).
+
+
 ## AI Transparency & Methodology
 
 In alignment with the epistemological focus of this project, transparency regarding the creation process is paramount. This graph model was developed with the assistance of **Google Gemini** (v2.5 Flash and 3 Pro), which served as an interactive dialogue partner and research tool.
 
 The AI's contribution included the following areas:
 
-* **Conceptual Brainstorming:** Exploratory dialogue to refine the core ideas of the model.
+* **Conceptual Brainstorming:** Exploratory dialogue to refine the concept of the model.
 * **Best Practices Integration:** Research and suggestions for adapting established patterns from graph theory and Neo4j.
 * **Coherence Validation:** Reviewing and stress-testing the consistency of the terminology and structural logic used in the graph.
 * **Drafting Support:** Generating initial outlines and structural sketches for the publication/documentation.
 
 **Note on Authorship:**
-While the AI provided support as described above, all final decisions, code implementations, and text formulations were curated, verified, and finalized by the maintainer mentioned above. The AI acted solely as an assistive tool, not as a co-author.
+While the AI provided support as described above, all final decisions, code implementations, and text formulations were curated, verified, and finalized by the maintainer mentioned above. The AI acted solely as an assistive tool, not as an autonomous agent/co-author.

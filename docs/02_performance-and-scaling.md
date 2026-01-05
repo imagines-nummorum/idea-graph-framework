@@ -11,11 +11,10 @@ The **IDEA** graph model employs a deep layered architecture to preserve epistem
 * **Low-Latency Standard Views:** Providing direct access to high-certainty data for front-end consumers.
 * **Reduced Computational Overhead:** Shifting complex logic from query-time to ingest-time.
 
----
 
 ## 2. Hierarchical Flattening (Materialized Paths)
 
-To avoid expensive recursive `:IS_A` traversals within the `Concept` hierarchy, we implement **Materialized Path Arrays**.
+To avoid expensive recursive `:IS_A` traversals within the `Concept` hierarchy, we will implement **Materialized Path Arrays**.
 
 ### Implementation: `concept_path_ids`
 
@@ -26,7 +25,6 @@ Each `Concept` node will be enriched with a property containing its entire ances
 * **Technical Benefit:** Enables high-performance filtering using Neo4j's array indexing.
 * *Query Example:* `MATCH (n:Concept) WHERE 'target-concept-id' IN n.concept_path_ids` instead of `MATCH (n:Concept)-[:IS_A*]->(t:Concept {concept_id: 'target-concept-id'})`.
 
----
 
 ## 3. The Epistemic Bypass (Shortcut Relations)
 
@@ -40,8 +38,8 @@ We collapse the path from a formal element to its semantic identification.
 * **Target Node:** `Concept`.
 * **Relationship:** `HAS_CERTAIN_PRIMARY_CONCEPT`.
 * **Materialization Trigger:**
-* `Interpretation.status == "Primary"`.
-* `Interpretation.certainty >= 0.8` (Current threshold).
+  * `Interpretation.status == "Primary"`.
+  * `Interpretation.certainty >= 0.8` (Current threshold).
 
 ### 3.2 Composition-to-Reading Shortcut
 
@@ -51,10 +49,9 @@ We bypass layout-based grouping nodes (e.g., `CompositionGroup`) to allow direct
 * **Target Node:** `Reading`.
 * **Relationship:** `HAS_CERTAIN_PRIMARY_READING`.
 * **Materialization Trigger:**
-* `Reading.status == "Primary"`.
-* `Reading.certainty >= 0.8` (Current threshold).
+  * `Reading.status == "Primary"`.
+  * `Reading.certainty >= 0.8` (Current threshold).
 
----
 
 ## 4. Proposed ETL Workflow (Conceptual)
 
@@ -65,9 +62,8 @@ The materialization logic resides entirely within the ETL (Extract, Transform, L
 | **1. Extract** | Daily Snapshot | Pull latest state from Postgres SSoT. |
 | **2. Transform** | Path Calculation | Compute the `concept_path_ids` array using a recursive CTE in Postgres. |
 | **3. Transform** | Shortcut Logic | Evaluate `status` and `certainty` thresholds to determine shortcut eligibility. |
-| **4. Load** | Graph Rebuild | Wipe the Neo4j instance (or specific labels) and perform a high-speed `UNWIND` load. |
+| **4. Load** | Graph Rebuild | Wipe the Neo4j instance (or specific labels) and perform a high-speed `UNWIND` load. Use Blue-Green Deployment to avoid downtime |
 
----
 
 ## 5. Performance Monitoring
 

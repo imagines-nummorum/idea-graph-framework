@@ -6,7 +6,6 @@ Thank you for your interest in the **Iconographical Definitional Epistemological
 
 To ensure that all efforts are aligned with our long-term roadmap and architectural integrity, we follow a **"ticket-first" workflow**. Please open a GitHub Issue to discuss any proposed changes before submitting a Pull Request.
 
----
 
 ## 2. Types of Contributions
 
@@ -37,7 +36,6 @@ IDEA is designed to be versatile, but our resources are focused on the Ancient W
 * **Policy:** If you are developing a module for a different field (e.g., Modern Art, Biology, etc.), **we recommend maintaining a separate repository.**
 * **Integration:** You should treat IDEA as a dependency. This keeps our core lean while allowing you full control over your domain-specific development. Remember: *IDEA is our tool, not the goal of our project.*
 
----
 
 ## 3. Forking, Adaptations & License
 
@@ -47,7 +45,6 @@ In accordance with the **Apache License 2.0**:
 * **Attribution:** Any derivative work must maintain proper attribution to the original IDEA repository and its authors.
 * **Notification:** We are always happy to hear about how IDEA is being used or adapted, even if your project leaves our original scope.
 
----
 
 ## 4. Academic Collaboration
 
@@ -55,7 +52,6 @@ If you are interested in a deeper research collaboration that goes beyond techni
 
 * **Contact:** Please reach out to our **Principal Investigators (PIs)**. Contact details can be found in on our [Homepage](https://www.imagines-nummorum.eu/en/contact).
 
----
 
 ## 5. Architectural Integrity: The Golden Rule
 

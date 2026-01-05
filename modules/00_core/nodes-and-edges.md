@@ -3,11 +3,11 @@
 This document defines the formal structure of the graph.
 
 **Important notes on performance:** 
-This documentation deals exclusively with the basic structure, not with possible performance optimization, as would be necessary for production. See reoadmap.md for more information.
+This documentation deals exclusively with the basic structure, not with possible performance optimization, as would be necessary for production. See [performance and scaling](../../docs/02_performance-and-scaling.md) and [roadmap](../../roadmap.md) for more information.
 
 **Important notes on fixtures:** 
-* For better readability, we use string-based IDs in the fixtures. In production, we would use INTs, as we aim to use an SQL database as our source of truth.
-* The `scope` property of `IDENTIFIED_AS_CONCEPT` is not used in the fxitures.
+* For better readability, we use string-based IDs in the fixtures. In production, we would use INTs, as we aim to use an SQL database as our sSoT.
+* The `scope` property of `IDENTIFIED_AS_CONCEPT` is not used in the fixtures.
 
 ## General Conventions
 
@@ -17,7 +17,6 @@ This documentation deals exclusively with the basic structure, not with possible
 * **Directionality:** Fixed from the specific/concrete to the abstract/conceptual.
 * **Uniqueness:** All properties ending in `_id` are enforced as unique constraints.
 
----
 
 ## 1. Physical Layer (Object Level)
 
@@ -37,7 +36,6 @@ This documentation deals exclusively with the basic structure, not with possible
 
 **Note:** Compositions can be linked to multiple units (if the units are definitely identical, serially produced).
 
----
 
 ## 2. Formal Analysis Layer (Description Level)
 
@@ -51,7 +49,7 @@ This documentation deals exclusively with the basic structure, not with possible
 | `composition_id` | INT | Yes | Unique identifier for the composition. |
 | `chromaticity` | ENUM | No | Color properties (e.g., "Polychromatic", "Monochromatic"). |
 
-**Note:** We consider modelling chromaticity as a separate node.
+**Note:** We consider modelling chromaticity as a separate node. See [know issues](../../known-issues.md).
 
 **Outgoing Edges:**
 | Type | Target Node | Cardinality | Description |
@@ -62,7 +60,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | `HAS_PATTERN` | `CompositionPattern` | 1:N | Reified link to an iconographical pattern. |
 | `HAS_COMPOSITION_COMPARISON` | `CompositionComparison` | 1:N | Links to a comparative analysis with other compositions. |
 
----
 
 ### Node: `CompositionEntity`
 
@@ -81,7 +78,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | `IS_PART_OF_COMPOSITION_GROUP` | `CompositionGroup` | N:M | (Optional) Assigns the entity to a group/container. |
 | `HAS_INTERPRETATION` | `Interpretation` | 1:N | Links to the epistemic identification of the entity. |
 
----
 
 ### Node: `CompositionFeature`
 
@@ -97,7 +93,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | :--- | :--- | :--- | :--- |
 | `HAS_INTERPRETATION` | `Interpretation` | 1:N | Links to the epistemic identification of the feature. |
 
----
 
 ### Node: `CompositionRelation`
 
@@ -116,7 +111,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | `HAS_COMPOSITION_EVENT` | `CompositionEvent` | 1:N | Groups the atomic relation into a macro-event. |
 | `HAS_INTERPRETATION` | `Interpretation` | 1:N | Links to the epistemic identification of the action. |
 
----
 
 ### Node: `CompositionModifier`
 
@@ -132,7 +126,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | :--- | :--- | :--- | :--- |
 | `HAS_INTERPRETATION` | `Interpretation` | 1:N | Links to the epistemic identification of the modifier. |
 
----
 
 ### Node: `CompositionEvent`
 
@@ -148,7 +141,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | :--- | :--- | :--- | :--- |
 | `HAS_INTERPRETATION` | `Interpretation` | 1:N | Links to the epistemic identification of the event. |
 
----
 
 ### Node: `CompositionGroup`
 
@@ -165,7 +157,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | :--- | :--- | :--- | :--- |
 | `HAS_READING` | `Reading` | 1:N | Links to the epistemic interpretation of text in this group. |
 
----
 
 ## 3. Epistemic Layer (Interpretation Level)
 
@@ -178,7 +169,7 @@ This documentation deals exclusively with the basic structure, not with possible
 | --- | --- | --- | --- |
 | `interpretation_id` | INT | Yes | Unique identifier for the interpretation. |
 | `certainty` | FLOAT | No | Confidence value (0.0 to 1.0). |
-| `status` | ENUM | No | Assignment status: "Primary", "Alternative", "Rejected". |
+| `status` | ENUM | No | Assignment status: "Primary", "Alternative", "Rejected", "Outdated". |
 | `reasoning_statement` | TEXT | No | Expert justification for this specific interpretation. |
 | `timestamp` | STRING | No | Date of the interpretation. |
 
@@ -204,7 +195,6 @@ This documentation deals exclusively with the basic structure, not with possible
 
 * `timestamp`: STRING (if different from interpretation timestamp)
 
----
 
 ### Node: `Reading`
 
@@ -217,7 +207,7 @@ This documentation deals exclusively with the basic structure, not with possible
 | `read_string` | STRING | No | The transcribed content. |
 | `certainty` | FLOAT | No | Confidence in the reading. |
 | `lang` | STRING | No | Language code (e.g., "EN", "LAT"). |
-| `status` | ENUM | No | "Primary", "Alternative", "Rejected". |
+| `status` | ENUM | No | "Primary", "Alternative", "Rejected", "oOtdated". |
 | `timestamp` | STRING | No | Date of entry. |
 
 **Outgoing Edges:**
@@ -227,7 +217,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | `REJECTED_BY` / `ACCEPTED_BY` | `Agent` | N:M | Validation by one or more agents. |
 | `IMPAIRED_BY` | `Architectonic` | N:M | Factors like wear or fragmentation. |
 
----
 
 ### Node: `SourceReference`
 
@@ -246,7 +235,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | `HAS_SOURCE` | `Source` | N:1 | Links to the container source. |
 | `HAS_EVIDENTIARY_RELATIONSHIP`| `Architectonic`| N:1 | Nature of evidence (e.g., "concurring", "conflicting"). |
 
----
 
 ## 4. Ontological Layer (ThING & Patterns)
 
@@ -264,7 +252,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | :--- | :--- | :--- | :--- |
 | `IS_A` | `Concept` | N:M | Hierarchical parent-child relationship (Strictly Acyclic). |
 
----
 
 ### Node: `Pattern`
 
@@ -280,7 +267,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | :--- | :--- | :--- | :--- |
 | `HAS_PATTERN_ENTITY` | `PatternEntity` | 1:N | Defines an abstract actor in the pattern. |
 
----
 
 ### Node: `PatternEntity`
 
@@ -302,7 +288,6 @@ This documentation deals exclusively with the basic structure, not with possible
 
 * `scope`: ENUM ("VisualAppearance", "ActualMeaning", "FunctionalMeaning")
 
----
 
 ### Node: `PatternRelation`
 
@@ -324,7 +309,6 @@ This documentation deals exclusively with the basic structure, not with possible
 
 * `scope`: ENUM ("VisualAppearance", "ActualMeaning", "FunctionalMeaning")
 
----
 
 ### Node: `Architectonic`
 
@@ -340,7 +324,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | :--- | :--- | :--- | :--- |
 | `IS_A` | `Architectonic` | N:M | Hierarchical relationship (Strictly Acyclic). |
 
----
 
 ### Node: `Agent`
 
@@ -351,7 +334,6 @@ This documentation deals exclusively with the basic structure, not with possible
 | --- | --- | --- | --- |
 | `agent_id` | INT | Yes | Unique identifier for the agent. |
 
----
 
 ### Node: `Source`
 

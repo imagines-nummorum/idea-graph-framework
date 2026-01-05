@@ -1,6 +1,6 @@
 # IDEA: Example Queries
 
-This document provides example Cypher queries to demonstrate the investigative potential of the **IDEA** framework. These queries are designed to run against the **baseline structure** (as defined in `99_fixtures.cypher`), utilizing standard graph traversals without performance-optimized materialized paths.
+This document provides example Cypher queries to demonstrate the investigative potential of the **IDEA** framework. These queries are designed to run against the **IDEA Core** (as defined in `99_fixtures.cypher`), utilizing standard graph traversals without performance-optimized materialized paths.
 
 ## 1. Ontology Overview (Recursive Hierarchy)
 
@@ -22,7 +22,6 @@ RETURN path
 These nodes represent the strictly acyclic hierarchy of the model. Concept related metadata can be added via ontology module.
 They can be further enriched with domain-specific modules (e.g., Numismatics) to provide detailed descriptions of ancient iconography.
 
----
 
 ## 2. Semantic Context: "Human holding Fruit"
 
@@ -46,7 +45,6 @@ RETURN DISTINCT comp.composition_id
 **Expected Output:**
 * composition-apple-tomato
 
----
 
 ## 3. High-Certainty Fact Extraction
 
@@ -66,7 +64,6 @@ RETURN ce.composition_entity_id, con.concept_id, i.certainty
 * entity-at-human, concept-human, 1.0
 * entity-bb-billiard-ball-sphere, concept-billiard-ball-7, 1.0
 
----
 
 ## 4. Human-in-the-Loop: Rejected Interpretations
 
@@ -82,7 +79,6 @@ RETURN ce.composition_entity_id, con.concept_id, i.reasoning_statement
 **Expected Output:**
 * entity-bb-glyph, concept-letter-l, "Commen Scheme, but ambiguous"
 
----
 
 ## 5. Conflict Analysis: Interpretations vs. Sources
 
@@ -98,7 +94,6 @@ RETURN i.interpretation_id, agent.agent_id, sr.reference, sr.refrence_statement,
 **Expected Output:**
 * interpretation-at-apple, agent-human, img-at-apple-conflicting, "apple reference image shows stem", source-at-reference-catalogue
 
----
 
 ## 6. Pattern-Based Rapid Access
 

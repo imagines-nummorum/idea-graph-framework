@@ -12,7 +12,6 @@ These constraints apply to all nodes and edges where these property names are us
 | `timestamp` | STRING | ISO 8601 (YYYY-MM-DD) | Date of creation or validation. |
 | `lang` | STRING | ISO 639-1 / 639-3 | Language code (e.g., "EN", "LAT", "GRC"). |
 
----
 
 ## 2. Core Enumerations (ENUMs)
 
@@ -57,7 +56,6 @@ The `scope` poperty is set if the cardinality is  N > 1.
 * **`ActualMeaning`**: Relates to the specific identification.
 * **`FunctionalMeaning`**: Relates to the role within the scene.
 
----
 
 ## 3. Ontological Structures
 
@@ -76,7 +74,6 @@ IDEA uses two distinct hierarchical systems (Strictly Acyclic Graphs).
 * **Hierarchy**: Defined by `IS_A` edges.
 * **Purpose**: Meta-concepts for methodology and epistemic classification.
 
----
 
 ## 4. Technical Constraints
 

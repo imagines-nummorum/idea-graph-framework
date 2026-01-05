@@ -44,7 +44,6 @@ This directory contains the formal documentation for the **Iconographical Defini
 * **Purpose:** A bridge for interdisciplinary communication.
 * **Key Topics:** Shared definitions for numismatic terms, graph engineering patterns, and epistemic metadata.
 
----
 
 ## [IDEA Core Documentation](modules/00_core)
 
