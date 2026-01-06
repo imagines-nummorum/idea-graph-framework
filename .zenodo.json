@@ -34,12 +34,10 @@
         },
         {
             "name": "Berlin-Brandenburg Academy of Sciences and Humanities",
-            "orcid": "https://ror.org/05jgq9443",
             "type": "HostingInstitution"
         },
         {
             "name": "Union der deutschen Akademien der Wissenschaften",
-            "orcid": "https://ror.org/04bvdz568",
             "type": "Funder"
         }
     ],
