@@ -7,6 +7,8 @@
 **A Graph Framework for Describing Visual Compositions and Modelling Uncertainty.**  
 **Bridging the gap between flexible humanities research and high-performance data engineering.**
 
+[![DOI](https://zenodo.org/badge/1120013880.svg)](https://doi.org/10.5281/zenodo.18160255)
+
 ### Documentation & Repository Access
 
 This project is optimized for an interactive documentation experience. 
@@ -149,7 +151,13 @@ It is coordinated by the [Union of German Academies of Sciences and Humanities](
 **Contact:** For any IDEA related topic we prefer direct communication on Github, for any contact to our initiative, see [Contact](https://www.imagines-nummorum.eu/en/contact)
 
 
-## AI Transparency & Methodology
+## Citation
+
+```
+Köster, J. (2026). IDEA: A Graph Framework for Describing Visual Compositions and Modelling Uncertainty (Version 0.9.2) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.18160255
+```
+
+# AI Transparency & Methodology
 
 In alignment with the epistemological focus of this project, transparency regarding the creation process is paramount. This graph model was developed with the assistance of **Google Gemini** (v2.5 Flash and 3 Pro), which served as an interactive dialogue partner and research tool.
 
