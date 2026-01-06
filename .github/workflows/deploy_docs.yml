@@ -24,8 +24,12 @@ jobs:
 
       - name: Build and Deploy
         run: |
-          mkdir ../temp_workspace
-          cp -r . ../temp_workspace/mkdocs
-          mv ../temp_workspace/mkdocs/mkdocs.yml ../temp_workspace/mkdocs.yml
-          cd ../temp_workspace
+          mkdir ../deploy_workspace
+          cp -r .git ../deploy_workspace/
+          mkdir ../deploy_workspace/mkdocs
+          cp -r . ../deploy_workspace/mkdocs/
+          cp mkdocs.yml ../deploy_workspace/mkdocs.yml
+          git config --global user.name github-actions[bot]
+          git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
+          cd ../deploy_workspace
           mkdocs gh-deploy --force --config-file mkdocs.yml
