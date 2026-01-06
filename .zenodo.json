@@ -42,7 +42,7 @@
         }
     ],
     "title": "IDEA: A Graph Framework for Describing Visual Compositions and Modelling Uncertainty",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "access_right": "open",
     "keywords": [
         "Graph Database", 
