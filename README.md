@@ -11,7 +11,7 @@
 
 This project is optimized for an interactive documentation experience. 
 
-* **Github Pages:** If you prefer Github Pages, please switch to [https://imagines-nummorum.github.io/idea-graph-framework/](https://imagines-nummorum.github.io/idea-graph-framework/).
+* **Github Pages:** If you prefer Github Pages, please switch to [imagines-nummorum.github.io/idea-graph-framework/](https://imagines-nummorum.github.io/idea-graph-framework/).
 * **Zenodo Users:** For the full interactive experience, latest updates, and proper navigation, please switch to our [GitHub Repository](https://github.com/imagines-nummorum/idea-graph-framework).
 
  
