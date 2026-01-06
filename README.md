@@ -153,8 +153,19 @@ It is coordinated by the [Union of German Academies of Sciences and Humanities](
 
 ## Citation
 
-```
-Köster, J. (2026). IDEA: A Graph Framework for Describing Visual Compositions and Modelling Uncertainty (Version 0.9.2) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.18160255
+```bibtex
+@software{koester_jan_2026_IDEA,
+  author       = {Köster, Jan},
+  title        = {{IDEA: A Graph Framework for Describing Visual 
+                   Compositions and Modelling Uncertainty}},
+  month        = jan,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v0.9.2},
+  doi          = {10.5281/zenodo.18160255},
+  url          = {https://doi.org/10.5281/zenodo.18160255}
+}
+
 ```
 
 # AI Transparency & Methodology
