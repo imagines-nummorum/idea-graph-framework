@@ -7,6 +7,13 @@
 **A Graph Framework for Describing Visual Compositions and Modelling Uncertainty.**  
 **Bridging the gap between flexible humanities research and high-performance data engineering.**
 
+### Documentation & Repository Access
+
+This project is optimized for an interactive documentation experience. 
+
+* **Github Pages:** If you prefer Github Pages, please switch to [https://imagines-nummorum.github.io/idea-graph-framework/](https://imagines-nummorum.github.io/idea-graph-framework/).
+* **Zenodo Users:** For the full interactive experience, latest updates, and proper navigation, please switch to our [GitHub Repository](https://github.com/imagines-nummorum/idea-graph-framework).
+
  
 ## Repository Structure
 
@@ -140,13 +147,6 @@ IDEA is open-sourced software created and maintained by [Jan Köster](https://or
 It is coordinated by the [Union of German Academies of Sciences and Humanities](https://www.akademienunion.de/).
 
 **Contact:** For any IDEA related topic we prefer direct communication on Github, for any contact to our initiative, see [Contact](https://www.imagines-nummorum.eu/en/contact)
-
-
-### Documentation & Repository Access
-
-This project is optimized for an interactive documentation experience. 
-
-* **Zenodo Users:** For the full interactive experience, latest updates, and proper navigation, please switch to our [GitHub Repository](https://github.com/imagines-nummorum/idea-graph-framework).
 
 
 ## AI Transparency & Methodology
