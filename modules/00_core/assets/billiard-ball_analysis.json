@@ -1,0 +1,1915 @@
+{
+  "style": {
+    "font-family": "Nunito Sans",
+    "background-color": "#F2F2F2",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#ffffff",
+    "label-background-color": "#848484",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#848484",
+    "type-background-color": "#F2F2F2",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "position": {
+        "x": 1755.5741939382879,
+        "y": 2871.765393450937
+      },
+      "caption": "",
+      "labels": [
+        "Unit"
+      ],
+      "properties": {
+        "unit_id": "unit-billiard-ball"
+      },
+      "style": {
+        "node-color": "#194d33",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 1755.5741939382879,
+        "y": 2458.8755658058376
+      },
+      "caption": "",
+      "labels": [
+        "Composition"
+      ],
+      "properties": {
+        "composition_id": "composition-billiard-ball",
+        "chromaticity": "Polychromatic"
+      },
+      "style": {
+        "node-color": "#9f0500",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 2650.0126947535464,
+        "y": 2204.1047502646015
+      },
+      "caption": "",
+      "labels": [
+        "CompositionEntity"
+      ],
+      "properties": {
+        "composition_entity_id": "entity-bb-billiard-ball-sphere"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 2812.5778279352553,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-sphere"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 2812.5778279352553,
+        "y": 1001.9611401210702
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-sphere"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 2812.5778279352553,
+        "y": 334.16706767045525
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-shape"
+      },
+      "style": {
+        "node-color": "#0062b1"
+      }
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": 3160.031075342093,
+        "y": 1998.5198889185194
+      },
+      "caption": "",
+      "labels": [
+        "CompositionFeature"
+      ],
+      "properties": {
+        "composition_feature_id": "feature-bb-sphere-color"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 3158.1709443838145,
+        "y": 1495.4899183033501
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-sphere-color"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 3158.1709443838145,
+        "y": 1001.961140121068
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Feature"
+      ],
+      "properties": {
+        "concept_id": "concept-red"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n10",
+      "position": {
+        "x": 3158.1709443838145,
+        "y": 656.237890785346
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Feature"
+      ],
+      "properties": {
+        "concept_id": "concept-color"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n11",
+      "position": {
+        "x": 978.3172966472616,
+        "y": 2204.1047502646024
+      },
+      "caption": "",
+      "labels": [
+        "CompositionEntity"
+      ],
+      "properties": {
+        "composition_entity_id": "entity-bb-human"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n12",
+      "position": {
+        "x": 1755.5741939382879,
+        "y": 1998.5198889185194
+      },
+      "caption": "",
+      "labels": [
+        "CompositionRelation"
+      ],
+      "properties": {
+        "composition_relation_id": "relation-bb-holding"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n13",
+      "position": {
+        "x": 1754.4544036031805,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "RelationInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-holding"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n14",
+      "position": {
+        "x": 977.1975063121542,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-human"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n15",
+      "position": {
+        "x": 1754.4544036031805,
+        "y": 1001.9611401210691
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Relation"
+      ],
+      "properties": {
+        "concept_id": "concept-holding"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n16",
+      "position": {
+        "x": 977.1975063121542,
+        "y": 1001.9611401210691
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-human"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n17",
+      "position": {
+        "x": 1754.4544036031805,
+        "y": 656.2378907853467
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Relation"
+      ],
+      "properties": {
+        "concept_id": "concept-handling"
+      },
+      "style": {
+        "node-color": "#0062b1"
+      }
+    },
+    {
+      "id": "n18",
+      "position": {
+        "x": 977.1975063121542,
+        "y": 656.2378907853467
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-figure"
+      },
+      "style": {
+        "node-color": "#0062b1"
+      }
+    },
+    {
+      "id": "n19",
+      "position": {
+        "x": 1324.6554564777457,
+        "y": 1793.2060205104895
+      },
+      "caption": "",
+      "labels": [
+        "CompositionModifier"
+      ],
+      "properties": {
+        "composition_modifier_id": "modifier-bb-using-right-hand"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n20",
+      "position": {
+        "x": 2163.437085543528,
+        "y": 1793.2060205104895
+      },
+      "caption": "",
+      "labels": [
+        "CompositionEvent"
+      ],
+      "properties": {
+        "composition_event_id": "event-bb-presentation"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n21",
+      "position": {
+        "x": 522.1817759817618,
+        "y": 1998.5198889185194
+      },
+      "caption": "",
+      "labels": [
+        "CompositionFeature"
+      ],
+      "properties": {
+        "composition_feature_id": "feature-bb-human-visual-scope"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n22",
+      "position": {
+        "x": 521.0619856466546,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-human-visual-scope"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n23",
+      "position": {
+        "x": 521.0619856466546,
+        "y": 1001.9611401210691
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Feature"
+      ],
+      "properties": {
+        "concept_id": "concept-detail-hand"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n24",
+      "position": {
+        "x": 521.0619856466546,
+        "y": 656.2378907853467
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Feature"
+      ],
+      "properties": {
+        "concept_id": "concept-human-visual-scope"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n25",
+      "position": {
+        "x": 1323.5356661426383,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "ModifierInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-using-right-hand"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n26",
+      "position": {
+        "x": 1323.5356661426383,
+        "y": 1001.9611401210691
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Modifier"
+      ],
+      "properties": {
+        "concept_id": "concept-using-right-hand"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n27",
+      "position": {
+        "x": 1323.5356661426383,
+        "y": 656.2378907853467
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Modifier"
+      ],
+      "properties": {
+        "concept_id": "concept-using-hand"
+      },
+      "style": {
+        "node-color": "#0062b1"
+      }
+    },
+    {
+      "id": "n28",
+      "position": {
+        "x": 2162.3172952084205,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EventInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-presentation"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n29",
+      "position": {
+        "x": 2162.3172952084205,
+        "y": 1001.9611401210691
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Event"
+      ],
+      "properties": {
+        "concept_id": "concept-presentation"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n30",
+      "position": {
+        "x": 2162.3172952084205,
+        "y": 656.2378907853467
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Event"
+      ],
+      "properties": {
+        "concept_id": "concept-display"
+      },
+      "style": {
+        "node-color": "#0062b1"
+      }
+    },
+    {
+      "id": "n31",
+      "position": {
+        "x": 129,
+        "y": 2204.1047502646024
+      },
+      "caption": "",
+      "labels": [
+        "CompositionContext"
+      ],
+      "properties": {
+        "composition_context_id": "context-bb-functional-demo"
+      },
+      "style": {
+        "outside-position": "top",
+        "node-color": "#e27300"
+      }
+    },
+    {
+      "id": "n32",
+      "position": {
+        "x": 129,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "ContextInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-functional-demo"
+      },
+      "style": {
+        "outside-position": "bottom",
+        "node-color": "#ab149e"
+      }
+    },
+    {
+      "id": "n33",
+      "position": {
+        "x": 129,
+        "y": 1001.9611401210691
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Context"
+      ],
+      "properties": {
+        "concept_id": "concept-functional-demo"
+      },
+      "style": {
+        "node-color": "#0062b1"
+      }
+    },
+    {
+      "id": "n34",
+      "position": {
+        "x": 521.0619856466546,
+        "y": 326.1189453926736
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Feature"
+      ],
+      "properties": {
+        "concept_id": "concept-visual-scope"
+      },
+      "style": {
+        "node-color": "#0062b1"
+      }
+    },
+    {
+      "id": "n35",
+      "position": {
+        "x": 3503.7640608323736,
+        "y": 2204.1047502646015
+      },
+      "caption": "",
+      "labels": [
+        "CompositionEntity"
+      ],
+      "properties": {
+        "composition_entity_id": "entity-bb-circle"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "right"
+      }
+    },
+    {
+      "id": "n36",
+      "position": {
+        "x": 4871.009817543492,
+        "y": 2204.1047502646024
+      },
+      "caption": "",
+      "labels": [
+        "CompositionEntity"
+      ],
+      "properties": {
+        "composition_entity_id": "entity-bb-glyph"
+      },
+      "style": {
+        "node-color": "#c45100"
+      }
+    },
+    {
+      "id": "n37",
+      "position": {
+        "x": 5477.535787580416,
+        "y": 2306.26245316473
+      },
+      "caption": "",
+      "labels": [
+        "CompositionGroup"
+      ],
+      "properties": {
+        "composition_group_id": "group-bb-text",
+        "group_function": "TextContainer"
+      },
+      "style": {
+        "node-color": "#fe9200",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n38",
+      "position": {
+        "x": 5602.632133051252,
+        "y": 1495.48991830335
+      },
+      "caption": "",
+      "labels": [
+        "Reading"
+      ],
+      "properties": {
+        "reading_id": "reading-bb-l"
+      },
+      "style": {
+        "node-color": "#fa28ff",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n39",
+      "position": {
+        "x": 3503.7640608323736,
+        "y": 1495.4899183033494
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-circle"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n40",
+      "position": {
+        "x": 5056.957493966999,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-glyph-7"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n41",
+      "position": {
+        "x": 4685.0621411199845,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-glyph-l"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n42",
+      "position": {
+        "x": 5352.439442109579,
+        "y": 1495.48991830335
+      },
+      "caption": "",
+      "labels": [
+        "Reading"
+      ],
+      "properties": {
+        "reading_id": "reading-bb-7"
+      },
+      "style": {
+        "node-color": "#fa28ff",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n43",
+      "position": {
+        "x": 5056.957493966999,
+        "y": 1001.9611401210691
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-digit-7"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n44",
+      "position": {
+        "x": 4685.0621411199845,
+        "y": 1001.9611401210693
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-letter-l"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n45",
+      "position": {
+        "x": 5056.957493966999,
+        "y": 656.2378907853467
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-digit"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n46",
+      "position": {
+        "x": 3503.7640608323736,
+        "y": 1001.9611401210691
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-bb-circle"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n47",
+      "position": {
+        "x": 2812.5778279352553,
+        "y": 656.2378907853472
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-bb-geometric-shape"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n48",
+      "position": {
+        "x": 3784.188906778988,
+        "y": 1998.5198889185194
+      },
+      "caption": "",
+      "labels": [
+        "CompositionFeature"
+      ],
+      "properties": {
+        "composition_feature_id": "feature-bb-circle-color"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n49",
+      "position": {
+        "x": 3784.188906778988,
+        "y": 1495.4899183033494
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-circle-color"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n50",
+      "position": {
+        "x": 3784.188906778988,
+        "y": 1001.9611401210691
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Feature"
+      ],
+      "properties": {
+        "concept_id": "concept-white"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n51",
+      "position": {
+        "x": 4092.5328778892044,
+        "y": 1998.5198889185194
+      },
+      "caption": "",
+      "labels": [
+        "CompositionFeature"
+      ],
+      "properties": {
+        "composition_feature_id": "feature-bb-glyph-color"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n52",
+      "position": {
+        "x": 4092.5328778892044,
+        "y": 1495.48991830335
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-glyph-color"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n53",
+      "position": {
+        "x": 4092.5328778892044,
+        "y": 1001.9611401210691
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Feature"
+      ],
+      "properties": {
+        "concept_id": "concept-black"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n54",
+      "position": {
+        "x": 4378.2409620105445,
+        "y": 1998.5198889185194
+      },
+      "caption": "",
+      "labels": [
+        "CompositionFeature"
+      ],
+      "properties": {
+        "composition_feature_id": "feature-bb-glyph-case"
+      },
+      "style": {
+        "node-color": "#c45100",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n55",
+      "position": {
+        "x": 4378.2409620105445,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "FeatureInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-glyph-case"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n56",
+      "position": {
+        "x": 4378.2409620105445,
+        "y": 1001.9611401210693
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Feature"
+      ],
+      "properties": {
+        "concept_id": "concept-uppercase"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n57",
+      "position": {
+        "x": 4685.0621411199845,
+        "y": 656.2378907853465
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-letter"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n58",
+      "position": {
+        "x": 4378.2409620105445,
+        "y": 656.2378907853467
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Feature"
+      ],
+      "properties": {
+        "concept_id": "concept-case"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n59",
+      "position": {
+        "x": 4871.009817543492,
+        "y": 334.16706767045525
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-graphic-character"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n60",
+      "position": {
+        "x": 4378.2409620105445,
+        "y": 326.1189453926736
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Feature"
+      ],
+      "properties": {
+        "concept_id": "concept-typographic-attribute"
+      },
+      "style": {
+        "node-color": "#0062b1"
+      }
+    },
+    {
+      "id": "n61",
+      "position": {
+        "x": 4187.3869391879325,
+        "y": 2458.8755658058376
+      },
+      "caption": "",
+      "labels": [
+        "CompositionGroup"
+      ],
+      "properties": {
+        "composition_group_id": "group-bb-billiard-ball",
+        "group_function": "LogicalUnit"
+      },
+      "style": {
+        "node-color": "#fe9200"
+      }
+    },
+    {
+      "id": "n62",
+      "position": {
+        "x": 2487.447561571838,
+        "y": 1495.4899183033504
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "EntityInterpretation"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-billiard-ball"
+      },
+      "style": {
+        "node-color": "#ab149e",
+        "outside-position": "bottom"
+      }
+    },
+    {
+      "id": "n63",
+      "position": {
+        "x": 2487.447561571838,
+        "y": 1001.9611401210695
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-billiard-ball-7"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n64",
+      "position": {
+        "x": 2487.447561571838,
+        "y": 656.2378907853472
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-billiard-ball"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n65",
+      "position": {
+        "x": 2487.447561571838,
+        "y": 326.1189453926736
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-sports-equipment"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n66",
+      "position": {
+        "x": 2487.447561571838,
+        "y": -4
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-object"
+      },
+      "style": {
+        "node-color": "#0062b1"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "fromId": "n1",
+      "toId": "n2",
+      "type": "HAS_COMPOSITION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "fromId": "n3",
+      "toId": "n4",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "fromId": "n4",
+      "toId": "n5",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "fromId": "n3",
+      "toId": "n7",
+      "type": "HAS_COMPOSITION_FEATURE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n4",
+      "fromId": "n7",
+      "toId": "n8",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n5",
+      "fromId": "n8",
+      "toId": "n9",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n6",
+      "fromId": "n2",
+      "toId": "n11",
+      "type": "HAS_COMPOSITION_ENTITY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n7",
+      "fromId": "n11",
+      "toId": "n12",
+      "type": "HAS_COMPOSITION_RELATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "fromId": "n12",
+      "toId": "n3",
+      "type": "HAS_COMPOSITION_RELATION_OBJECT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n9",
+      "fromId": "n12",
+      "toId": "n13",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n10",
+      "fromId": "n11",
+      "toId": "n14",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n11",
+      "fromId": "n13",
+      "toId": "n15",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n12",
+      "fromId": "n14",
+      "toId": "n16",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n13",
+      "fromId": "n15",
+      "toId": "n17",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n14",
+      "fromId": "n16",
+      "toId": "n18",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n15",
+      "fromId": "n12",
+      "toId": "n19",
+      "type": "HAS_COMPOSITION_MODIFIER",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n16",
+      "fromId": "n12",
+      "toId": "n20",
+      "type": "HAS_COMPOSITION_EVENT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n17",
+      "fromId": "n11",
+      "toId": "n21",
+      "type": "HAS_COMPOSITION_FEATURE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n18",
+      "fromId": "n21",
+      "toId": "n22",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n19",
+      "fromId": "n22",
+      "toId": "n23",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n20",
+      "fromId": "n23",
+      "toId": "n24",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n21",
+      "fromId": "n19",
+      "toId": "n25",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n22",
+      "fromId": "n25",
+      "toId": "n26",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n23",
+      "fromId": "n26",
+      "toId": "n27",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n24",
+      "fromId": "n20",
+      "toId": "n28",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n25",
+      "fromId": "n28",
+      "toId": "n29",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n26",
+      "fromId": "n29",
+      "toId": "n30",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n27",
+      "fromId": "n2",
+      "toId": "n31",
+      "type": "HAS_COMPOSITION_CONTEXT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n28",
+      "fromId": "n31",
+      "toId": "n32",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n29",
+      "fromId": "n32",
+      "toId": "n33",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n30",
+      "fromId": "n24",
+      "toId": "n34",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n31",
+      "fromId": "n36",
+      "toId": "n37",
+      "type": "IS_PART_OF_COMPOSITION_GROUP",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n32",
+      "fromId": "n37",
+      "toId": "n38",
+      "type": "HAS_READING",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n33",
+      "fromId": "n35",
+      "toId": "n39",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n34",
+      "fromId": "n36",
+      "toId": "n40",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n35",
+      "fromId": "n36",
+      "toId": "n41",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n36",
+      "fromId": "n37",
+      "toId": "n42",
+      "type": "HAS_READING",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n37",
+      "fromId": "n40",
+      "toId": "n43",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n38",
+      "fromId": "n41",
+      "toId": "n44",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n39",
+      "fromId": "n43",
+      "toId": "n45",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n40",
+      "fromId": "n39",
+      "toId": "n46",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n41",
+      "fromId": "n35",
+      "toId": "n48",
+      "type": "HAS_COMPOSITION_FEATURE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n42",
+      "fromId": "n48",
+      "toId": "n49",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n43",
+      "fromId": "n49",
+      "toId": "n50",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n44",
+      "fromId": "n50",
+      "toId": "n10",
+      "type": "IS_A",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#cccccc",
+        "type-border-color": "#cccccc"
+      }
+    },
+    {
+      "id": "n45",
+      "fromId": "n36",
+      "toId": "n51",
+      "type": "HAS_COMPOSITION_FEATURE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n46",
+      "fromId": "n51",
+      "toId": "n52",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n47",
+      "fromId": "n52",
+      "toId": "n53",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n48",
+      "fromId": "n53",
+      "toId": "n10",
+      "type": "IS_A",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#cccccc",
+        "type-border-color": "#cccccc"
+      }
+    },
+    {
+      "id": "n49",
+      "fromId": "n36",
+      "toId": "n54",
+      "type": "HAS_COMPOSITION_FEATURE",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n50",
+      "fromId": "n54",
+      "toId": "n55",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n51",
+      "fromId": "n55",
+      "toId": "n56",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n52",
+      "fromId": "n44",
+      "toId": "n57",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n53",
+      "fromId": "n56",
+      "toId": "n58",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n54",
+      "fromId": "n55",
+      "toId": "n41",
+      "type": "DEPENDS_ON",
+      "properties": {},
+      "style": {
+        "margin-start": 20,
+        "type-padding": 5
+      }
+    },
+    {
+      "id": "n55",
+      "fromId": "n45",
+      "toId": "n59",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n56",
+      "fromId": "n57",
+      "toId": "n59",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n57",
+      "fromId": "n58",
+      "toId": "n60",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n58",
+      "fromId": "n3",
+      "toId": "n61",
+      "type": "IS_PART_OF_COMPOSITION_GROUP",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#cccccc",
+        "type-border-color": "#cccccc"
+      }
+    },
+    {
+      "id": "n59",
+      "fromId": "n35",
+      "toId": "n61",
+      "type": "IS_PART_OF_COMPOSITION_GROUP",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#cccccc",
+        "type-border-color": "#cccccc"
+      }
+    },
+    {
+      "id": "n60",
+      "fromId": "n36",
+      "toId": "n61",
+      "type": "IS_PART_OF_COMPOSITION_GROUP",
+      "properties": {},
+      "style": {
+        "type-border-color": "#cccccc",
+        "type-color": "#b3b3b3",
+        "arrow-color": "#cccccc"
+      }
+    },
+    {
+      "id": "n61",
+      "fromId": "n2",
+      "toId": "n61",
+      "type": "HAS_COMPOSITION_GROUP",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n62",
+      "fromId": "n2",
+      "toId": "n37",
+      "type": "HAS_COMPOSITION_GROUP",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n63",
+      "fromId": "n2",
+      "toId": "n36",
+      "type": "HAS_COMPOSITION_ENTITY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n64",
+      "fromId": "n46",
+      "toId": "n47",
+      "type": "IS_A",
+      "properties": {},
+      "style": {
+        "arrow-color": "#cccccc",
+        "type-color": "#cccccc",
+        "type-border-color": "#cccccc"
+      }
+    },
+    {
+      "id": "n65",
+      "fromId": "n2",
+      "toId": "n35",
+      "type": "HAS_COMPOSITION_ENTITY",
+      "properties": {},
+      "style": {
+        "margin-start": 5
+      }
+    },
+    {
+      "id": "n66",
+      "fromId": "n2",
+      "toId": "n3",
+      "type": "HAS_COMPOSITION_ENTITY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n67",
+      "fromId": "n5",
+      "toId": "n47",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n68",
+      "fromId": "n47",
+      "toId": "n6",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n69",
+      "type": "IDENTIFIED_AS_CONCEPT",
+      "style": {},
+      "properties": {},
+      "fromId": "n62",
+      "toId": "n63"
+    },
+    {
+      "id": "n70",
+      "fromId": "n63",
+      "toId": "n64",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n71",
+      "fromId": "n64",
+      "toId": "n65",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n72",
+      "fromId": "n65",
+      "toId": "n66",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n73",
+      "fromId": "n3",
+      "toId": "n62",
+      "type": "HAS_INTERPRETATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n74",
+      "fromId": "n9",
+      "toId": "n10",
+      "type": "IS_A",
+      "properties": {},
+      "style": {}
+    }
+  ]
+}

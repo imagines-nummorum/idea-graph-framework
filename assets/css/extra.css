@@ -1,0 +1,8 @@
+.md-header__title {
+    margin-left: 0;
+}
+
+.md-typeset pre > code {
+    border: 1px solid #37474f;
+    border-radius: 4px;
+}

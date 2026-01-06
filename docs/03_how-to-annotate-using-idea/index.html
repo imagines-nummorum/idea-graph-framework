@@ -1,0 +1,2090 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Graph Framework for Describing Visual Compositions and Modelling Uncertainty">
+      
+      
+      
+      
+        <link rel="prev" href="../../modules/10_numismatics/">
+      
+      
+        <link rel="next" href="../../modules/00_core/fixtures/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/idea-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>How to annotate - IDEA Graph Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-annotate-with-idea" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
+      
+  <img src="../../assets/idea-logo-no-bg.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IDEA Graph Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to annotate
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../00_conceptual-framework/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../04_ai-annotation-pipeline/" class="md-tabs__link">
+          
+  
+  
+  Vision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../modules/00_core/" class="md-tabs__link">
+          
+  
+  
+  Modules
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Hands on
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
+      
+  <img src="../../assets/idea-logo-no-bg.svg" alt="logo">
+
+    </a>
+    IDEA Graph Framework
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_conceptual-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptual Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_performance-and-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../known-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../99_glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_ai-annotation-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annotation Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_trustworthy-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trustworthy AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/00_core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/00_core/nodes-and-edges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nodes & Edges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/00_core/data-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daten-Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/05_ontology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/10_numismatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numismatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands on
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hands on
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to annotate
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to annotate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-workflow-vertical-stacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Workflow: Vertical Stacking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Workflow: Vertical Stacking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-define-the-frame-layer-i-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 0: Define the Frame (Layer I &amp; II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-identify-an-entity-the-apple-tomato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Identify an Entity (The "Apple-Tomato")
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Identify an Entity (The &#34;Apple-Tomato&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-the-formal-observation-layer-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 The Formal Observation (Layer II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-the-interpretive-act-layer-iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 The Interpretive Act (Layer III)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-linking-to-concepts-layer-iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Linking to Concepts (Layer IV)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-describe-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Describe Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Describe Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-formal-feature-layer-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Formal Feature (Layer II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-interpretation-concept-layer-iii-iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Interpretation &amp; Concept (Layer III &amp; IV)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-map-relations-and-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Map Relations and Actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Map Relations and Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-the-relation-layer-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 The Relation (Layer II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-adding-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Adding Modifiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-handling-the-hand-and-cropping-visual-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Handling "The Hand" and Cropping (Visual Scope)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Handling &#34;The Hand&#34; and Cropping (Visual Scope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-why-not-entity-hand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Why not "Entity: Hand"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-formal-feature-visual-scope-layer-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Formal Feature: Visual Scope (Layer II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-interpretation-the-cropping-layer-iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Interpretation: The Cropping (Layer III)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-ontological-mapping-visual-scope-layer-iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Ontological Mapping: Visual Scope (Layer IV)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-justify-with-methodology-architectonics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Justify with Methodology (Architectonics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-abstract-meanings-compositioncontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Abstract Meanings (CompositionContext)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-dealing-with-text-reading-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Dealing with Text (Reading &amp; Groups)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-the-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of the Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-why-no-graphical-annotations-polygons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important: Why no Graphical Annotations (Polygons)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Structures:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Structures:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-patterns-as-blueprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Patterns as Blueprints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patterns-as-a-scaffold-for-ai-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patterns as a "Scaffold" for AI Annotation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling-similarity-the-centroid-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modeling Similarity (The Centroid Approach)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/00_core/fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixtures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modules/00_core/queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-workflow-vertical-stacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Workflow: Vertical Stacking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Workflow: Vertical Stacking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-define-the-frame-layer-i-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 0: Define the Frame (Layer I &amp; II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-identify-an-entity-the-apple-tomato" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Identify an Entity (The "Apple-Tomato")
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Identify an Entity (The &#34;Apple-Tomato&#34;)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-the-formal-observation-layer-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 The Formal Observation (Layer II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-the-interpretive-act-layer-iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 The Interpretive Act (Layer III)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-linking-to-concepts-layer-iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Linking to Concepts (Layer IV)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-describe-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Describe Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Describe Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-formal-feature-layer-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Formal Feature (Layer II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-interpretation-concept-layer-iii-iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Interpretation &amp; Concept (Layer III &amp; IV)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-map-relations-and-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Map Relations and Actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Map Relations and Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-the-relation-layer-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 The Relation (Layer II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-adding-modifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Adding Modifiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-handling-the-hand-and-cropping-visual-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Handling "The Hand" and Cropping (Visual Scope)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Handling &#34;The Hand&#34; and Cropping (Visual Scope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-why-not-entity-hand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Why not "Entity: Hand"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-formal-feature-visual-scope-layer-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Formal Feature: Visual Scope (Layer II)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-interpretation-the-cropping-layer-iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Interpretation: The Cropping (Layer III)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-ontological-mapping-visual-scope-layer-iv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Ontological Mapping: Visual Scope (Layer IV)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-justify-with-methodology-architectonics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Justify with Methodology (Architectonics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-abstract-meanings-compositioncontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Abstract Meanings (CompositionContext)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-dealing-with-text-reading-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Dealing with Text (Reading &amp; Groups)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-the-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of the Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-why-no-graphical-annotations-polygons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important: Why no Graphical Annotations (Polygons)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Structures:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Structures:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-patterns-as-blueprints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Patterns as Blueprints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patterns-as-a-scaffold-for-ai-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patterns as a "Scaffold" for AI Annotation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modeling-similarity-the-centroid-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modeling Similarity (The Centroid Approach)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="how-to-annotate-with-idea">How to Annotate with IDEA</h1>
+<p>This guide walks you through the process of describing a visual scene using the IDEA framework. To illustrate the workflow, we will use the <strong>"Apple-Tomato"</strong> example: a composition where a human hand holds a red object that could be either an apple or a tomato.</p>
+<p>Instead of just "tagging" an image, we build a path from the <strong>concrete observation</strong> to the <strong>abstract concept</strong>, documenting every step of the interpretive process.</p>
+<p>We recommand having the following files at hand:
+* <a href="../01_architecture/">architecture.md</a>
+* <a href="../../modules/00_core/nodes-and-edges/">nodes-and-edges.md</a>
+* <a href="../../modules/00_core/fixtures/">fixtures.md</a></p>
+<h2 id="the-workflow-vertical-stacking">The Workflow: Vertical Stacking</h2>
+<p>For every element you identify, you complete the path from Layer II (Formal) to Layer IV (Ontological) before moving to the next element.</p>
+<blockquote>
+<p><strong>Note on Methodology:</strong> While CV models typically use a <strong>horizontal stack approach</strong> (processing all entities, then all features, then all relations across the entire composition to maximize computational efficiency), we recommend the <strong>vertical stack approach</strong> for human annotators. This is often more accessible to the human mind as it maintains the semantic context of a single visual element — from observation to interpretation — before moving to the next part of the image.</p>
+</blockquote>
+<h3 id="step-0-define-the-frame-layer-i-ii">Step 0: Define the Frame (Layer I &amp; II)</h3>
+<p>Before describing content, establish the <code>Unit</code> and the visual container (<code>Composition</code>).</p>
+<blockquote>
+<p><strong>Note on Units:</strong> When dealing only with virtual resources, the unit may seem redundant at first glance, but it is indispensable when handling real-world objects such as, in our case, ancient coins, as we have a physical carrier and multiple image zones (compositions).</p>
+</blockquote>
+<ul>
+<li><strong>Unit</strong>: The physical/virtual object (e.g., <code>unit-apple-tomato</code>).</li>
+<li><strong>Composition</strong>: The specific view or side being analyzed (e.g., <code>composition-apple-tomato</code>).</li>
+</ul>
+<h3 id="step-1-identify-an-entity-the-apple-tomato">Step 1: Identify an Entity (The "Apple-Tomato")</h3>
+<p>Now, we describe the red object held in the hand.</p>
+<h4 id="11-the-formal-observation-layer-ii">1.1 The Formal Observation (Layer II)</h4>
+<p>Create a <code>CompositionEntity</code>. At this stage, do not think of it as an "apple"; it is simply a "thing" in the image.</p>
+<ul>
+<li><strong>Node</strong>: <code>(entity-at-apple-tomato:CompositionEntity)</code></li>
+</ul>
+<h4 id="12-the-interpretive-act-layer-iii">1.2 The Interpretive Act (Layer III)</h4>
+<p>This is the "Epistemic Primary" step. Since the object is ambiguous, we create <strong>two</strong> interpretations for the same entity.</p>
+<ul>
+<li><strong>Interpretation A</strong>: Likely a tomato.</li>
+<li><code>certainty: 0.5</code>, <code>reasoning_statement: "Tomato texture, uncommon shape"</code> </li>
+<li><strong>Interpretation B</strong>: Possibly an apple.</li>
+<li><code>certainty: 0.4</code>, <code>reasoning_statement: "Apple shape, but no stem"</code> </li>
+</ul>
+<h4 id="13-linking-to-concepts-layer-iv">1.3 Linking to Concepts (Layer IV)</h4>
+<p>Connect each interpretation to the global <code>Concept</code> tree (ThING).</p>
+<ul>
+<li><code>Interpretation A</code> --IDENTIFIED_AS_CONCEPT--&gt; <code>concept-tomato</code> </li>
+<li><code>Interpretation B</code> --IDENTIFIED_AS_CONCEPT--&gt; <code>concept-apple</code> </li>
+</ul>
+<h3 id="step-2-describe-features">Step 2: Describe Features</h3>
+<p>Entities have attributes. Let's describe the color of our object.</p>
+<h4 id="21-formal-feature-layer-ii">2.1 Formal Feature (Layer II)</h4>
+<ul>
+<li><strong>Node</strong>: <code>(feature-at-apple-color:CompositionFeature)</code></li>
+<li><strong>Edge</strong>: <code>entity-at-apple-tomato</code> --HAS_COMPOSITION_FEATURE--&gt; <code>feature-at-apple-color</code></li>
+</ul>
+<blockquote>
+<p><strong>Feature vs. Relation</strong>: Features are Attributes/states of an entity. While <code>standing</code> is a state, <code>standing_on</code> is directed and requires an object (another entity). <code>standing_on</code> should therefore be modeled as a <code>Relation</code>. In many cases it es a good idea to model both (<code>standing</code> as <code>Feature</code> and <code>standing_</code> as <code>Relation</code>) since it makes queries easier.</p>
+</blockquote>
+<h4 id="22-interpretation-concept-layer-iii-iv">2.2 Interpretation &amp; Concept (Layer III &amp; IV)</h4>
+<ul>
+<li><strong>Interpretation</strong>: Certainty 1.0 (it is definitely red).</li>
+<li><strong>Concept</strong>: <code>concept-red</code> </li>
+</ul>
+<h3 id="step-3-map-relations-and-actions">Step 3: Map Relations and Actions</h3>
+<p>An image is rarely static. In our example, a human is holding the object.</p>
+<h4 id="31-the-relation-layer-ii">3.1 The Relation (Layer II)</h4>
+<p>Define the action between the human (<code>entity-at-human</code>) and the object.</p>
+<ul>
+<li><strong>Node</strong>: <code>(relation-at-holding:CompositionRelation)</code></li>
+<li><strong>Edges</strong>:</li>
+<li><code>entity-at-human</code> --HAS_COMPOSITION_RELATION--&gt; <code>relation-at-holding</code> </li>
+<li><code>relation-at-holding</code> --HAS_COMPOSITION_RELATION_OBJECT--&gt; <code>entity-at-apple-tomato</code> </li>
+</ul>
+<blockquote>
+<p><strong>Relation vs. Event</strong>: A Relation is the atomic link between two distinct entities. For relations between 3 or more entities, use <code>Event</code> nodes: <code>Relation</code> --HAS_COMPOSITION_EVENT--&gt; <code>Event</code></p>
+</blockquote>
+<h4 id="32-adding-modifiers">3.2 Adding Modifiers</h4>
+<p>Was it the right or left hand?</p>
+<ul>
+<li><strong>Modifier</strong>: <code>modifier-at-using-right-hand</code> </li>
+<li><strong>Interpretation</strong>: "Arrangement of fingers indicates the right hand." </li>
+<li><strong>Concept</strong>: <code>concept-using-right-hand</code> </li>
+</ul>
+<h3 id="step-4-handling-the-hand-and-cropping-visual-scope">Step 4: Handling "The Hand" and Cropping (Visual Scope)</h3>
+<p>A common pitfall is to declare the hand as its own <code>Entity</code>. In IDEA, we usually treat the <strong>Human</strong> as the entity, while the <strong>Hand</strong> and the fact that it is a <strong>Detail</strong> (cropped) are handled as <code>Features</code>.</p>
+<h4 id="41-why-not-entity-hand">4.1 Why not "Entity: Hand"?</h4>
+<p>If we labeled the hand as an entity, we would lose the connection to the person. Instead, we identify the person as the entity and describe the "hand-ness" and the "cropping" as attributes of how that person is depicted.</p>
+<h4 id="42-formal-feature-visual-scope-layer-ii">4.2 Formal Feature: Visual Scope (Layer II)</h4>
+<p>We observe that only a part of the human is visible.</p>
+<ul>
+<li><strong>Node</strong>: <code>(feature-at-human-visual-scope:CompositionFeature)</code> </li>
+<li><strong>Edge</strong>: <code>entity-at-human</code> --HAS_COMPOSITION_FEATURE--&gt; <code>feature-at-human-visual-scope</code> </li>
+</ul>
+<h4 id="43-interpretation-the-cropping-layer-iii">4.3 Interpretation: The Cropping (Layer III)</h4>
+<p>We document <em>why</em> we think this is a detail.</p>
+<ul>
+<li><strong>Interpretation</strong>: <code>interpretation-at-human-visual-scope</code> </li>
+<li><strong>Reasoning</strong>: "Obvious cropping of the subject at the right edge of the frame." </li>
+<li><strong>Certainty</strong>: <code>1.0</code> (it is a factual observation of the frame) </li>
+</ul>
+<h4 id="44-ontological-mapping-visual-scope-layer-iv">4.4 Ontological Mapping: Visual Scope (Layer IV)</h4>
+<p>Finally, we link this to the ThING to enable queries like "Show me all human details".</p>
+<ul>
+<li><strong>Primary Concept</strong>: <code>concept-detail-hand</code> </li>
+<li><strong>Parent Concept</strong>: <code>concept-human-visual-scope</code>  (which is a type of <code>concept-visual-scope</code>) </li>
+</ul>
+<blockquote>
+<p><strong>Feature vs. Entity</strong>: If it is a part of a larger being (like a hand, an eye, or a wing), model it as a <strong>Feature</strong> of that being. If it is a separate, moveable object (like a sword, a shield, or a tomato), model it as a separate <strong>Entity</strong>.</p>
+</blockquote>
+<h3 id="step-5-justify-with-methodology-architectonics">Step 5: Justify with Methodology (Architectonics)</h3>
+<p>To make your uncertainty transparent, link your interpretations to methodological "Architectonics."</p>
+<ul>
+<li><strong>Conflict</strong>: If a reference image shows a stem but yours doesn't, use <code>architectonic-conflicting</code>. </li>
+<li><strong>Ambiguity</strong>: If the shape is unclear, mark the interpretation as --<code>IMPAIRED_BY</code>--&gt; <code>architectonic-ambiguity</code>. </li>
+</ul>
+<h3 id="step-6-abstract-meanings-compositioncontext">Step 6: Abstract Meanings (CompositionContext)</h3>
+<p>Sometimes, a composition refers to something that isn't a physical "thing" in the image, such as a historical event, a specific myth, or a publication context.</p>
+<ul>
+<li><strong>The Problem</strong>: You cannot point to a "Battle of Actium" node in the visual pixels, but the image is clearly about it.</li>
+<li><strong>The Solution</strong>: Use a <code>CompositionContext</code> node.</li>
+<li><strong>Workflow</strong>:</li>
+<li><strong>Formal</strong>: Create a <code>CompositionContext</code> and link it to your <code>Composition</code>.</li>
+<li><strong>Epistemic</strong>: Add an <code>Interpretation</code> (e.g., certainty 1.0, reasoning: "Defined by publication context").</li>
+<li><strong>Ontological</strong>: Link to the abstract concept (e.g., <code>concept-functional-demo</code> or a historical event concept).</li>
+</ul>
+<h3 id="step-7-dealing-with-text-reading-groups">Step 7: Dealing with Text (Reading &amp; Groups)</h3>
+<p>To handle text (like the "7" on a billiard ball), IDEA uses a specific structure that separates the logical container from the actual signs.</p>
+<ol>
+<li><strong>Create a Container</strong>: Create a <code>CompositionGroup</code> with the <code>group_function: "TextContainer"</code> and link it to the <code>Composition</code>.</li>
+<li><strong>Optional Glyphs</strong>: If you want to be precise, create <code>CompositionEntity</code> nodes for individual letters/signs and link them to the group using <code>IS_PART_OF_COMPOSITION_GROUP</code>.</li>
+<li><strong>The Reading</strong>: Instead of a standard <code>Interpretation</code>, link a <code>Reading</code> node to the <code>CompositionGroup</code>.</li>
+<li><strong>Properties</strong>: In addition to <code>certainty</code>, a <code>Reading</code> includes <code>read_string</code> (the transcribed text) and <code>lang</code> (the language, e.g., "EN").</li>
+<li><strong>Logic</strong>: Just like interpretations, readings can be <code>STATED_BY</code> an agent or <code>IMPAIRED_BY</code> ambiguity (e.g., due to wear on a coin).</li>
+</ol>
+<h3 id="summary-of-the-path">Summary of the Path</h3>
+<p>When you are finished, a single "observation" (the red object) looks like this in the graph:</p>
+<p><code>Composition</code> → <code>CompositionEntity</code> → <code>Interpretation</code> → <code>Concept</code></p>
+<blockquote>
+<p><strong>Note</strong>: This path might seem longer than a simple tag, but it allows IDEA to answer complex questions like: <em>"Show me all objects where the identification as 'Apple' was disputed due to 'Ambiguity'."</em></p>
+</blockquote>
+<h3 id="important-why-no-graphical-annotations-polygons">Important: Why no Graphical Annotations (Polygons)?</h3>
+<p>You might notice that there are no properties for coordinates or polygons (e.g., SVG/JSON) in the graph nodes. This is a deliberate design choice for <strong>performance and efficiency</strong>.</p>
+<ul>
+<li><strong>Separation of Concerns</strong>: IDEA follows a strict "Read-Optimized Projection" philosophy.</li>
+<li><strong>Spatial Performance</strong>: Complex spatial queries (e.g., "Is entity A inside the region of group B?") are handled much more efficiently in a relational database like <strong>PostgreSQL</strong> using spatial extensions.</li>
+<li><strong>The Link</strong>: We will store the graphical coordinates (polygons) in the relational Single Source of Truth (SSoT). These are mapped to the unique <code>_id</code> of the <code>CompositionEntity</code> or <code>CompositionGroup</code>.</li>
+<li><strong>The Result</strong>: The graph stays lean and fast for semantic traversals, while the frontend fetches the visual coordinates from the SQL backend when it needs to draw them on the screen.</li>
+</ul>
+<h2 id="additional-structures">Additional Structures:</h2>
+<h3 id="using-patterns-as-blueprints">Using Patterns as Blueprints</h3>
+<p>When a scene follows a common iconographical scheme (e.g., "Human holding an object"), you don't have to reinvent the wheel every time. IDEA uses <strong>Patterns</strong> as reusable blueprints.</p>
+<ul>
+<li><strong>Simplified Structure</strong>: Unlike a full analysis, a <code>Pattern</code> uses a reduced set of nodes: only <code>PatternEntity</code> and <code>PatternRelation</code>.</li>
+<li><strong>No Epistemic Layer inside Patterns</strong>: Because patterns are abstract and "idle," they don't need interpretation nodes or certainty values within their own structure; they link directly to <code>Concepts</code>.</li>
+<li><strong>Linking to Reality</strong>: To apply a pattern to a real image, you create an <code>Interpretation</code> node between the <code>Composition</code> (or <code>CompositionPattern</code>) and the <code>Pattern</code>.</li>
+<li><strong>Benefit</strong>: This "epistemic shift" makes patterns much faster to create and act as a filter for thousands of similar images.</li>
+</ul>
+<h3 id="patterns-as-a-scaffold-for-ai-annotation">Patterns as a "Scaffold" for AI Annotation</h3>
+<p>Patterns serve a critical role in automated workflows, especially when dealing with ambiguous or damaged material where a specific scene cannot be identified with certainty.</p>
+<ul>
+<li><strong>Contextual Grounding</strong>: Even if an AI agent cannot recognize a specific mythological or historical scene, a Pattern provides the necessary <strong>structural scaffold</strong>.</li>
+<li><strong>Iconographical "Priors"</strong>: Patterns act as visual archetypes (e.g., "Enthroned figure with scepter"). If the AI identifies a "Figure" and a "Scepter," the Pattern suggests the most probable relational structure, even if the specific identity of the deity remains unknown.</li>
+<li><strong>Error Reduction</strong>: By forcing the AI to align its findings with predefined <code>PatternEntity</code> and <code>PatternRelation</code> structures, we reduce the risk of "hallucinated" relations that do not exist in the iconographical record. Of cause we have to be careful with so far unknown scenes.</li>
+<li><strong>Human-in-the-Loop</strong>: The AI proposes a <code>PatternRecognition</code> based on these blueprints, which a human expert can then easily validate or refine by setting the <code>certainty</code> value in the Interpretation layer.</li>
+</ul>
+<h3 id="modeling-similarity-the-centroid-approach">Modeling Similarity (The Centroid Approach)</h3>
+<p>If two or more compositions look alike, IDEA avoids creating direct "looks-like" edges between every single image. Instead, we use a <strong>Centroid Model</strong> to handle clusters of similarity.</p>
+<ol>
+<li><strong>The Hub</strong>: A <code>CompositionParallel</code> node acts as the center (centroid) of a similarity cluster.</li>
+<li><strong>The Spokes</strong>: Each <code>Composition</code> is linked to this hub via a <code>CompositionComparison</code> node.</li>
+<li><strong>Aggregated Data</strong>: The hub stores the collective data of the cluster, such as the <code>similarity_average</code> and the <code>assertion_count</code>.</li>
+<li><strong>Connecting Clusters</strong>: For images that are only slightly similar, we do not create a new huge cluster. Instead, we create a single "bridge" between two representative compositions of different clusters.</li>
+<li><strong>Human vs. AI</strong>: While humans often prefer 1:1 comparisons, this centroid approach is specifically designed for <strong>AI agents</strong>. AI can efficiently calculate these clusters based on feature vectors, making the graph a perfect training set for machine learning.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tracking", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

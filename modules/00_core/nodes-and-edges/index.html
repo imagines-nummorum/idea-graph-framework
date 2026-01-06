@@ -1,0 +1,2419 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Graph Framework for Describing Visual Compositions and Modelling Uncertainty">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../data-dictionary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/idea-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Nodes & Edges - IDEA Graph Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#idea-core-node-and-edge-specifications" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
+      
+  <img src="../../../assets/idea-logo-no-bg.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IDEA Graph Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Nodes & Edges
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../docs/00_conceptual-framework/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../docs/04_ai-annotation-pipeline/" class="md-tabs__link">
+          
+  
+  
+  Vision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Modules
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../docs/03_how-to-annotate-using-idea/" class="md-tabs__link">
+          
+  
+  
+  Hands on
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
+      
+  <img src="../../../assets/idea-logo-no-bg.svg" alt="logo">
+
+    </a>
+    IDEA Graph Framework
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/00_conceptual-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptual Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/01_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/02_performance-and-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../known-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/99_glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/04_ai-annotation-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annotation Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/05_trustworthy-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trustworthy AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CONTRIBUTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nodes & Edges
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nodes & Edges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-physical-layer-object-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Physical Layer (Object Level)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Physical Layer (Object Level)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Unit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-formal-analysis-layer-description-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Formal Analysis Layer (Description Level)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Formal Analysis Layer (Description Level)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Composition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositionentity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionEntity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositionfeature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionFeature
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositionrelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionRelation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositionmodifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionModifier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositionevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionEvent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositiongroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionGroup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-epistemic-layer-interpretation-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Epistemic Layer (Interpretation Level)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Epistemic Layer (Interpretation Level)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Reading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-sourcereference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: SourceReference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ontological-layer-thing-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ontological Layer (ThING &amp; Patterns)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Ontological Layer (ThING &amp; Patterns)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Concept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-patternentity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: PatternEntity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-patternrelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: PatternRelation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-architectonic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Architectonic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daten-Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_ontology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10_numismatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numismatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands on
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hands on
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/03_how-to-annotate-using-idea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to annotate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixtures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-physical-layer-object-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Physical Layer (Object Level)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Physical Layer (Object Level)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Unit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-formal-analysis-layer-description-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Formal Analysis Layer (Description Level)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Formal Analysis Layer (Description Level)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-composition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Composition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositionentity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionEntity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositionfeature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionFeature
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositionrelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionRelation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositionmodifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionModifier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositionevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionEvent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-compositiongroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: CompositionGroup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-epistemic-layer-interpretation-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Epistemic Layer (Interpretation Level)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Epistemic Layer (Interpretation Level)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Reading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-sourcereference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: SourceReference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ontological-layer-thing-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ontological Layer (ThING &amp; Patterns)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Ontological Layer (ThING &amp; Patterns)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Concept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-patternentity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: PatternEntity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-patternrelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: PatternRelation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-architectonic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Architectonic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node: Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="idea-core-node-and-edge-specifications">IDEA Core: Node and Edge Specifications</h1>
+<p>This document defines the formal structure of the graph.</p>
+<p><strong>Important notes on performance:</strong> 
+This documentation deals exclusively with the basic structure, not with possible performance optimization, as would be necessary for production. See <a href="../../../docs/02_performance-and-scaling/">performance and scaling</a> and <a href="../../../roadmap/">roadmap</a> for more information.</p>
+<p><strong>Important notes on fixtures:</strong> 
+* For better readability, we use string-based IDs in the fixtures. In production, we would use INTs, as we aim to use an SQL database as our sSoT.
+* The <code>scope</code> property of <code>IDENTIFIED_AS_CONCEPT</code> is not used in the fixtures.</p>
+<h2 id="general-conventions">General Conventions</h2>
+<ul>
+<li><strong>Labels:</strong> PascalCase (e.g., <code>CompositionEntity</code>).</li>
+<li><strong>Properties:</strong> lower_snake_case (e.g., <code>reasoning_statement</code>).</li>
+<li><strong>Edges:</strong> UPPER_SNAKE_CASE (e.g., <code>IDENTIFIED_AS_CONCEPT</code>).</li>
+<li><strong>Directionality:</strong> Fixed from the specific/concrete to the abstract/conceptual.</li>
+<li><strong>Uniqueness:</strong> All properties ending in <code>_id</code> are enforced as unique constraints.</li>
+</ul>
+<h2 id="1-physical-layer-object-level">1. Physical Layer (Object Level)</h2>
+<h3 id="node-unit">Node: <code>Unit</code></h3>
+<p><strong>Description:</strong> Represents the physical/virtual object/carrier.
+<strong>Labels:</strong> <code>Unit</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>unit_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the physical/virtual object/carrier.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_COMPOSITION</code> | <code>Composition</code> | N:M | Links the physical/virtual object/carrier its visual containers/compositions. |</p>
+<p><strong>Note:</strong> Compositions can be linked to multiple units (if the units are definitely identical, serially produced).</p>
+<h2 id="2-formal-analysis-layer-description-level">2. Formal Analysis Layer (Description Level)</h2>
+<h3 id="node-composition">Node: <code>Composition</code></h3>
+<p><strong>Description:</strong> A visual container of a unit containing all formal elements.
+<strong>Labels:</strong> <code>Composition</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>composition_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the composition.</td>
+</tr>
+<tr>
+<td><code>chromaticity</code></td>
+<td>ENUM</td>
+<td>No</td>
+<td>Color properties (e.g., "Polychromatic", "Monochromatic").</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> We consider modelling chromaticity as a separate node. See <a href="../../../known-issues/">know issues</a>.</p>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_COMPOSITION_ENTITY</code> | <code>CompositionEntity</code> | 1:N | Identifies a distinct entity in the image. |
+| <code>HAS_COMPOSITION_CONTEXT</code> | <code>CompositionContext</code> | 1:N | Links to the publication or historical context/meaning. |
+| <code>HAS_COMPOSITION_GROUP</code> | <code>CompositionGroup</code> | 1:N | Logical grouping of elements. |
+| <code>HAS_PATTERN</code> | <code>CompositionPattern</code> | 1:N | Reified link to an iconographical pattern. |
+| <code>HAS_COMPOSITION_COMPARISON</code> | <code>CompositionComparison</code> | 1:N | Links to a comparative analysis with other compositions. |</p>
+<h3 id="node-compositionentity">Node: <code>CompositionEntity</code></h3>
+<p><strong>Description:</strong> A neutral, formal element identified in the composition (e.g., a figure, an object, decoration).
+<strong>Labels:</strong> <code>CompositionEntity</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>composition_entity_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the formal entity.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_COMPOSITION_FEATURE</code> | <code>CompositionFeature</code> | 1:N | Assigns an attribute or state to this entity. |
+| <code>HAS_COMPOSITION_RELATION</code> | <code>CompositionRelation</code> | 1:N | Starts a directed action/relation from this entity. |
+| <code>IS_PART_OF_COMPOSITION_GROUP</code> | <code>CompositionGroup</code> | N:M | (Optional) Assigns the entity to a group/container. |
+| <code>HAS_INTERPRETATION</code> | <code>Interpretation</code> | 1:N | Links to the epistemic identification of the entity. |</p>
+<h3 id="node-compositionfeature">Node: <code>CompositionFeature</code></h3>
+<p><strong>Description:</strong> A formal attribute or temporary state belonging to a <code>CompositionEntity</code>.
+<strong>Labels:</strong> <code>CompositionFeature</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>composition_feature_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the feature.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_INTERPRETATION</code> | <code>Interpretation</code> | 1:N | Links to the epistemic identification of the feature. |</p>
+<h3 id="node-compositionrelation">Node: <code>CompositionRelation</code></h3>
+<p><strong>Description:</strong> An atomic action or relationship between two entities.
+<strong>Labels:</strong> <code>CompositionRelation</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>composition_relation_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the relation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_COMPOSITION_RELATION_OBJECT</code> | <code>CompositionEntity</code> | N:1 | Defines the target entity (object) of the relation. |
+| <code>HAS_COMPOSITION_MODIFIER</code> | <code>CompositionModifier</code> | 1:N | Adds specific details (e.g., handedness) to the relation. |
+| <code>HAS_COMPOSITION_EVENT</code> | <code>CompositionEvent</code> | 1:N | Groups the atomic relation into a macro-event. |
+| <code>HAS_INTERPRETATION</code> | <code>Interpretation</code> | 1:N | Links to the epistemic identification of the action. |</p>
+<h3 id="node-compositionmodifier">Node: <code>CompositionModifier</code></h3>
+<p><strong>Description:</strong> Describes the specific execution of a <code>CompositionRelation</code>.
+<strong>Labels:</strong> <code>CompositionModifier</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>composition_modifier_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the modifier.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_INTERPRETATION</code> | <code>Interpretation</code> | 1:N | Links to the epistemic identification of the modifier. |</p>
+<h3 id="node-compositionevent">Node: <code>CompositionEvent</code></h3>
+<p><strong>Description:</strong> Represents a macro-level action consisting of (multiple) relations.
+<strong>Labels:</strong> <code>CompositionEvent</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>composition_event_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the event.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_INTERPRETATION</code> | <code>Interpretation</code> | 1:N | Links to the epistemic identification of the event. |</p>
+<h3 id="node-compositiongroup">Node: <code>CompositionGroup</code></h3>
+<p><strong>Description:</strong> A logical container or spatial region within a composition.
+<strong>Labels:</strong> <code>CompositionGroup</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>composition_group_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the group.</td>
+</tr>
+<tr>
+<td><code>group_function</code></td>
+<td>ENUM</td>
+<td>No</td>
+<td>Purpose of the group (e.g., "LogicalUnit", "TextContainer").</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_READING</code> | <code>Reading</code> | 1:N | Links to the epistemic interpretation of text in this group. |</p>
+<h2 id="3-epistemic-layer-interpretation-level">3. Epistemic Layer (Interpretation Level)</h2>
+<h3 id="node-interpretation">Node: <code>Interpretation</code></h3>
+<p><strong>Description:</strong> The central node for semantic assignment and uncertainty modeling.
+<strong>Labels:</strong> <code>Interpretation</code> (Sub-labels: <code>EntityInterpretation</code>, <code>FeatureInterpretation</code>, <code>RelationInterpretation</code>, <code>ModifierInterpretation</code>, <code>EventInterpretation</code>, <code>ContextInterpretation</code>)</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>interpretation_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the interpretation.</td>
+</tr>
+<tr>
+<td><code>certainty</code></td>
+<td>FLOAT</td>
+<td>No</td>
+<td>Confidence value (0.0 to 1.0).</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>ENUM</td>
+<td>No</td>
+<td>Assignment status: "Primary", "Alternative", "Rejected", "Outdated".</td>
+</tr>
+<tr>
+<td><code>reasoning_statement</code></td>
+<td>TEXT</td>
+<td>No</td>
+<td>Expert justification for this specific interpretation.</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>STRING</td>
+<td>No</td>
+<td>Date of the interpretation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>IDENTIFIED_AS_CONCEPT</code> | <code>Concept</code> | 1:N | Semantic link to ThING. Requires <code>scope</code> if N &gt; 1. |
+| <code>STATED_BY</code> | <code>Agent</code> | N:1 | The Agent who created the interpretation. |
+| <code>REJECTED_BY</code> / <code>ACCEPTED_BY</code> | <code>Agent</code> | N:M | Validation by one or more agents. |
+| <code>SUPPORTED_BY</code> | <code>Architectonic</code> | N:M | Methodological grounding (e.g., logical deduction). |
+| <code>IMPAIRED_BY</code> | <code>Architectonic</code> | N:M | Weakening factors (e.g., ambiguity). |
+| <code>HAS_SOURCE_REFERENCE</code> | <code>SourceReference</code> | 1:N | Links to external evidence (reference images, literature). |
+| <code>RECOGNIZED_PATTERN</code> | <code>Pattern</code> | N:1 | Links an interpretation to a generic Pattern definition (only for CompositionsPatterns). |
+| <code>DEPENDS_ON</code> | <code>Interpretation</code> | 1:N | Logical dependency on another interpretation. |</p>
+<p><strong>Edge Properties for <code>IDENTIFIED_AS_CONCEPT</code>:</strong>
+(if N &gt; 1)</p>
+<ul>
+<li><code>scope</code>: ENUM ("VisualAppearance", "ActualMeaning", "FunctionalMeaning")</li>
+</ul>
+<p><strong>Edge Properties for <code>ACCEPTED_BY</code> / <code>REJECTED_BY</code>:</strong>
+(if Interpretation timestamp and Edge timestamp are not equal)</p>
+<ul>
+<li><code>timestamp</code>: STRING (if different from interpretation timestamp)</li>
+</ul>
+<h3 id="node-reading">Node: <code>Reading</code></h3>
+<p><strong>Description:</strong> The interpretation of signs/letters.
+<strong>Labels:</strong> <code>Reading</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reading_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier.</td>
+</tr>
+<tr>
+<td><code>read_string</code></td>
+<td>STRING</td>
+<td>No</td>
+<td>The transcribed content.</td>
+</tr>
+<tr>
+<td><code>certainty</code></td>
+<td>FLOAT</td>
+<td>No</td>
+<td>Confidence in the reading.</td>
+</tr>
+<tr>
+<td><code>lang</code></td>
+<td>STRING</td>
+<td>No</td>
+<td>Language code (e.g., "EN", "LAT").</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>ENUM</td>
+<td>No</td>
+<td>"Primary", "Alternative", "Rejected", "oOtdated".</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>STRING</td>
+<td>No</td>
+<td>Date of entry.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>STATED_BY</code> | <code>Agent</code> | N:1 | The Agent who created the interpretation. |
+| <code>REJECTED_BY</code> / <code>ACCEPTED_BY</code> | <code>Agent</code> | N:M | Validation by one or more agents. |
+| <code>IMPAIRED_BY</code> | <code>Architectonic</code> | N:M | Factors like wear or fragmentation. |</p>
+<h3 id="node-sourcereference">Node: <code>SourceReference</code></h3>
+<p><strong>Description:</strong> A specific evidentiary statement linking an interpretation to a source.
+<strong>Labels:</strong> <code>SourceReference</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source_reference_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier.</td>
+</tr>
+<tr>
+<td><code>reference</code></td>
+<td>STRING</td>
+<td>No</td>
+<td>Specific locator (e.g., page number, image-ID).</td>
+</tr>
+<tr>
+<td><code>refrence_statement</code></td>
+<td>TEXT</td>
+<td>No</td>
+<td>Description of the evidence found in the source.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_SOURCE</code> | <code>Source</code> | N:1 | Links to the container source. |
+| <code>HAS_EVIDENTIARY_RELATIONSHIP</code>| <code>Architectonic</code>| N:1 | Nature of evidence (e.g., "concurring", "conflicting"). |</p>
+<h2 id="4-ontological-layer-thing-patterns">4. Ontological Layer (ThING &amp; Patterns)</h2>
+<h3 id="node-concept">Node: <code>Concept</code></h3>
+<p><strong>Description:</strong> Semantic lemma in the Tree of Concepts.
+<strong>Labels:</strong> <code>Concept</code> (Sub-labels: <code>Entity</code>, <code>Feature</code>, <code>Relation</code>, <code>Modifier</code>, <code>Event</code>, <code>Context</code>)</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>concept_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Semantic URI or ID.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>IS_A</code> | <code>Concept</code> | N:M | Hierarchical parent-child relationship (Strictly Acyclic). |</p>
+<h3 id="node-pattern">Node: <code>Pattern</code></h3>
+<p><strong>Description:</strong> Abstract iconographical pattern defining a scene structure.
+<strong>Labels:</strong> <code>Pattern</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pattern_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the pattern.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_PATTERN_ENTITY</code> | <code>PatternEntity</code> | 1:N | Defines an abstract actor in the pattern. |</p>
+<h3 id="node-patternentity">Node: <code>PatternEntity</code></h3>
+<p><strong>Description:</strong> Abstract placeholder for an entity within a pattern.
+<strong>Labels:</strong> <code>PatternEntity</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pattern_entity_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_CONCEPT</code> | <code>Concept</code> | N:M | The required semantic type for this actor. |
+| <code>HAS_PATTERN_RELATION</code> | <code>PatternRelation</code> | 1:N | Defines actions expected from this actor in the pattern. |</p>
+<p><strong>Edge Properties for <code>HAS_CONCEPT</code>:</strong>
+(if N &gt; 1)</p>
+<ul>
+<li><code>scope</code>: ENUM ("VisualAppearance", "ActualMeaning", "FunctionalMeaning")</li>
+</ul>
+<h3 id="node-patternrelation">Node: <code>PatternRelation</code></h3>
+<p><strong>Description:</strong> Abstract placeholder for an action within a pattern.
+<strong>Labels:</strong> <code>PatternRelation</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pattern_relation_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>HAS_CONCEPT</code> | <code>Concept</code> | N:M | The required semantic type for the action. |
+| <code>HAS_PATTERN_RELATION_OBJECT</code>| <code>PatternEntity</code> | N:1 | The abstract target of the action. |</p>
+<p><strong>Edge Properties for <code>HAS_CONCEPT</code>:</strong>
+(if N &gt; 1)</p>
+<ul>
+<li><code>scope</code>: ENUM ("VisualAppearance", "ActualMeaning", "FunctionalMeaning")</li>
+</ul>
+<h3 id="node-architectonic">Node: <code>Architectonic</code></h3>
+<p><strong>Description:</strong> Meta-concepts for methodology and epistemic classification.
+<strong>Labels:</strong> <code>Architectonic</code> (Sub-label: <code>Methodology</code>)</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>architectonic_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outgoing Edges:</strong>
+| Type | Target Node | Cardinality | Description |
+| :--- | :--- | :--- | :--- |
+| <code>IS_A</code> | <code>Architectonic</code> | N:M | Hierarchical relationship (Strictly Acyclic). |</p>
+<h3 id="node-agent">Node: <code>Agent</code></h3>
+<p><strong>Description:</strong> Entities (Human or AI) responsible for statements and validations.
+<strong>Labels:</strong> <code>Agent</code> (Sub-labels: <code>HumanAgent</code>, <code>AIAgent</code>)</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>agent_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier for the agent.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="node-source">Node: <code>Source</code></h3>
+<p><strong>Description:</strong> Bibliographic or archival container (e.g., a book or database).
+<strong>Labels:</strong> <code>Source</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Unique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source_id</code></td>
+<td>INT</td>
+<td>Yes</td>
+<td>Unique identifier.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tracking", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

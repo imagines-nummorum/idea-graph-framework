@@ -1,0 +1,440 @@
+{
+  "style": {
+    "font-family": "Nunito Sans",
+    "background-color": "#F2F2F2",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#ffffff",
+    "label-background-color": "#848484",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#848484",
+    "type-background-color": "#F2F2F2",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 1015.5341435401715,
+        "y": 1864.8719016898287
+      },
+      "caption": "",
+      "labels": [
+        "Composition"
+      ],
+      "properties": {
+        "composition_id": "composition-billiard-ball"
+      },
+      "style": {
+        "node-color": "#9f0500",
+        "outside-position": "top-right"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 112.50000000000023,
+        "y": 1864.8719016898287
+      },
+      "caption": "",
+      "labels": [
+        "Composition"
+      ],
+      "properties": {
+        "composition_id": "composition-apple-tomato"
+      },
+      "style": {
+        "node-color": "#9f0500",
+        "outside-position": "top-left"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 1015.5341435401716,
+        "y": 75
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-object"
+      },
+      "style": {
+        "node-color": "#0062b1"
+      }
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 564.0170717700853,
+        "y": 75
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Relation"
+      ],
+      "properties": {
+        "concept_id": "concept-holding"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 112.5,
+        "y": 75
+      },
+      "caption": "",
+      "labels": [
+        "Concept",
+        "Entity"
+      ],
+      "properties": {
+        "concept_id": "concept-human"
+      },
+      "style": {
+        "node-color": "#0062b1",
+        "outside-position": "top"
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 112.50000000000023,
+        "y": 1059.808284775233
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "PatternRecognition"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-at-human-holding-object",
+        "certainty": "1.0",
+        "reasoning_statement": "(human) hand is holding an object",
+        "timestamp": "2025-12-22"
+      },
+      "style": {
+        "node-color": "#ab149e"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 1015.5341435401716,
+        "y": 1059.808284775233
+      },
+      "caption": "",
+      "labels": [
+        "Interpretation",
+        "PatternRecognition"
+      ],
+      "properties": {
+        "interpretation_id": "interpretation-bb-human-holding-object",
+        "certainty": "1.0",
+        "reasoning_statement": "(human) hand is holding an object",
+        "timestamp": "2025-12-22"
+      },
+      "style": {
+        "node-color": "#ab149e"
+      }
+    },
+    {
+      "id": "n7",
+      "position": {
+        "x": 564.0170717700859,
+        "y": 871.0924930699603
+      },
+      "caption": "",
+      "labels": [
+        "Pattern"
+      ],
+      "properties": {
+        "pattern_id": "pattern-human-holding-object"
+      },
+      "style": {
+        "node-color": "#808900"
+      }
+    },
+    {
+      "id": "n8",
+      "position": {
+        "x": 112.50000000000023,
+        "y": 645.7959527646226
+      },
+      "caption": "",
+      "labels": [
+        "PatternEntity"
+      ],
+      "properties": {
+        "pattern_entity_id": "entity-human"
+      },
+      "style": {
+        "node-color": "#b0bc00",
+        "outside-position": "top-left"
+      }
+    },
+    {
+      "id": "n9",
+      "position": {
+        "x": 1015.5341435401716,
+        "y": 645.7959527646228
+      },
+      "caption": "",
+      "labels": [
+        "PatternEntity"
+      ],
+      "properties": {
+        "pattern_entity_id": "entity-object"
+      },
+      "style": {
+        "node-color": "#b0bc00",
+        "outside-position": "top-right"
+      }
+    },
+    {
+      "id": "n10",
+      "position": {
+        "x": 564.0170717700859,
+        "y": 420.49941245928505
+      },
+      "caption": "",
+      "labels": [
+        "PatternRelation"
+      ],
+      "properties": {
+        "pattern_relation_id": "relation-holding"
+      },
+      "style": {
+        "node-color": "#b0bc00"
+      }
+    },
+    {
+      "id": "n11",
+      "position": {
+        "x": 112.50000000000023,
+        "y": 1473.8206167858432
+      },
+      "caption": "",
+      "labels": [
+        "CompositionPattern"
+      ],
+      "properties": {
+        "composition_pattern_id": "pattern-at-human-holding-object"
+      },
+      "style": {
+        "node-color": "#f44e3b",
+        "outside-position": "top-left"
+      }
+    },
+    {
+      "id": "n12",
+      "position": {
+        "x": 1015.5341435401716,
+        "y": 1473.8206167858432
+      },
+      "caption": "",
+      "labels": [
+        "CompositionPattern"
+      ],
+      "properties": {
+        "composition_pattern_id": "pattern-bb-humand-holding-object"
+      },
+      "style": {
+        "node-color": "#f44e3b",
+        "outside-position": "top-right"
+      }
+    },
+    {
+      "id": "n13",
+      "position": {
+        "x": 564.0170717700859,
+        "y": 1248.5240764805058
+      },
+      "caption": "",
+      "labels": [
+        "Agent",
+        "HumanAgent"
+      ],
+      "properties": {
+        "agent-id": "agent-human"
+      },
+      "style": {
+        "node-color": "#653294"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "fromId": "n5",
+      "toId": "n7",
+      "type": "RECOGNIZED_PATTERN",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n1",
+      "fromId": "n6",
+      "toId": "n7",
+      "type": "RECOGNIZED_PATTERN",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n2",
+      "fromId": "n7",
+      "toId": "n8",
+      "type": "HAS_PATTERN_ENTITY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "fromId": "n7",
+      "toId": "n9",
+      "type": "HAS_PATTERN_ENTITY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n4",
+      "fromId": "n8",
+      "toId": "n10",
+      "type": "HAS_PATTERN_RELATION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n5",
+      "fromId": "n10",
+      "toId": "n9",
+      "type": "HAS_PATTERN_RELATION_OBJECT",
+      "properties": {},
+      "style": {
+        "type-padding": 5,
+        "margin-start": 20
+      }
+    },
+    {
+      "id": "n6",
+      "fromId": "n8",
+      "toId": "n4",
+      "type": "HAS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n7",
+      "fromId": "n9",
+      "toId": "n2",
+      "type": "HAS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n8",
+      "fromId": "n10",
+      "toId": "n3",
+      "type": "HAS_CONCEPT",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n9",
+      "fromId": "n11",
+      "toId": "n5",
+      "type": "HAS_RECOGNITION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n10",
+      "fromId": "n12",
+      "toId": "n6",
+      "type": "HAS_RECOGNITION",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n11",
+      "fromId": "n0",
+      "toId": "n12",
+      "type": "HAS_PATTERN",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n12",
+      "fromId": "n1",
+      "toId": "n11",
+      "type": "HAS_PATTERN",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n13",
+      "fromId": "n5",
+      "toId": "n13",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    },
+    {
+      "id": "n14",
+      "fromId": "n6",
+      "toId": "n13",
+      "type": "STATED_BY",
+      "properties": {},
+      "style": {}
+    }
+  ]
+}

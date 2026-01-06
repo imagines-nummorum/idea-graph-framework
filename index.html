@@ -1,0 +1,1818 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Graph Framework for Describing Visual Compositions and Modelling Uncertainty">
+      
+      
+      
+      
+      
+        <link rel="next" href="docs/00_conceptual-framework/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/idea-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>IDEA Graph Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/css/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#idea-iconographical-definitional-epistemological-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
+      
+  <img src="assets/idea-logo-no-bg.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IDEA Graph Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="docs/00_conceptual-framework/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="docs/04_ai-annotation-pipeline/" class="md-tabs__link">
+          
+  
+  
+  Vision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="modules/00_core/" class="md-tabs__link">
+          
+  
+  
+  Modules
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="docs/03_how-to-annotate-using-idea/" class="md-tabs__link">
+          
+  
+  
+  Hands on
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
+      
+  <img src="assets/idea-logo-no-bg.svg" alt="logo">
+
+    </a>
+    IDEA Graph Framework
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repository-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repository Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why IDEA?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empowering-research-from-observation-to-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empowering Research: From Observation to Insight
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Empowering Research: From Observation to Insight">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-researchers-do-with-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What can researchers do with IDEA?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Highlights
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Highlights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-epistemic-reification-solving-the-provenance-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Epistemic Reification (Solving the Provenance Problem)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-deterministic-query-depth-materialized-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Deterministic Query Depth &amp; Materialized Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linear-complexity-similarity-on-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Linear Complexity Similarity (O(n) Scaling)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-relational-single-source-of-truth-ssot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Relational Single Source of Truth (SSoT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-four-layer-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Four-Layer Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-essential-reading-theory-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Essential Reading (Theory &amp; Data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-hands-on-running-the-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Hands-on: Running the Sandbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#author-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author &amp; Governance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Author &amp; Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentation-repository-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation &amp; Repository Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-transparency-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Transparency &amp; Methodology
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/00_conceptual-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptual Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/01_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/02_performance-and-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="known-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/99_glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/04_ai-annotation-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annotation Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/05_trustworthy-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trustworthy AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CONTRIBUTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/00_core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/00_core/nodes-and-edges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nodes & Edges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/00_core/data-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daten-Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/05_ontology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/10_numismatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numismatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands on
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hands on
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docs/03_how-to-annotate-using-idea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to annotate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/00_core/fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixtures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/00_core/queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repository-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repository Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why IDEA?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empowering-research-from-observation-to-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empowering Research: From Observation to Insight
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Empowering Research: From Observation to Insight">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-researchers-do-with-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What can researchers do with IDEA?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Highlights
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Highlights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-epistemic-reification-solving-the-provenance-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Epistemic Reification (Solving the Provenance Problem)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-deterministic-query-depth-materialized-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Deterministic Query Depth &amp; Materialized Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linear-complexity-similarity-on-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Linear Complexity Similarity (O(n) Scaling)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-relational-single-source-of-truth-ssot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Relational Single Source of Truth (SSoT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-four-layer-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Four-Layer Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-essential-reading-theory-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Essential Reading (Theory &amp; Data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-hands-on-running-the-sandbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Hands-on: Running the Sandbox
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#author-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author &amp; Governance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Author &amp; Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentation-repository-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation &amp; Repository Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-transparency-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Transparency &amp; Methodology
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p align="center">
+  <img src="assets/idea-logo.svg" alt="Project Logo showing the Letters IDEA as an amalgam" width="150">
+</p>
+
+<h1 id="idea-iconographical-definitional-epistemological-architecture">IDEA: Iconographical Definitional Epistemological Architecture</h1>
+<p><strong>A Graph Framework for Describing Visual Compositions and Modelling Uncertainty.</strong><br />
+<strong>Bridging the gap between flexible humanities research and high-performance data engineering.</strong></p>
+<h2 id="repository-structure">Repository Structure</h2>
+<div class="highlight"><pre><span></span><code>.
+├── docs/                # Detailed technical specifications (Architecture etc.)
+├── modules/
+│   ├── 00_core/         # The domain-agnostic engine (Cypher Statements, Fixtures)
+│   ├── 05_ontology/     # Multi-language support and semantic metadata (WIP)
+│   └── 10_numismatics/  # Domain extension for ancient coinage (WIP)
+└── README.md            # This file
+</code></pre></div>
+<h2 id="why-idea">Why IDEA?</h2>
+<p>To investigate and search hundreds of thousands of coin datasets for our <strong><a href="https://www.imagines-nummorum.eu/en">Imagines Nummorum</a></strong> project in real-time, we required a high-performance, scalable solution.</p>
+<p>While <strong>CIDOC CRM</strong> remains the academic gold standard for linked data in cultural heritage, implementing it at this specific scale and complexity often results in systems that are practically unusable for high-speed querying. Furthermore, we needed a native way to model <strong>scientific uncertainty and expert reasoning</strong> — areas where current standards offer no satisfactory high-performance solutions.</p>
+<p><strong>IDEA is our tool, not our goal.</strong> It was born out of the necessity to achieve a comprehensive iconographical and semantic indexing of ancient Greek coinage. We invite the community to join us on this 25-year mission (2025–2050) and to adapt or evolve our architecture for their own research needs.</p>
+<h2 id="empowering-research-from-observation-to-insight">Empowering Research: From Observation to Insight</h2>
+<p>IDEA is designed to act as a semantic workbench for scholars in numismatics, archaeology, and visual studies. It transforms static image descriptions into a dynamic, multidimensional knowledge graph.</p>
+<h3 id="what-can-researchers-do-with-idea">What can researchers do with IDEA?</h3>
+<ul>
+<li><strong>Complex Iconographical Queries:</strong> Perform advanced searches that go beyond simple keywords. You can query specific scene structures, such as: "Show me all units where a deity (Entity) is holding (Relation) a weapon (Object)".</li>
+<li><strong>Modeling the "Maybe":</strong> In the humanities, truth is rarely binary. IDEA allows you to capture uncertainty by assigning certainty values (0.0–1.0) and documenting conflicting hypotheses or expert reasoning for every identification.</li>
+<li><strong>Separating Sight from Meaning:</strong> Maintain a clean distinction between a neutral formal description (what is seen, the segment) and its epistemic interpretation (what it represents, the Platonic idea).</li>
+<li><strong>Tracking Provenance &amp; Methodology:</strong> Every statement is linked to an Agent (Human/AI), ensuring that the history of an interpretation is fully traceable and bibliographically grounded. Source References and Methological information enable detailled reasoning.</li>
+<li><strong>Flexible Ontological Mapping:</strong> The framework is architecturally agnostic. While it serves as the foundation for the upcoming ThING (Thesaurus Iconographicus Nummorum Graecorum), you can model and plug in any hierarchical classification system or domain-specific ontology to meet your research requirements.</li>
+<li><strong>Quantifying Similarity:</strong> Utilize the Hub-and-Spoke model to identify and quantify "diffuse" similarities between compositions that are difficult to capture through traditional direct edges.</li>
+<li><strong>Modular Extension Framework:</strong> IDEA is designed as a "lean", domain-agnostic core engine that can be easily extended to suit your specific research field. You can develop your own domain-specific modules or feature-rich extensions to add custom labels and properties without breaking the underlying four-layer logic.</li>
+</ul>
+<h2 id="technical-highlights">Technical Highlights</h2>
+<p>IDEA is engineered for production-grade reasoning, moving beyond "traditional" academic graphs to a robust, scalable architecture.</p>
+<h3 id="1-epistemic-reification-solving-the-provenance-problem">1. Epistemic Reification (Solving the Provenance Problem)</h3>
+<p>Instead of modelling facts as binary edges, IDEA reifies the act of interpretation as a first-class node (<code>Interpretation</code>):</p>
+<ul>
+<li><strong>Atomic Accountability:</strong> Every semantic claim is a node, not a property on an edge, allowing for complex metadata (Certainty, Reasoning, Methodology) without "Property-Graph-Bloat".</li>
+<li><strong>Provenance Tracking:</strong> Every semantic link carries metadata: <code>Agent</code> (Human/AI), <code>Methodology</code>, <code>Certainty</code> ( to ), and a <code>Reasoning Statement</code>.</li>
+<li><strong>Deterministic RAG:</strong> Provides a high-fidelity roadmap for LLMs, mitigating hallucinations by forcing the model to traverse explicitly modeled uncertainty layers.</li>
+</ul>
+<h3 id="2-deterministic-query-depth-materialized-paths">2. Deterministic Query Depth &amp; Materialized Paths</h3>
+<p>Standard graph models often suffer from unpredictable traversal costs due to deep ontological recursions. IDEA eliminates expensive <code>:IS_A*</code> lookups by materializing the hierarchy:</p>
+<ul>
+<li><strong>O(1) Hierarchy Checks:</strong> Ancestral lookups in the concept tree are converted into simple array-membership checks using the <code>concept_path_ids</code> property.</li>
+<li><strong>Path-Length Invariant:</strong> The distance from a physical <code>Unit</code> to its semantic <code>Concept</code> is structurally capped (e.g., 4 for Entities, 6 for Events).</li>
+<li><strong>Performance Guarantee:</strong> By fixing traversal depth and materializing hierarchical paths, the model achieves near-constant <em>O</em>(1) vertical traversal complexity relative to the schema depth and <em>O</em>(log n) lookup efficiency, ensuring native compatibility with horizontally scalable graph engines.</li>
+</ul>
+<h3 id="3-linear-complexity-similarity-on-scaling">3. Linear Complexity Similarity (<em>O</em>(n) Scaling)</h3>
+<p>To avoid the <em>O</em>(n²) "dense graph" trap where edges grow exponentially, IDEA utilizes a <strong>Centroid-based Hub-and-Spoke model</strong>:</p>
+<ul>
+<li><strong>Topological Compression:</strong> Diffuse similarity is managed via <code>CompositionParallel</code> hubs rather than direct edges between compositions.</li>
+<li><strong>Resource Efficiency:</strong> This reduces edge density by orders of magnitude, allowing the system to handle many compositions on commodity hardware without index collapse.</li>
+</ul>
+<h3 id="4-relational-single-source-of-truth-ssot">4. Relational Single Source of Truth (SSoT)</h3>
+<p>IDEA is designed as a strict <strong>Read-Optimized Projection</strong> of a normalized relational database:</p>
+<ul>
+<li><strong>Integrity-First:</strong> The graph layer acts as a high-performance materialized view, ensuring ACID compliance and formal data integrity at the source.</li>
+<li><strong>Traceability:</strong> Every node carries a unique identifier (<code>_id</code>) mapped directly from the relational SSoT primary keys.</li>
+</ul>
+<h2 id="the-four-layer-architecture">The Four-Layer Architecture</h2>
+<pre class="mermaid"><code>graph LR
+    %% Nodes
+    A(Concrete)
+    B(Abstract)
+    C(Object Layer)
+    D(Formal Analysis Layer)
+    E(Epistemic Layer)
+    F(Ontological Layer)
+
+    %% Edges
+    A ----&gt; B
+    C --&gt; D    
+    D --&gt; E
+    E --&gt; F</code></pre>
+<p>The framework distinguishes between observation and interpretation through a strict four-layer logic:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Focus</th>
+<th>Key Nodes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>I: Object</strong></td>
+<td>Physical/Virtual Object/Carrier</td>
+<td><code>Unit</code></td>
+</tr>
+<tr>
+<td><strong>II: Formal Analysis</strong></td>
+<td>Structural Primitives (Neutral)</td>
+<td><code>Composition</code>, <code>Entity</code>, <code>Relation</code> ...</td>
+</tr>
+<tr>
+<td><strong>III: Epistemic</strong></td>
+<td>Uncertainty &amp; Reasoning</td>
+<td><code>Interpretation</code>, <code>Source</code>, <code>Agent</code>, <code>Comparison</code></td>
+</tr>
+<tr>
+<td><strong>IV: Ontological</strong></td>
+<td>Abstract Concepts (ThING)</td>
+<td><code>Concept</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="getting-started">Getting Started</h2>
+<p>To understand the core logic and explore the graph, we recommend the following paths:</p>
+<h3 id="1-essential-reading-theory-data">1. Essential Reading (Theory &amp; Data)</h3>
+<p>Before diving into the code, please review these documents to understand the epistemic and structural foundations:</p>
+<ul>
+<li><strong><a href="docs/01_architecture/">Architecture Overview</a>:</strong> Learn about the four-layer logic, epistemic reification, and the performance-centric design philosophy.</li>
+<li><strong><a href="modules/00_core/fixtures/">Core Fixtures</a>:</strong> Understand how abstract concepts are instantiated. This document includes references to visualizations of the example scenarios.</li>
+</ul>
+<h3 id="2-hands-on-running-the-sandbox">2. Hands-on: Running the Sandbox</h3>
+<p>For a live demonstration of the IDEA framework, we provide a pre-configured Docker environment that automatically seeds the graph with our core logic and test data.
+<strong>Important Note:</strong> This Docker setup is intended for local demo and development purposes only. It is not hardened for production environments.</p>
+<ol>
+<li><strong>Set up the Environment:</strong> if you need to change default password or ports, run <code>cp .env.example .env</code> and edit the related keys. </li>
+<li><strong>Run the docker command:</strong> <code>docker-compose up</code> and wait for the seeding to be completed</li>
+<li><strong>Access the Neo4j Browser:</strong> Open your browser and navigate to <strong><code>http://localhost:7474</code></strong> (User: noe4j, PW: password).</li>
+<li>The seeder has already loaded the constraints, indices, and fixtures from the <code>modules/00_core</code> directory.</li>
+<li>You can immediately run the examples from <strong><a href="modules/00_core/queries/">queries.md</a></strong> in the Neo4j Browser.</li>
+<li><strong>Reset:</strong> use <code>docker-compose down -v</code> to revert any changes to the data</li>
+</ol>
+<p>If you want to build some datasets on you own, we recommand reading at least <strong><a href="docs/03_how-to-annotate-using-idea/">how-to-annotate-using-idea.md</a></strong> and <strong><a href="modules/00_core/nodes-and-edges/">nodes-and-edges.md</a></strong>.</p>
+<h2 id="author-governance">Author &amp; Governance</h2>
+<p>IDEA is open-sourced software created and maintained by <a href="https://orcid.org/0000-0003-2713-5207">Jan Köster</a> and licensed under the <a href="LICENSE.txt">Apache 2.0 license</a> for the Academy Project <a href="https://www.bbaw.de/en/research/imagines-nvmmorvm-thesaurus-iconographicus-nummorum-graecorum-online">"Imagines Nummorum"</a> at the <a href="https://www.bbaw.de/en/">Berlin-Brandenburg Academy of Sciences and Humanities</a>. This project  is part of the "Akademienprogramm", funded by German federal and state governments, which serves to preserve, secure and make present our cultural heritage.
+It is coordinated by the <a href="https://www.akademienunion.de/">Union of German Academies of Sciences and Humanities</a>.</p>
+<p><strong>Contact:</strong> For any IDEA related topic we prefer direct communication on Github, for any contact to our initiative, see <a href="https://www.imagines-nummorum.eu/en/contact">Contact</a></p>
+<h3 id="documentation-repository-access">Documentation &amp; Repository Access</h3>
+<p>This project is optimized for an interactive documentation experience. </p>
+<ul>
+<li><strong>Zenodo Users:</strong> For the full interactive experience, latest updates, and proper navigation, please switch to our <a href="https://github.com/imagines-nummorum/idea-graph-framework">GitHub Repository</a>.</li>
+</ul>
+<h2 id="ai-transparency-methodology">AI Transparency &amp; Methodology</h2>
+<p>In alignment with the epistemological focus of this project, transparency regarding the creation process is paramount. This graph model was developed with the assistance of <strong>Google Gemini</strong> (v2.5 Flash and 3 Pro), which served as an interactive dialogue partner and research tool.</p>
+<p>The AI's contribution included the following areas:</p>
+<ul>
+<li><strong>Conceptual Brainstorming:</strong> Exploratory dialogue to refine the concept of the model.</li>
+<li><strong>Best Practices Integration:</strong> Research and suggestions for adapting established patterns from graph theory and Neo4j.</li>
+<li><strong>Coherence Validation:</strong> Reviewing and stress-testing the consistency of the terminology and structural logic used in the graph.</li>
+<li><strong>Drafting Support:</strong> Generating initial outlines and structural sketches for the publication/documentation.</li>
+</ul>
+<p><strong>Note on Authorship:</strong>
+While the AI provided support as described above, all final decisions, code implementations, and text formulations were curated, verified, and finalized by the maintainer mentioned above. The AI acted solely as an assistive tool, not as an autonomous agent/co-author.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.tracking", "content.code.copy", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

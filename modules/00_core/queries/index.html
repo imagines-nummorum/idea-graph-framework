@@ -1,0 +1,1486 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Graph Framework for Describing Visual Compositions and Modelling Uncertainty">
+      
+      
+      
+      
+        <link rel="prev" href="../fixtures/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/idea-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Queries - IDEA Graph Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#idea-example-queries" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
+      
+  <img src="../../../assets/idea-logo-no-bg.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IDEA Graph Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Queries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../docs/00_conceptual-framework/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../docs/04_ai-annotation-pipeline/" class="md-tabs__link">
+          
+  
+  
+  Vision
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Modules
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../docs/03_how-to-annotate-using-idea/" class="md-tabs__link">
+          
+  
+  
+  Hands on
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
+      
+  <img src="../../../assets/idea-logo-no-bg.svg" alt="logo">
+
+    </a>
+    IDEA Graph Framework
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/00_conceptual-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptual Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/01_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/02_performance-and-scaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../known-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known Issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/99_glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vision
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/04_ai-annotation-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Annotation Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/05_trustworthy-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trustworthy AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CONTRIBUTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Core
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nodes-and-edges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nodes & Edges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-dictionary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daten-Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_ontology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ontology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10_numismatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numismatics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands on
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hands on
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docs/03_how-to-annotate-using-idea/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to annotate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixtures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Queries
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ontology-overview-recursive-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Ontology Overview (Recursive Hierarchy)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-semantic-context-human-holding-fruit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Semantic Context: "Human holding Fruit"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-high-certainty-fact-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. High-Certainty Fact Extraction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-human-in-the-loop-rejected-interpretations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Human-in-the-Loop: Rejected Interpretations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conflict-analysis-interpretations-vs-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Conflict Analysis: Interpretations vs. Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-pattern-based-rapid-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Pattern-Based Rapid Access
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ontology-overview-recursive-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Ontology Overview (Recursive Hierarchy)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-semantic-context-human-holding-fruit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Semantic Context: "Human holding Fruit"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-high-certainty-fact-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. High-Certainty Fact Extraction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-human-in-the-loop-rejected-interpretations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Human-in-the-Loop: Rejected Interpretations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conflict-analysis-interpretations-vs-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Conflict Analysis: Interpretations vs. Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-pattern-based-rapid-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Pattern-Based Rapid Access
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="idea-example-queries">IDEA: Example Queries</h1>
+<p>This document provides example Cypher queries to demonstrate the investigative potential of the <strong>IDEA</strong> framework. These queries are designed to run against the <strong>IDEA Core</strong> (as defined in <code>99_fixtures.cypher</code>), utilizing standard graph traversals without performance-optimized materialized paths.</p>
+<h2 id="1-ontology-overview-recursive-hierarchy">1. Ontology Overview (Recursive Hierarchy)</h2>
+<p><strong>Scenario:</strong> Show all concepts descending from concept-object as paths.</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">child</span><span class="p">:</span><span class="n">Concept</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">IS_A</span><span class="p">*</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">parent</span><span class="p">:</span><span class="n">Concept</span><span class="w"> </span><span class="p">{</span><span class="n">concept_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;concept-object&#39;</span><span class="p">})</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">path</span>
+</code></pre></div>
+<strong>Expected Output:</strong>
+* (:Concept:Fixture:Entity {concept_id: "concept-sports-equipment"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-object"})
+* (:Concept:Fixture:Entity {concept_id: "concept-billiard-ball"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-sports-equipment"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-object"})
+* (:Concept:Fixture:Entity {concept_id: "concept-billiard-ball-7"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-billiard-ball"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-sports-equipment"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-object"})
+* (:Concept:Fixture:Entity {concept_id: "concept-fruit"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-object"})
+* (:Concept:Fixture:Entity {concept_id: "concept-apple"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-fruit"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-object"})
+* (:Concept:Fixture:Entity {concept_id: "concept-tomato"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-fruit"})-[:IS_A]-&gt;(:Concept:Fixture:Entity {concept_id: "concept-object"})</p>
+<p><strong>NOTE:</strong>
+These nodes represent the strictly acyclic hierarchy of the model. Concept related metadata can be added via ontology module.
+They can be further enriched with domain-specific modules (e.g., Numismatics) to provide detailed descriptions of ancient iconography.</p>
+<h2 id="2-semantic-context-human-holding-fruit">2. Semantic Context: "Human holding Fruit"</h2>
+<p><strong>Scenario:</strong> Find compositions where a human (Entity) is holding (Relation) as fruit (Entity), not just keywords.</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="p">:</span><span class="n">Unit</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">comp</span><span class="p">:</span><span class="n">Composition</span><span class="p">)</span>
+
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">comp</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION_ENTITY</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">ce_human</span><span class="p">:</span><span class="n">CompositionEntity</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">ce_human</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_INTERPRETATION</span><span class="o">]-&gt;</span><span class="p">(:</span><span class="n">Interpretation</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">IDENTIFIED_AS_CONCEPT</span><span class="o">]-&gt;</span><span class="p">(:</span><span class="n">Concept</span><span class="w"> </span><span class="p">{</span><span class="n">concept_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;concept-human&#39;</span><span class="p">})</span>
+
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">ce_human</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION_RELATION</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">rel</span><span class="p">:</span><span class="n">CompositionRelation</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">rel</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_INTERPRETATION</span><span class="o">]-&gt;</span><span class="p">(:</span><span class="n">Interpretation</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">IDENTIFIED_AS_CONCEPT</span><span class="o">]-&gt;</span><span class="p">(:</span><span class="n">Concept</span><span class="w"> </span><span class="p">{</span><span class="n">concept_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;concept-holding&#39;</span><span class="p">})</span>
+
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">rel</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION_RELATION_OBJECT</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">ce_fruit</span><span class="p">:</span><span class="n">CompositionEntity</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">ce_fruit</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_INTERPRETATION</span><span class="o">]-&gt;</span><span class="p">(:</span><span class="n">Interpretation</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">IDENTIFIED_AS_CONCEPT</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">c_fruit</span><span class="p">:</span><span class="n">Concept</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">c_fruit</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">IS_A</span><span class="p">*</span><span class="m">0</span><span class="p">..</span><span class="o">]-&gt;</span><span class="p">(:</span><span class="n">Concept</span><span class="w"> </span><span class="p">{</span><span class="n">concept_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;concept-fruit&#39;</span><span class="p">})</span>
+
+<span class="k">RETURN</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">comp</span><span class="p">.</span><span class="n">composition_id</span>
+</code></pre></div>
+<strong>Expected Output:</strong>
+* composition-apple-tomato</p>
+<h2 id="3-high-certainty-fact-extraction">3. High-Certainty Fact Extraction</h2>
+<p><strong>Scenario:</strong> Retrieve only the "Gold Standard" identifications of entities where the certainty is high and the status is primary.</p>
+<div class="highlight"><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="p">:</span><span class="n">Unit</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">c</span><span class="p">:</span><span class="n">Composition</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION_ENTITY</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">ce</span><span class="p">:</span><span class="n">CompositionEntity</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">ce</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_INTERPRETATION</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">Interpretation</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">IDENTIFIED_AS_CONCEPT</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">con</span><span class="p">:</span><span class="n">Concept</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;Primary&#39;</span><span class="w"> </span>
+<span class="w">  </span><span class="n">AND</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">certainty</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">.</span><span class="m">8</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">ce</span><span class="p">.</span><span class="n">composition_entity_id</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="n">concept_id</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">certainty</span>
+</code></pre></div>
+<p><strong>Expected Output:</strong>
+* entity-at-human, concept-human, 1.0
+* entity-bb-billiard-ball-sphere, concept-billiard-ball-7, 1.0</p>
+<h2 id="4-human-in-the-loop-rejected-interpretations">4. Human-in-the-Loop: Rejected Interpretations</h2>
+<p><strong>Scenario:</strong> Identify entity interpretations that were proposed (e.g., by an AI) but explicitly rejected by a human expert. This is essential for identifying AI bias or outdated scholarly opinions</p>
+<div class="highlight"><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">ce</span><span class="p">:</span><span class="n">CompositionEntity</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_INTERPRETATION</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">Interpretation</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">REJECTED_BY</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">HumanAgent</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">IDENTIFIED_AS_CONCEPT</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">con</span><span class="p">:</span><span class="n">Concept</span><span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">ce</span><span class="p">.</span><span class="n">composition_entity_id</span><span class="p">,</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="n">concept_id</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">reasoning_statement</span>
+</code></pre></div>
+<p><strong>Expected Output:</strong>
+* entity-bb-glyph, concept-letter-l, "Commen Scheme, but ambiguous"</p>
+<h2 id="5-conflict-analysis-interpretations-vs-sources">5. Conflict Analysis: Interpretations vs. Sources</h2>
+<p><strong>Scenario:</strong> Find cases where an expert's interpretation is in direct conflict with the cited reference material. This is important to understand the low certainty or to check the references.</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">Interpretation</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_SOURCE_REFERENCE</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">sr</span><span class="p">:</span><span class="n">SourceReference</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">sr</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_EVIDENTIARY_RELATIONSHIP</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">arch</span><span class="p">:</span><span class="n">Architectonic</span><span class="w"> </span><span class="p">{</span><span class="n">architectonic_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;architectonic-conflicting&#39;</span><span class="p">})</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">sr</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_SOURCE</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="n">Source</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">STATED_BY</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">agent</span><span class="p">:</span><span class="n">Agent</span><span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">interpretation_id</span><span class="p">,</span><span class="w"> </span><span class="n">agent</span><span class="p">.</span><span class="n">agent_id</span><span class="p">,</span><span class="w"> </span><span class="n">sr</span><span class="p">.</span><span class="n">reference</span><span class="p">,</span><span class="w"> </span><span class="n">sr</span><span class="p">.</span><span class="n">refrence_statement</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">source_id</span>
+</code></pre></div>
+<strong>Expected Output:</strong>
+* interpretation-at-apple, agent-human, img-at-apple-conflicting, "apple reference image shows stem", source-at-reference-catalogue</p>
+<h2 id="6-pattern-based-rapid-access">6. Pattern-Based Rapid Access</h2>
+<p><strong>Scenario:</strong> Quickly identify all Compositions that match a standardized iconographical scene, such as "Human holding object". This is faster than going into the formal analysis.</p>
+<div class="highlight"><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="p">:</span><span class="n">Unit</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">c</span><span class="p">:</span><span class="n">Composition</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_PATTERN</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">cp</span><span class="p">:</span><span class="n">CompositionPattern</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">cp</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_RECOGNITION</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">Interpretation</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">RECOGNIZED_PATTERN</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Pattern</span><span class="w"> </span><span class="p">{</span><span class="n">pattern_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;pattern-human-holding-object&#39;</span><span class="p">})</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">u</span><span class="p">.</span><span class="n">unit_id</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">composition_id</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">certainty</span>
+</code></pre></div>
+<p><strong>Expected Output:</strong>
+* unit-apple-tomato, composition-apple-tomato, 1.0
+* unit-billiard-ball, composition-billiard-ball, 1.0</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tracking", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
