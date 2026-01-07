@@ -7,7 +7,7 @@
 **A Graph Framework for Describing Visual Compositions and Modelling Uncertainty.**  
 **Bridging the gap between flexible humanities research and high-performance data engineering.**
 
-[![DOI](https://zenodo.org/badge/1120013880.svg)](https://doi.org/10.5281/zenodo.18160255)
+[![doi.org/10.5281/zenodo.18160255](https://zenodo.org/badge/1120013880.svg)](https://doi.org/10.5281/zenodo.18160255)
 
 ### Documentation & Repository Access
 
