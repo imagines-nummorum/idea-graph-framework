@@ -1,10 +1,10 @@
-# IDEA Fixtures: Sandbox Documentation
+# IN.IDEA Fixtures: Sandbox Documentation
 
-This document describes the test datasets (fixtures) provided in the IDEA Core Docker container. These examples are designed to demonstrate the framework's ability to model **epistemic uncertainty**, **multimodal interpretations**, and **complex scene structures**. If you want to know more about the annotation process, see [how-to-annotate-using-idea](../../docs/03_how-to-annotate-using-idea.md).
+This document describes the test datasets (fixtures) provided in the IN.IDEA Core Docker container. These examples are designed to demonstrate the framework's ability to model **epistemic uncertainty**, **multimodal interpretations**, and **complex scene structures**. If you want to know more about the annotation process, see [how-to-annotate-using-in-idea](../../docs/03_how-to-annotate-using-in-idea.md).
 
 ## 1. Documentation Assets 
 
-To understand the structural logic of IDEA, we provide both static visual examples and interactive model diagrams.
+To understand the structural logic of IN.IDEA, we provide both static visual examples and interactive model diagrams.
 
 ![Fixture-Images showing two compositions: a hand holding an apple-tomato and a hand holding a billiard-ball](assets/core-fixture-compositions-merged.jpg)
 Figure 1: Visual representation of the composition-apple-tomato and composition-billiard-ball test cases.
@@ -22,12 +22,12 @@ The provided Neo4j Docker setup loads the fixtures directly into the database du
 
 * **Pedagogical Simplification:** The images are intentionally AI-generated and only partially annotated. We focus on specific challenges (ambiguity, OCR, AI-vs-Human perception) rather than exhaustive description.
 * **Human-Readable IDs:** In this sandbox, we use string-based identifiers (e.g., `unit-apple-tomato`) for easier navigation in the Neo4j Browser. In production, these are mapped to `INT` keys.
-* **Domain Agnosticism:** While IDEA is rooted in numismatics, these fixtures use everyday objects to ensure the architectural logic is understood by non-experts.
+* **Domain Agnosticism:** While IN.IDEA is rooted in numismatics, these fixtures use everyday objects to ensure the architectural logic is understood by non-experts.
 
 
 ## 3. Case Study A: The "Apple-Tomato" (Epistemic Ambiguity)
 
-This case demonstrates how IDEA handles material ambiguity where an object cannot be clearly assigned to a single concept.
+This case demonstrates how IN.IDEA handles material ambiguity where an object cannot be clearly assigned to a single concept.
 
 ### Data Model Highlights
 * **Entity Ambiguity:** The object is interpreted as both an "Apple" and a "Tomato".
@@ -60,7 +60,7 @@ The character on the ball is modeled via the `Reading` node.
 
 ### 5. Modeling Logic: The "Human Holding Object" Pattern
 
-IDEA distinguishes between what is *visible* and what is *represented* to maintain a clean ontological structure.
+IN.IDEA distinguishes between what is *visible* and what is *represented* to maintain a clean ontological structure.
 
 #### The Pars-pro-Toto Problem & Visual Scope
 

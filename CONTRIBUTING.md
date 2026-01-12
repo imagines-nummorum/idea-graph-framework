@@ -1,6 +1,6 @@
-# Contributing to IDEA
+# Contributing to IN.IDEA
 
-Thank you for your interest in the **Iconographical Definitional Epistemological Architecture (IDEA)**. We welcome feedback and contributions that help refine this framework for the structured description of images and the modeling of uncertainty.
+Thank you for your interest in the **Iconographical Definitional Epistemological Architecture (IN.IDEA)**. We welcome feedback and contributions that help refine this framework for the structured description of images and the modeling of uncertainty.
 
 ## 1. Interaction Policy: Issue First
 
@@ -15,7 +15,7 @@ We distinguish between different levels of contribution to maintain a focused pr
 
 We highly encourage reports on bugs or conceptual inconsistencies.
 
-* **Edge Case Suitability:** We especially value feedback from users who test IDEA with their own datasets. Please report any "edge cases" where the current model reaches its limits.
+* **Edge Case Suitability:** We especially value feedback from users who test IN.IDEA with their own datasets. Please report any "edge cases" where the current model reaches its limits.
 
 ### B. Core Enhancements
 
@@ -31,19 +31,19 @@ If you wish to develop a module for a specific domain within our primary researc
 
 ### D. Domain Modules: Outside Scope
 
-IDEA is designed to be versatile, but our resources are focused on the Ancient World.
+IN.IDEA is designed to be versatile, but our resources are focused on the Ancient World.
 
 * **Policy:** If you are developing a module for a different field (e.g., Modern Art, Biology, etc.), **we recommend maintaining a separate repository.**
-* **Integration:** You should treat IDEA as a dependency. This keeps our core lean while allowing you full control over your domain-specific development. Remember: *IDEA is our tool, not the goal of our project.*
+* **Integration:** You should treat IN.IDEA as a dependency. This keeps our core lean while allowing you full control over your domain-specific development. Remember: *IN.IDEA is our tool, not the goal of our project.*
 
 
 ## 3. Forking, Adaptations & License
 
 In accordance with the **Apache License 2.0**:
 
-* **Freedom to Adapt:** We explicitly encourage you to fork, adapt, and transform IDEA for your own purposes.
-* **Attribution:** Any derivative work must maintain proper attribution to the original IDEA repository and its authors.
-* **Notification:** We are always happy to hear about how IDEA is being used or adapted, even if your project leaves our original scope.
+* **Freedom to Adapt:** We explicitly encourage you to fork, adapt, and transform IN.IDEA for your own purposes.
+* **Attribution:** Any derivative work must maintain proper attribution to the original IN.IDEA repository and its authors.
+* **Notification:** We are always happy to hear about how IN.IDEA is being used or adapted, even if your project leaves our original scope.
 
 
 ## 4. Academic Collaboration
@@ -55,7 +55,7 @@ If you are interested in a deeper research collaboration that goes beyond techni
 
 ## 5. Architectural Integrity: The Golden Rule
 
-Every contribution, especially when proposing new modules or refinements, must adhere to the **IDEA Core Architecture**:
+Every contribution, especially when proposing new modules or refinements, must adhere to the **IN.IDEA Core Architecture**:
 
 * **Immutable Four-Layer Logic:** You may add specific node properties or specialized leaf-nodes, but you must **never alter the fundamental four-layer structure** (Object → Formal → Epistemic → Ontological).
 * **Directionality:** Edges must always flow from the specific/concrete to the abstract/conceptual.

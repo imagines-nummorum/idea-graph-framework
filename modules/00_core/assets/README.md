@@ -1,6 +1,6 @@
 # Core Assets
 
-To understand the structural logic of IDEA, we provide both static visual examples and interactive model diagrams.
+To understand the structural logic of IN.IDEA, we provide both static visual examples and interactive model diagrams.
 
 ![Fixture-Images showing two compositions: a hand holding an apple-tomato and a hand holding a billiard-ball](core-fixture-compositions-merged.jpg)
 Figure 1: Visual representation of the composition-apple-tomato and composition-billiard-ball test cases.

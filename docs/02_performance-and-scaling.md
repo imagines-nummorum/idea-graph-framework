@@ -1,11 +1,11 @@
-# IDEA: Performance and Scaling
+# IN.IDEA: Performance and Scaling
 
 > [!IMPORTANT]
 > **Architectural Status:** The infrastructure described in this document—specifically the **Postgres-as-Single-Source-of-Truth (SSoT)** and the automated **ETL Pipeline** — is currently a **conceptual design**. It serves as a roadmap for implementation and is not yet part of the active codebase.
 
 ## 1. Core Objectives
 
-The **IDEA** graph model employs a deep layered architecture to preserve epistemic nuance. While this is ideal for data integrity, it introduces high "hop-counts" for standard queries. This strategy defines how we **denormalize** specific paths during the transfer from the relational SSoT to the Graph DB to achieve:
+The **IN.IDEA** graph model employs a deep layered architecture to preserve epistemic nuance. While this is ideal for data integrity, it introduces high "hop-counts" for standard queries. This strategy defines how we **denormalize** specific paths during the transfer from the relational SSoT to the Graph DB to achieve:
 
 * **O(1) Hierarchy Lookups:** Bypassing recursive traversals in the Tree of Concepts.
 * **Low-Latency Standard Views:** Providing direct access to high-certainty data for front-end consumers.

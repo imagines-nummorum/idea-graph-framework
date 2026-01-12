@@ -1,4 +1,4 @@
-# IDEA: Known Issues and Limitations
+# IN.IDEA: Known Issues and Limitations
 
 This document tracks identified architectural inconsistencies, simplified data representations in the fixtures, and planned structural refinements for future releases.
 
@@ -20,9 +20,9 @@ This document tracks identified architectural inconsistencies, simplified data r
 
 ## 3. Modeling Competing Interpretations
 
-* **Description:** While IDEA allows for multiple `Interpretation` nodes, the explicit relationship between *competing* hypotheses is currently handled only via the `status` property ("Primary", "Alternative", "Rejected" etc.).
+* **Description:** While IN.IDEA allows for multiple `Interpretation` nodes, the explicit relationship between *competing* hypotheses is currently handled only via the `status` property ("Primary", "Alternative", "Rejected" etc.).
 * **Planned Research:** We are monitoring whether the current "status-only" approach is sufficient or if a dedicated edge type (e.g., `CONFLICTS_WITH`) is required to explicitly link mutually exclusive interpretations.
-* **Current Strategy:** To avoid "schema-less sprawl," we will observe this situation in controlled test cases before introducing new edge types to the IDEA Core.
+* **Current Strategy:** To avoid "schema-less sprawl," we will observe this situation in controlled test cases before introducing new edge types to the IN.IDEA Core.
 
 ## 4. Normalization of Chromaticity
 

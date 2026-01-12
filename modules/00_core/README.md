@@ -1,6 +1,6 @@
-# IDEA Core
+# IN.IDEA Core
 
-This module contains the formal technical specification and reference implementation of the IDEA Core. It defines the fundamental structure required to describe units, compositions, and epistemic interpretations.
+This module contains the formal technical specification and reference implementation of the IN.IDEA Core. It defines the fundamental structure required to describe units, compositions, and epistemic interpretations.
 
 ## Quick Links
 * **Architecture:** For the theoretical foundation, see [`architecture.md`](../../docs/01_architecture.md).
@@ -13,7 +13,7 @@ This module contains the formal technical specification and reference implementa
 * **[`queries.md`](queries.md):** Example Cypher queries for common analytical tasks.
 
 ## Deployment
-To initialize a Neo4j instance with the IDEA Core, execute the Cypher scripts in the following order (or let the seeder in our docker-compose.yml do its job):
+To initialize a Neo4j instance with the IN.IDEA Core, execute the Cypher scripts in the following order (or let the seeder in our docker-compose.yml do its job):
 1. [`00_constraints.cypher`](00_constraints.cypher): Enforces uniqueness and required properties.
 2. [`01_index.cypher`](01_index.cypher): Optimizes lookup performance.
 3. [`99_fixtures.cypher`](99_fixtures.cypher): Ingests the sample graph data described in [`fixtures.md`](fixtures.md).

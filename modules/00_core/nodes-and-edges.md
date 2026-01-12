@@ -1,4 +1,4 @@
-# IDEA Core: Node and Edge Specifications
+# IN.IDEA Core: Node and Edge Specifications
 
 This document defines the formal structure of the graph.
 

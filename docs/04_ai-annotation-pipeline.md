@@ -1,8 +1,8 @@
-# IDEA: AI-Assisted Annotation Pipeline (Blueprint)
+# IN.IDEA: AI-Assisted Annotation Pipeline (Blueprint)
 
 ## 1. Executive Summary: Breaking the "Cold Start" Problem
 
-The manual annotation of hundreds of thousands of cultural heritage objects using the **IDEA Four-Layer Architecture** is a high-precision but resource-intensive task. To achieve critical mass data, we need an AI-assisted pipeline.
+The manual annotation of hundreds of thousands of cultural heritage objects using the **IN.IDEA Four-Layer Architecture** is a high-precision but resource-intensive task. To achieve critical mass data, we need an AI-assisted pipeline.
 
 This pipeline is designed to solve the **Cold Start Problem**: transforming legacy text-based descriptions into structured graph data. By utilizing Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG), we shift the expert's role from **data entry** to **data validation** (Human-in-the-loop).
 
@@ -42,7 +42,7 @@ Using the distilled patterns, the system generates initial graph drafts for new 
 
 The crucial step where "data" becomes "scholarly knowledge."
 
-* **Process:** Experts review the AI-generated drafts via the future IDEA Web Frontend.
+* **Process:** Experts review the AI-generated drafts via the future IN.IDEA Web Frontend.
 * **Action:**
   * Validate or reject the `Interpretation` Nodes (no deletion to get feedback for the AI).
   * create new `Interpretation` nodes and link Methodology/Sources for complex interpretations.
@@ -65,7 +65,7 @@ As the Gold Standard grows, the system becomes self-improving.
 | --- | --- | --- |
 | **LLM Orchestration** | LangChain / LangGraph | Managing multi-step extraction and validation loops. |
 | **Vector Database** | Milvus / Weaviate | Storing embeddings of legacy descriptions and Cypher snippets. |
-| **Graph DB** | Neo4j | The queryable projection of the IDEA model. |
+| **Graph DB** | Neo4j | The queryable projection of the IN.IDEA model. |
 | **Single Source of Truth** | PostgreSQL | Relational storage for all validated transactions. |
 | **Validation UI** | Vue.js | Expert interface for the Human-in-the-loop phase. |
 
@@ -80,7 +80,7 @@ As the Gold Standard grows, the system becomes self-improving.
 
 ## 5. Future Outlook: From Text-to-Graph to Image-to-Graph
 
-While the current pipeline focuses on **Natural Language Processing (NLP)** to leverage existing legacy descriptions, the IDEA architecture is inherently **medium-agnostic**. The long-term objective is a **hybrid analysis model** or a direct **Computer Vision (CV)** approach:
+While the current pipeline focuses on **Natural Language Processing (NLP)** to leverage existing legacy descriptions, the IN.IDEA architecture is inherently **medium-agnostic**. The long-term objective is a **hybrid analysis model** or a direct **Computer Vision (CV)** approach:
 
 * **Direct Image Annotation:** Future iterations will utilize AI models to perform instance segmentation directly on coin images, identifying and labeling segments as `CompositionEntity` nodes.
 * **Hybrid Multimodal Analysis:** By combining visual segment analysis with free-text descriptions, the system can cross-validate findings, further increasing the `certainty` of interpretations in the Epistemic Layer.

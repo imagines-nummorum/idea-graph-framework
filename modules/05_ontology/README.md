@@ -1,4 +1,4 @@
-# IDEA Ontology
+# IN.IDEA Ontology
 
 * **Status:** Planned / Concept Phase.
 * **Scope:** Extended Core

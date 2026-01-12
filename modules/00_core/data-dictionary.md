@@ -1,6 +1,6 @@
-# IDEA Core: Data Dictionary
+# IN.IDEA Core: Data Dictionary
 
-This document defines the allowed values, data types, and constraints for properties within the IDEA Core. It ensures data integrity across the Relational Database (Source of Truth) and the Graph DB (Query Layer).
+This document defines the allowed values, data types, and constraints for properties within the IN.IDEA Core. It ensures data integrity across the Relational Database (Source of Truth) and the Graph DB (Query Layer).
 
 ## 1. Global Value Constraints
 
@@ -15,7 +15,7 @@ These constraints apply to all nodes and edges where these property names are us
 
 ## 2. Core Enumerations (ENUMs)
 
-The following values are the current defaults for the IDEA Core. These lists are non-exhaustive and will be expanded by future updates.
+The following values are the current defaults for the IN.IDEA Core. These lists are non-exhaustive and will be expanded by future updates.
 
 ### 2.1 Composition Enums
 
@@ -59,7 +59,7 @@ The `scope` poperty is set if the cardinality is  N > 1.
 
 ## 3. Ontological Structures
 
-IDEA uses two distinct hierarchical systems (Strictly Acyclic Graphs).
+IN.IDEA uses two distinct hierarchical systems (Strictly Acyclic Graphs).
 
 ### 3.1 Concept Taxonomy (ThING)
 

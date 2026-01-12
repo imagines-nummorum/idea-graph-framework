@@ -1,13 +1,13 @@
-# IDEA: Architectural Overview
+# IN.IDEA: Architectural Overview
 
 ## 1. Design Philosophy
 
-The development of IDEA is designed to bridge the gap between flexible humanities research and high-performance data engineering:
+The development of IN.IDEA is designed to bridge the gap between flexible humanities research and high-performance data engineering:
 
-* **Epistemic Primacy (Modeling the "Maybe"):** Unlike traditional models that force reality into binary 1s and 0s, IDEA treats interpretation as a first-class citizen. By reifying the interpretive act into its own node, we allow for the structured representation of uncertainty, conflicting hypotheses, and expert reasoning. Diffuse similarity between objects is modeled via **centroid-structures (Hub-and-Spoke)** rather than direct edges, enabling nuanced similarity quantification.
-* **Relational-to-Graph Integrity:** IDEA is designed as a strict Read-Optimized Projection of a relational database (Single Source of Truth, e.g., PostgreSQL). Every node, edge, and property in the graph must have a schematic counterpart in the relational model. This prevents "schema-less sprawl" and ensures that the data remains verifiable, migratable, and strictly typed. In production we will operate on a strict "Schema-on-Write" principle during the ETL process.
+* **Epistemic Primacy (Modeling the "Maybe"):** Unlike traditional models that force reality into binary 1s and 0s, IN.IDEA treats interpretation as a first-class citizen. By reifying the interpretive act into its own node, we allow for the structured representation of uncertainty, conflicting hypotheses, and expert reasoning. Diffuse similarity between objects is modeled via **centroid-structures (Hub-and-Spoke)** rather than direct edges, enabling nuanced similarity quantification.
+* **Relational-to-Graph Integrity:** IN.IDEA is designed as a strict Read-Optimized Projection of a relational database (Single Source of Truth, e.g., PostgreSQL). Every node, edge, and property in the graph must have a schematic counterpart in the relational model. This prevents "schema-less sprawl" and ensures that the data remains verifiable, migratable, and strictly typed. In production we will operate on a strict "Schema-on-Write" principle during the ETL process.
 * **Horizontal Scalability & Performance-Centric Flatness:** The graph is engineered to grow in "width" (number of units) rather than "depth" (traversal length). To reach *O*(1) or *O*(log n) performance for complex queries, the depth from a physical unit to an ontological concept is fixed (typically 4 to 6 hops). Deep ontological recursions are bypassed by **materializing hierarchy paths** directly as node properties. See **[performance-and-scaling.md](02_performance-and-scaling.md)**
-* **Modular Framework Design:** The framework distinguishes between the **IDEA Core** — a lean, domain-agnostic engine for formal analysis —, **Core Extensions** (e.g., for ontology management) and specialized **Domain Extensions** (e.g., `IDEA Numismatics`). Our "Golden Rule" states: *Modules may extend the Core with specialized labels or properties, but they must never alter the fundamental four-layer logic or the core edge directionality (from concrete to abstract).*
+* **Modular Framework Design:** The framework distinguishes between the **IN.IDEA Core** — a lean, domain-agnostic engine for formal analysis —, **Core Extensions** (e.g., for ontology management) and specialized **Domain Extensions** (e.g., `IN.IDEA Numismatics`). Our "Golden Rule" states: *Modules may extend the Core with specialized labels or properties, but they must never alter the fundamental four-layer logic or the core edge directionality (from concrete to abstract).*
 * **Multi-Modal Readiness:** While the current implementation focuses on static visual media (coins, stelae, paintings), the underlying logic of distinguishing between objects, formal elements, epistemic interpretations and concepts is intentionally medium-agnostic. The concept is prepared for future expansions into moving images, complex 3D objects, or textual analysis.
 
 
@@ -25,7 +25,7 @@ The development of IDEA is designed to bridge the gap between flexible humanitie
 
 ## 3. The Atomic Core Elements
 
-To maintain semantic precision across all layers, IDEA utilizes seven core categories. These categories are used to define visual elements, abstract patterns, and ontological concepts:
+To maintain semantic precision across all layers, IN.IDEA utilizes seven core categories. These categories are used to define visual elements, abstract patterns, and ontological concepts:
 
 * **Entity:** Any discrete being or object.
 * **Feature:** Attributes, states belonging to an Entity.
@@ -38,7 +38,7 @@ To maintain semantic precision across all layers, IDEA utilizes seven core categ
 
 ## 4. The Four-Layer Architecture
 
-The Four-Layer Architecture is the backbone of the IDEA Core
+The Four-Layer Architecture is the backbone of the IN.IDEA Core
 
 ### Layer I: Object Layer
 
@@ -104,7 +104,7 @@ flowchart TD
 
 ### A) Interpretation / Uncertainty and Reasoning
 
-The core of IDEA’s uncertainty modeling. No semantic link exists without an intermediate interpretation node.
+The core of IN.IDEA’s uncertainty modeling. No semantic link exists without an intermediate interpretation node.
 
 ```mermaid
 flowchart TD
@@ -146,7 +146,7 @@ flowchart TD
 
 ### B) Similarity 
 
-To model "diffuse" similarity between images without creating direct edges, IDEA uses a Hub-and-Spoke model. “Diffuse” refers to similarities that are difficult or impossible to model in the structure of the graph because the concepts involved are too far apart.
+To model "diffuse" similarity between images without creating direct edges, IN.IDEA uses a Hub-and-Spoke model. “Diffuse” refers to similarities that are difficult or impossible to model in the structure of the graph because the concepts involved are too far apart.
 
 ```mermaid
 flowchart TD
@@ -207,7 +207,7 @@ flowchart TD
 
 * **Nodes:** `Concept`, `Pattern`, `PatternEntity`, `PatternRelation`.
 * **Concepts:** An abstract hierarchy of lemmas (Entity, Relation, etc.) used for classification. 
-* **Core Limitation:** To maintain domain-agnosticism and high performance, the IDEA Core treats Concepts as structural anchors with minimal properties (primarily `concept_id`).
+* **Core Limitation:** To maintain domain-agnosticism and high performance, the IN.IDEA Core treats Concepts as structural anchors with minimal properties (primarily `concept_id`).
 * **Extension - Module 05_ontology:** For human-readable labels, multi-language support, and detailed definitions, the Core is extended by the **Ontology Module**. This module handles the semantic "flesh" of the ThING, allowing the Core to remain a lean navigational skeleton (Work in Progress).
 
 #### B) Patterns

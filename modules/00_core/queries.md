@@ -1,6 +1,6 @@
-# IDEA: Example Queries
+# IN.IDEA: Example Queries
 
-This document provides example Cypher queries to demonstrate the investigative potential of the **IDEA** framework. These queries are designed to run against the **IDEA Core** (as defined in `99_fixtures.cypher`), utilizing standard graph traversals without performance-optimized materialized paths.
+This document provides example Cypher queries to demonstrate the investigative potential of the **IN.IDEA** framework. These queries are designed to run against the **IN.IDEA Core** (as defined in `99_fixtures.cypher`), utilizing standard graph traversals without performance-optimized materialized paths.
 
 ## 1. Ontology Overview (Recursive Hierarchy)
 

@@ -1,9 +1,9 @@
-# IDEA's Epistemic Layer Pattern: A Blueprint for Trustworthy AI
+# IN.IDEA's Epistemic Layer Pattern: A Blueprint for Trustworthy AI
 
 ## 1. Beyond Domain Specificity: The Meta-Architecture
 
-While the IDEA framework was originally developed for iconographical research, its core innovation lies in the **decoupling of domain-specific data from epistemic evaluation**. IDEA's Layer III addresses the "Hallucination of Certainty" in LLMs by moving interpretation from an implicit process into an explicit graph node. This separation allows for a universal thought pattern that can be applied to any field requiring high-stakes decision-making and uncertainty modeling.
-IDEA's Layer III provides the structural "glass box" for reasoning, uncertainty, and provenance that remains constant across disciplines.
+While the IN.IDEA framework was originally developed for iconographical research, its core innovation lies in the **decoupling of domain-specific data from epistemic evaluation**. IN.IDEA's Layer III addresses the "Hallucination of Certainty" in LLMs by moving interpretation from an implicit process into an explicit graph node. This separation allows for a universal thought pattern that can be applied to any field requiring high-stakes decision-making and uncertainty modeling.
+IN.IDEA's Layer III provides the structural "glass box" for reasoning, uncertainty, and provenance that remains constant across disciplines.
 
 
 ## 2. The Core Mechanism
@@ -35,7 +35,7 @@ These are "pruned" LLMs—models with high reasoning capabilities but minimal "w
 
 The agent produces a grounded report, an *Numismatic Expert Agent* might answer like this:
 
-> "Based on the IDEA Graph, there are three competing interpretations due to ambiguity for this scene. Interpretation A has a certainty of 0.8 (supported by Source X), while Interpretation B is a minority view (certainty 0.3) but is supported by a more recent publication. Moreover, there is an interesserting compositional parallel to another coin from Thrace which implies an interpretation as Y with a certainty of 0.6."
+> "Based on the IN.IDEA Graph, there are three competing interpretations due to ambiguity for this scene. Interpretation A has a certainty of 0.8 (supported by Source X), while Interpretation B is a minority view (certainty 0.3) but is supported by a more recent publication. Moreover, there is an interesserting compositional parallel to another coin from Thrace which implies an interpretation as Y with a certainty of 0.6."
 
 ### Step 4: Transparent Synthesis
 
@@ -43,7 +43,7 @@ The Orchestrator presents the user with the full spectrum of expert findings (it
 
 ### Summary: A New Paradigm for AI Interaction
 
-By adopting IDEA's Layer III mechanics, we move from **Stochastic Generation** (guessing the next word) to **Structural Analysis** (navigating a graph of weighted interpretations). This pattern allows AI systems to participate in scientific discourse by respecting the "Maybe" and providing a verifiable audit trail for every conclusion.
+By adopting IN.IDEA's Layer III mechanics, we move from **Stochastic Generation** (guessing the next word) to **Structural Analysis** (navigating a graph of weighted interpretations). This pattern allows AI systems to participate in scientific discourse by respecting the "Maybe" and providing a verifiable audit trail for every conclusion.
 
 
 ## 4. Breaking the "Crystalline" Intelligence
@@ -57,7 +57,7 @@ Traditionally, an AI's knowledge is "frozen" after training. This setup allows f
 
 ## 5. Performance
 
-The "pruned" Agent Models are much smaller and require less resources. On the other hand the graph must be super performant. IDEA addresses this problem by growing in width, not in depth, by applying its similarity-centroid-solution and its performance optimizations. 
+The "pruned" Agent Models are much smaller and require less resources. On the other hand the graph must be super performant. IN.IDEA addresses this problem by growing in width, not in depth, by applying its similarity-centroid-solution and its performance optimizations. 
 
 
 ## 6. Project Scope and Future Outlook
@@ -66,11 +66,11 @@ The "pruned" Agent Models are much smaller and require less resources. On the ot
 The comprehensive implementation of the agentic backbone described above significantly transcends our research goals and financial resources. Nevertheless, we view it as our responsibility to present these structural potentials for broader discussion, especially since our own numismatic research workflows would gain substantial analytical rigor from such a specialized expert agent. While we provide the epistemic blueprint through Layer III, the large-scale technical realization of these autonomous reasoning systems remains a task for the wider AI research and engineering community.
 
 ### Risk Assessment and Intellectual Agency
-The practical realization of this architecture is not a technocratic "fix" for uncertainty; it demands a rigorous risk assessment and the intellectual agency of the inquirer. IDEA is designed as an instrument for critical scientific discourse, not as a "truth machine" that replaces human judgment.
+The practical realization of this architecture is not a technocratic "fix" for uncertainty; it demands a rigorous risk assessment and the intellectual agency of the inquirer. IN.IDEA is designed as an instrument for critical scientific discourse, not as a "truth machine" that replaces human judgment.
 
 To avoid a naive reliance on automated systems, every implementation must ensure that:
 * **Human Responsibility remains Central:** The final synthesis of complex, uncertain data cannot be offloaded to an algorithm without the constant vigilance of an informed human mind.
 * **Critical Evaluation is Mandatory:** Users are placed under the obligation to actively weigh the conflicting hypotheses and certainty scores provided by the Expert Agents.
 * **Integrity is Protected:** Robust mechanisms (such as the suggested "Merge Request" approach for SSoT writes) must prevent agents from undermining the structural foundation of the knowledge base.
 
-Ultimately, the power of IDEA lies not in providing final answers, but in empowering the user to make informed, responsible decisions amidst the inherent ambiguity of human knowledge.
+Ultimately, the power of IN.IDEA lies not in providing final answers, but in empowering the user to make informed, responsible decisions amidst the inherent ambiguity of human knowledge.

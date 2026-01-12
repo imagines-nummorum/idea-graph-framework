@@ -1,6 +1,6 @@
-# How to Annotate with IDEA
+# How to Annotate with IN.IDEA
 
-This guide walks you through the process of describing a visual scene using the IDEA framework. To illustrate the workflow, we will use the **"Apple-Tomato"** example: a composition where a human hand holds a red object that could be either an apple or a tomato.
+This guide walks you through the process of describing a visual scene using the IN.IDEA framework. To illustrate the workflow, we will use the **"Apple-Tomato"** example: a composition where a human hand holds a red object that could be either an apple or a tomato.
 
 Instead of just "tagging" an image, we build a path from the **concrete observation** to the **abstract concept**, documenting every step of the interpretive process.
 
@@ -101,7 +101,7 @@ Was it the right or left hand?
 
 ### Step 4: Handling "The Hand" and Cropping (Visual Scope)
 
-A common pitfall is to declare the hand as its own `Entity`. In IDEA, we usually treat the **Human** as the entity, while the **Hand** and the fact that it is a **Detail** (cropped) are handled as `Features`.
+A common pitfall is to declare the hand as its own `Entity`. In IN.IDEA, we usually treat the **Human** as the entity, while the **Hand** and the fact that it is a **Detail** (cropped) are handled as `Features`.
 
 #### 4.1 Why not "Entity: Hand"?
 
@@ -157,7 +157,7 @@ Sometimes, a composition refers to something that isn't a physical "thing" in th
 
 ### Step 7: Dealing with Text (Reading & Groups)
 
-To handle text (like the "7" on a billiard ball), IDEA uses a specific structure that separates the logical container from the actual signs.
+To handle text (like the "7" on a billiard ball), IN.IDEA uses a specific structure that separates the logical container from the actual signs.
 
 1. **Create a Container**: Create a `CompositionGroup` with the `group_function: "TextContainer"` and link it to the `Composition`.
 2. **Optional Glyphs**: If you want to be precise, create `CompositionEntity` nodes for individual letters/signs and link them to the group using `IS_PART_OF_COMPOSITION_GROUP`.
@@ -172,14 +172,14 @@ When you are finished, a single "observation" (the red object) looks like this i
 
 `Composition` → `CompositionEntity` → `Interpretation` → `Concept`
 
-> **Note**: This path might seem longer than a simple tag, but it allows IDEA to answer complex questions like: *"Show me all objects where the identification as 'Apple' was disputed due to 'Ambiguity'."*
+> **Note**: This path might seem longer than a simple tag, but it allows IN.IDEA to answer complex questions like: *"Show me all objects where the identification as 'Apple' was disputed due to 'Ambiguity'."*
 
 
 ### Important: Why no Graphical Annotations (Polygons)?
 
 You might notice that there are no properties for coordinates or polygons (e.g., SVG/JSON) in the graph nodes. This is a deliberate design choice for **performance and efficiency**.
 
-* **Separation of Concerns**: IDEA follows a strict "Read-Optimized Projection" philosophy.
+* **Separation of Concerns**: IN.IDEA follows a strict "Read-Optimized Projection" philosophy.
 * **Spatial Performance**: Complex spatial queries (e.g., "Is entity A inside the region of group B?") are handled much more efficiently in a relational database like **PostgreSQL** using spatial extensions.
 * **The Link**: We will store the graphical coordinates (polygons) in the relational Single Source of Truth (SSoT). These are mapped to the unique `_id` of the `CompositionEntity` or `CompositionGroup`.
 * **The Result**: The graph stays lean and fast for semantic traversals, while the frontend fetches the visual coordinates from the SQL backend when it needs to draw them on the screen.
@@ -189,7 +189,7 @@ You might notice that there are no properties for coordinates or polygons (e.g.,
 
 ### Using Patterns as Blueprints
 
-When a scene follows a common iconographical scheme (e.g., "Human holding an object"), you don't have to reinvent the wheel every time. IDEA uses **Patterns** as reusable blueprints.
+When a scene follows a common iconographical scheme (e.g., "Human holding an object"), you don't have to reinvent the wheel every time. IN.IDEA uses **Patterns** as reusable blueprints.
 
 * **Simplified Structure**: Unlike a full analysis, a `Pattern` uses a reduced set of nodes: only `PatternEntity` and `PatternRelation`.
 * **No Epistemic Layer inside Patterns**: Because patterns are abstract and "idle," they don't need interpretation nodes or certainty values within their own structure; they link directly to `Concepts`.
@@ -208,7 +208,7 @@ Patterns serve a critical role in automated workflows, especially when dealing w
 
 ### Modeling Similarity (The Centroid Approach)
 
-If two or more compositions look alike, IDEA avoids creating direct "looks-like" edges between every single image. Instead, we use a **Centroid Model** to handle clusters of similarity.
+If two or more compositions look alike, IN.IDEA avoids creating direct "looks-like" edges between every single image. Instead, we use a **Centroid Model** to handle clusters of similarity.
 
 1. **The Hub**: A `CompositionParallel` node acts as the center (centroid) of a similarity cluster.
 2. **The Spokes**: Each `Composition` is linked to this hub via a `CompositionComparison` node.
