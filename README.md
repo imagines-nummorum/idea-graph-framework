@@ -4,6 +4,8 @@
 
 # IN.IDEA: Iconographical Definitional Epistemological Architecture
 
+**DOI: [10.5281/zenodo.18160255](https://doi.org/10.5281/zenodo.18160255)**
+
 **A Graph Framework for Describing Visual Compositions and Modelling Uncertainty.**  
 **Bridging the gap between flexible humanities research and high-performance data engineering.**
 
@@ -139,7 +141,6 @@ For a live demonstration of the IN.IDEA framework, we provide a pre-configured D
 4. **Reset:** use `docker-compose down -v` to revert any changes to the data
 
 If you want to build some datasets on you own, we recommand reading at least **[how-to-annotate-using-in-idea.md](docs/03_how-to-annotate-using-in-idea.md)** and **[nodes-and-edges.md](modules/00_core/nodes-and-edges.md)**.
-
  
 ## Author & Governance
 
@@ -147,6 +148,23 @@ IN.IDEA is open-sourced software created and maintained by [Jan Köster](https:/
 It is coordinated by the [Union of German Academies of Sciences and Humanities](https://www.akademienunion.de/).
 
 **Contact:** For any IN.IDEA related topic we prefer direct communication on Github, for any contact to our initiative, see [Contact](https://www.imagines-nummorum.eu/en/contact)
+
+## Citation
+
+```bibtex
+@software{koester_jan_2026_IN_IDEA,
+  author       = {Köster, Jan},
+  title        = {{IN.IDEA: A Graph Framework for Describing Visual 
+                   Compositions and Modelling Uncertainty}},
+  month        = jan,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v0.9.3},
+  doi          = {10.5281/zenodo.18160255},
+  url          = {https://doi.org/10.5281/zenodo.18160255}
+}
+
+```
 
 ## AI Transparency & Methodology
 
