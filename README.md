@@ -2,18 +2,19 @@
   <img src="assets/in-idea-logo.svg" alt="Project Logo showing the Letters I D E A as an amalgam" width="150">
 </p>
 
-# IN.IDEA: Iconographical Definitional Epistemological Architecture
+# IN.IDEA
+### Imagines Nummorum: Iconographical Definitional Epistemological Architecture
 
 **DOI: [10.5281/zenodo.18160255](https://doi.org/10.5281/zenodo.18160255)**
 
-**A Graph Framework for Describing Visual Compositions and Modelling Uncertainty.**  
-**Bridging the gap between flexible humanities research and high-performance data engineering.**
+A Graph Framework for Describing Visual Compositions and Modelling Uncertainty.  
+Bridging the gap between flexible humanities research and high-performance data engineering.
 
-### Documentation & Repository Access
+## Documentation & Repository Access
 
 This project is optimized for an interactive documentation experience. 
 
-* **Github Pages:** If you prefer Github Pages, please switch to [imagines-nummorum.github.io/idea-graph-framework/](https://imagines-nummorum.github.io/idea-graph-framework/).
+* **Github Pages:** If you prefer the reader experience, please switch to **[Github Pages](https://imagines-nummorum.github.io/idea-graph-framework/)**.
 * **Zenodo Users:** For the full interactive experience, latest updates, and proper navigation, please switch to our [GitHub Repository](https://github.com/imagines-nummorum/idea-graph-framework).
 
  
@@ -182,9 +183,9 @@ While the AI provided support as described above, all final decisions, code impl
 
 ## Nomenclature & Roots
 
-This framework is officially titled IN.IDEA.
+This framework is officially titled **IN.IDEA**.
 The name is a functional synthesis:
-* **IN:** Relfects the primary domain of application (Imagines Nummorum)
-* **IDEA:** An acronym for Iconographical Definitional Epistemological Architecture, describing the underlying logical framework for graph-based knowledge representation.
+* **IN:** Relfects the primary scope of application (Imagines Nummorum)
+* **IDEA:** An acronym for **Iconographical Definitional Epistemological Architecture**, describing the underlying logical framework for graph-based knowledge representation.
 
 **Note:** This software is independent and not affiliated with any brand including the word or acronym *idea*. It is a non-commercial, research-driven, open-sourced software architecture.
