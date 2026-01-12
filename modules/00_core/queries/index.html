@@ -18,7 +18,7 @@
         
       
       
-      <link rel="icon" href="../../../assets/idea-favicon.png">
+      <link rel="icon" href="../../../assets/in-idea-favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#idea-example-queries" class="md-skip">
+        <a href="#inidea-example-queries" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -287,7 +287,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../docs/03_how-to-annotate-using-idea/" class="md-tabs__link">
+        <a href="../../../docs/03_how-to-annotate-using-in-idea/" class="md-tabs__link">
           
   
   
@@ -323,7 +323,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     IDEA Graph Framework
@@ -1041,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../docs/03_how-to-annotate-using-idea/" class="md-nav__link">
+      <a href="../../../docs/03_how-to-annotate-using-in-idea/" class="md-nav__link">
         
   
   
@@ -1347,8 +1347,8 @@
 
 
 
-<h1 id="idea-example-queries">IDEA: Example Queries</h1>
-<p>This document provides example Cypher queries to demonstrate the investigative potential of the <strong>IDEA</strong> framework. These queries are designed to run against the <strong>IDEA Core</strong> (as defined in <code>99_fixtures.cypher</code>), utilizing standard graph traversals without performance-optimized materialized paths.</p>
+<h1 id="inidea-example-queries">IN.IDEA: Example Queries</h1>
+<p>This document provides example Cypher queries to demonstrate the investigative potential of the <strong>IN.IDEA</strong> framework. These queries are designed to run against the <strong>IN.IDEA Core</strong> (as defined in <code>99_fixtures.cypher</code>), utilizing standard graph traversals without performance-optimized materialized paths.</p>
 <h2 id="1-ontology-overview-recursive-hierarchy">1. Ontology Overview (Recursive Hierarchy)</h2>
 <p><strong>Scenario:</strong> Show all concepts descending from concept-object as paths.</p>
 <p><div class="highlight"><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">child</span><span class="p">:</span><span class="n">Concept</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">IS_A</span><span class="p">*</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">parent</span><span class="p">:</span><span class="n">Concept</span><span class="w"> </span><span class="p">{</span><span class="n">concept_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;concept-object&#39;</span><span class="p">})</span>

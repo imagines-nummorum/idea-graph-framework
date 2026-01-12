@@ -20,7 +20,7 @@
         
       
       
-      <link rel="icon" href="../../assets/idea-favicon.png">
+      <link rel="icon" href="../../assets/in-idea-favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-annotate-with-idea" class="md-skip">
+        <a href="#how-to-annotate-with-inidea" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -325,7 +325,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     IDEA Graph Framework
@@ -1861,8 +1861,8 @@
 
 
 
-<h1 id="how-to-annotate-with-idea">How to Annotate with IDEA</h1>
-<p>This guide walks you through the process of describing a visual scene using the IDEA framework. To illustrate the workflow, we will use the <strong>"Apple-Tomato"</strong> example: a composition where a human hand holds a red object that could be either an apple or a tomato.</p>
+<h1 id="how-to-annotate-with-inidea">How to Annotate with IN.IDEA</h1>
+<p>This guide walks you through the process of describing a visual scene using the IN.IDEA framework. To illustrate the workflow, we will use the <strong>"Apple-Tomato"</strong> example: a composition where a human hand holds a red object that could be either an apple or a tomato.</p>
 <p>Instead of just "tagging" an image, we build a path from the <strong>concrete observation</strong> to the <strong>abstract concept</strong>, documenting every step of the interpretive process.</p>
 <p>We recommand having the following files at hand:
 * <a href="../01_architecture/">architecture.md</a>
@@ -1939,7 +1939,7 @@
 <li><strong>Concept</strong>: <code>concept-using-right-hand</code> </li>
 </ul>
 <h3 id="step-4-handling-the-hand-and-cropping-visual-scope">Step 4: Handling "The Hand" and Cropping (Visual Scope)</h3>
-<p>A common pitfall is to declare the hand as its own <code>Entity</code>. In IDEA, we usually treat the <strong>Human</strong> as the entity, while the <strong>Hand</strong> and the fact that it is a <strong>Detail</strong> (cropped) are handled as <code>Features</code>.</p>
+<p>A common pitfall is to declare the hand as its own <code>Entity</code>. In IN.IDEA, we usually treat the <strong>Human</strong> as the entity, while the <strong>Hand</strong> and the fact that it is a <strong>Detail</strong> (cropped) are handled as <code>Features</code>.</p>
 <h4 id="41-why-not-entity-hand">4.1 Why not "Entity: Hand"?</h4>
 <p>If we labeled the hand as an entity, we would lose the connection to the person. Instead, we identify the person as the entity and describe the "hand-ness" and the "cropping" as attributes of how that person is depicted.</p>
 <h4 id="42-formal-feature-visual-scope-layer-ii">4.2 Formal Feature: Visual Scope (Layer II)</h4>
@@ -1981,7 +1981,7 @@
 <li><strong>Ontological</strong>: Link to the abstract concept (e.g., <code>concept-functional-demo</code> or a historical event concept).</li>
 </ul>
 <h3 id="step-7-dealing-with-text-reading-groups">Step 7: Dealing with Text (Reading &amp; Groups)</h3>
-<p>To handle text (like the "7" on a billiard ball), IDEA uses a specific structure that separates the logical container from the actual signs.</p>
+<p>To handle text (like the "7" on a billiard ball), IN.IDEA uses a specific structure that separates the logical container from the actual signs.</p>
 <ol>
 <li><strong>Create a Container</strong>: Create a <code>CompositionGroup</code> with the <code>group_function: "TextContainer"</code> and link it to the <code>Composition</code>.</li>
 <li><strong>Optional Glyphs</strong>: If you want to be precise, create <code>CompositionEntity</code> nodes for individual letters/signs and link them to the group using <code>IS_PART_OF_COMPOSITION_GROUP</code>.</li>
@@ -1993,19 +1993,19 @@
 <p>When you are finished, a single "observation" (the red object) looks like this in the graph:</p>
 <p><code>Composition</code> → <code>CompositionEntity</code> → <code>Interpretation</code> → <code>Concept</code></p>
 <blockquote>
-<p><strong>Note</strong>: This path might seem longer than a simple tag, but it allows IDEA to answer complex questions like: <em>"Show me all objects where the identification as 'Apple' was disputed due to 'Ambiguity'."</em></p>
+<p><strong>Note</strong>: This path might seem longer than a simple tag, but it allows IN.IDEA to answer complex questions like: <em>"Show me all objects where the identification as 'Apple' was disputed due to 'Ambiguity'."</em></p>
 </blockquote>
 <h3 id="important-why-no-graphical-annotations-polygons">Important: Why no Graphical Annotations (Polygons)?</h3>
 <p>You might notice that there are no properties for coordinates or polygons (e.g., SVG/JSON) in the graph nodes. This is a deliberate design choice for <strong>performance and efficiency</strong>.</p>
 <ul>
-<li><strong>Separation of Concerns</strong>: IDEA follows a strict "Read-Optimized Projection" philosophy.</li>
+<li><strong>Separation of Concerns</strong>: IN.IDEA follows a strict "Read-Optimized Projection" philosophy.</li>
 <li><strong>Spatial Performance</strong>: Complex spatial queries (e.g., "Is entity A inside the region of group B?") are handled much more efficiently in a relational database like <strong>PostgreSQL</strong> using spatial extensions.</li>
 <li><strong>The Link</strong>: We will store the graphical coordinates (polygons) in the relational Single Source of Truth (SSoT). These are mapped to the unique <code>_id</code> of the <code>CompositionEntity</code> or <code>CompositionGroup</code>.</li>
 <li><strong>The Result</strong>: The graph stays lean and fast for semantic traversals, while the frontend fetches the visual coordinates from the SQL backend when it needs to draw them on the screen.</li>
 </ul>
 <h2 id="additional-structures">Additional Structures:</h2>
 <h3 id="using-patterns-as-blueprints">Using Patterns as Blueprints</h3>
-<p>When a scene follows a common iconographical scheme (e.g., "Human holding an object"), you don't have to reinvent the wheel every time. IDEA uses <strong>Patterns</strong> as reusable blueprints.</p>
+<p>When a scene follows a common iconographical scheme (e.g., "Human holding an object"), you don't have to reinvent the wheel every time. IN.IDEA uses <strong>Patterns</strong> as reusable blueprints.</p>
 <ul>
 <li><strong>Simplified Structure</strong>: Unlike a full analysis, a <code>Pattern</code> uses a reduced set of nodes: only <code>PatternEntity</code> and <code>PatternRelation</code>.</li>
 <li><strong>No Epistemic Layer inside Patterns</strong>: Because patterns are abstract and "idle," they don't need interpretation nodes or certainty values within their own structure; they link directly to <code>Concepts</code>.</li>
@@ -2021,7 +2021,7 @@
 <li><strong>Human-in-the-Loop</strong>: The AI proposes a <code>PatternRecognition</code> based on these blueprints, which a human expert can then easily validate or refine by setting the <code>certainty</code> value in the Interpretation layer.</li>
 </ul>
 <h3 id="modeling-similarity-the-centroid-approach">Modeling Similarity (The Centroid Approach)</h3>
-<p>If two or more compositions look alike, IDEA avoids creating direct "looks-like" edges between every single image. Instead, we use a <strong>Centroid Model</strong> to handle clusters of similarity.</p>
+<p>If two or more compositions look alike, IN.IDEA avoids creating direct "looks-like" edges between every single image. Instead, we use a <strong>Centroid Model</strong> to handle clusters of similarity.</p>
 <ol>
 <li><strong>The Hub</strong>: A <code>CompositionParallel</code> node acts as the center (centroid) of a similarity cluster.</li>
 <li><strong>The Spokes</strong>: Each <code>Composition</code> is linked to this hub via a <code>CompositionComparison</code> node.</li>

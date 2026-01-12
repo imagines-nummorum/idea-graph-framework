@@ -20,7 +20,7 @@
         
       
       
-      <link rel="icon" href="../../assets/idea-favicon.png">
+      <link rel="icon" href="../../assets/in-idea-favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#idea-architectural-overview" class="md-skip">
+        <a href="#inidea-architectural-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -289,7 +289,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../03_how-to-annotate-using-idea/" class="md-tabs__link">
+        <a href="../03_how-to-annotate-using-in-idea/" class="md-tabs__link">
           
   
   
@@ -325,7 +325,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     IDEA Graph Framework
@@ -1262,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_how-to-annotate-using-idea/" class="md-nav__link">
+      <a href="../03_how-to-annotate-using-in-idea/" class="md-nav__link">
         
   
   
@@ -1561,14 +1561,14 @@
 
 
 
-<h1 id="idea-architectural-overview">IDEA: Architectural Overview</h1>
+<h1 id="inidea-architectural-overview">IN.IDEA: Architectural Overview</h1>
 <h2 id="1-design-philosophy">1. Design Philosophy</h2>
-<p>The development of IDEA is designed to bridge the gap between flexible humanities research and high-performance data engineering:</p>
+<p>The development of IN.IDEA is designed to bridge the gap between flexible humanities research and high-performance data engineering:</p>
 <ul>
-<li><strong>Epistemic Primacy (Modeling the "Maybe"):</strong> Unlike traditional models that force reality into binary 1s and 0s, IDEA treats interpretation as a first-class citizen. By reifying the interpretive act into its own node, we allow for the structured representation of uncertainty, conflicting hypotheses, and expert reasoning. Diffuse similarity between objects is modeled via <strong>centroid-structures (Hub-and-Spoke)</strong> rather than direct edges, enabling nuanced similarity quantification.</li>
-<li><strong>Relational-to-Graph Integrity:</strong> IDEA is designed as a strict Read-Optimized Projection of a relational database (Single Source of Truth, e.g., PostgreSQL). Every node, edge, and property in the graph must have a schematic counterpart in the relational model. This prevents "schema-less sprawl" and ensures that the data remains verifiable, migratable, and strictly typed. In production we will operate on a strict "Schema-on-Write" principle during the ETL process.</li>
+<li><strong>Epistemic Primacy (Modeling the "Maybe"):</strong> Unlike traditional models that force reality into binary 1s and 0s, IN.IDEA treats interpretation as a first-class citizen. By reifying the interpretive act into its own node, we allow for the structured representation of uncertainty, conflicting hypotheses, and expert reasoning. Diffuse similarity between objects is modeled via <strong>centroid-structures (Hub-and-Spoke)</strong> rather than direct edges, enabling nuanced similarity quantification.</li>
+<li><strong>Relational-to-Graph Integrity:</strong> IN.IDEA is designed as a strict Read-Optimized Projection of a relational database (Single Source of Truth, e.g., PostgreSQL). Every node, edge, and property in the graph must have a schematic counterpart in the relational model. This prevents "schema-less sprawl" and ensures that the data remains verifiable, migratable, and strictly typed. In production we will operate on a strict "Schema-on-Write" principle during the ETL process.</li>
 <li><strong>Horizontal Scalability &amp; Performance-Centric Flatness:</strong> The graph is engineered to grow in "width" (number of units) rather than "depth" (traversal length). To reach <em>O</em>(1) or <em>O</em>(log n) performance for complex queries, the depth from a physical unit to an ontological concept is fixed (typically 4 to 6 hops). Deep ontological recursions are bypassed by <strong>materializing hierarchy paths</strong> directly as node properties. See <strong><a href="../02_performance-and-scaling/">performance-and-scaling.md</a></strong></li>
-<li><strong>Modular Framework Design:</strong> The framework distinguishes between the <strong>IDEA Core</strong> — a lean, domain-agnostic engine for formal analysis —, <strong>Core Extensions</strong> (e.g., for ontology management) and specialized <strong>Domain Extensions</strong> (e.g., <code>IDEA Numismatics</code>). Our "Golden Rule" states: <em>Modules may extend the Core with specialized labels or properties, but they must never alter the fundamental four-layer logic or the core edge directionality (from concrete to abstract).</em></li>
+<li><strong>Modular Framework Design:</strong> The framework distinguishes between the <strong>IN.IDEA Core</strong> — a lean, domain-agnostic engine for formal analysis —, <strong>Core Extensions</strong> (e.g., for ontology management) and specialized <strong>Domain Extensions</strong> (e.g., <code>IN.IDEA Numismatics</code>). Our "Golden Rule" states: <em>Modules may extend the Core with specialized labels or properties, but they must never alter the fundamental four-layer logic or the core edge directionality (from concrete to abstract).</em></li>
 <li><strong>Multi-Modal Readiness:</strong> While the current implementation focuses on static visual media (coins, stelae, paintings), the underlying logic of distinguishing between objects, formal elements, epistemic interpretations and concepts is intentionally medium-agnostic. The concept is prepared for future expansions into moving images, complex 3D objects, or textual analysis.</li>
 </ul>
 <h2 id="2-style-and-conventions">2. Style and Conventions</h2>
@@ -1605,7 +1605,7 @@
 </table>
 <p><strong>ID Strategy</strong>: Every node carries a unique identifier (<code>_id</code>) mapped directly from the relational SSoT primary keys. This ensures 1:1 traceability between the graph projection and the SQL source. <strong>Please note:</strong> the fixtures are populated with string-based identifiers for easier navigation in the Neo4j Browser.</p>
 <h2 id="3-the-atomic-core-elements">3. The Atomic Core Elements</h2>
-<p>To maintain semantic precision across all layers, IDEA utilizes seven core categories. These categories are used to define visual elements, abstract patterns, and ontological concepts:</p>
+<p>To maintain semantic precision across all layers, IN.IDEA utilizes seven core categories. These categories are used to define visual elements, abstract patterns, and ontological concepts:</p>
 <ul>
 <li><strong>Entity:</strong> Any discrete being or object.</li>
 <li><strong>Feature:</strong> Attributes, states belonging to an Entity.</li>
@@ -1616,7 +1616,7 @@
 <li><strong>Group:</strong> Logical containers or spatial regions (e.g., a text block or a logical arrangement). (no Concept)</li>
 </ul>
 <h2 id="4-the-four-layer-architecture">4. The Four-Layer Architecture</h2>
-<p>The Four-Layer Architecture is the backbone of the IDEA Core</p>
+<p>The Four-Layer Architecture is the backbone of the IN.IDEA Core</p>
 <h3 id="layer-i-object-layer">Layer I: Object Layer</h3>
 <p>Represents the physical or virtual object (e.g., a specific coin) which has one or more <code>Composition</code> (Layer II).</p>
 <pre class="mermaid"><code>flowchart TD
@@ -1671,7 +1671,7 @@
 </ul>
 <h3 id="layer-iii-epistemic-layer">Layer III: Epistemic Layer</h3>
 <h3 id="a-interpretation-uncertainty-and-reasoning">A) Interpretation / Uncertainty and Reasoning</h3>
-<p>The core of IDEA’s uncertainty modeling. No semantic link exists without an intermediate interpretation node.</p>
+<p>The core of IN.IDEA’s uncertainty modeling. No semantic link exists without an intermediate interpretation node.</p>
 <pre class="mermaid"><code>flowchart TD
     %% Classes 
     classDef element fill:#c45100,stroke:none,color:#eee;
@@ -1709,7 +1709,7 @@
 <li><strong>Methodology:</strong> <code>Architectonic</code> nodes define the meta-ontology of the interpretation (e.g., "Logical Deduction" or "Ambiguity").</li>
 </ul>
 <h3 id="b-similarity">B) Similarity</h3>
-<p>To model "diffuse" similarity between images without creating direct edges, IDEA uses a Hub-and-Spoke model. “Diffuse” refers to similarities that are difficult or impossible to model in the structure of the graph because the concepts involved are too far apart.</p>
+<p>To model "diffuse" similarity between images without creating direct edges, IN.IDEA uses a Hub-and-Spoke model. “Diffuse” refers to similarities that are difficult or impossible to model in the structure of the graph because the concepts involved are too far apart.</p>
 <pre class="mermaid"><code>flowchart TD
     %% Classes ´
     classDef composition fill:#9f0500,stroke:none,color:#eee;
@@ -1762,7 +1762,7 @@
 <ul>
 <li><strong>Nodes:</strong> <code>Concept</code>, <code>Pattern</code>, <code>PatternEntity</code>, <code>PatternRelation</code>.</li>
 <li><strong>Concepts:</strong> An abstract hierarchy of lemmas (Entity, Relation, etc.) used for classification. </li>
-<li><strong>Core Limitation:</strong> To maintain domain-agnosticism and high performance, the IDEA Core treats Concepts as structural anchors with minimal properties (primarily <code>concept_id</code>).</li>
+<li><strong>Core Limitation:</strong> To maintain domain-agnosticism and high performance, the IN.IDEA Core treats Concepts as structural anchors with minimal properties (primarily <code>concept_id</code>).</li>
 <li><strong>Extension - Module 05_ontology:</strong> For human-readable labels, multi-language support, and detailed definitions, the Core is extended by the <strong>Ontology Module</strong>. This module handles the semantic "flesh" of the ThING, allowing the Core to remain a lean navigational skeleton (Work in Progress).</li>
 </ul>
 <h4 id="b-patterns">B) Patterns</h4>

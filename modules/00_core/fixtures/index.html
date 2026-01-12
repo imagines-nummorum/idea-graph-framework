@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../../../docs/03_how-to-annotate-using-idea/">
+        <link rel="prev" href="../../../docs/03_how-to-annotate-using-in-idea/">
       
       
         <link rel="next" href="../queries/">
@@ -20,7 +20,7 @@
         
       
       
-      <link rel="icon" href="../../../assets/idea-favicon.png">
+      <link rel="icon" href="../../../assets/in-idea-favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#idea-fixtures-sandbox-documentation" class="md-skip">
+        <a href="#inidea-fixtures-sandbox-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -289,7 +289,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../docs/03_how-to-annotate-using-idea/" class="md-tabs__link">
+        <a href="../../../docs/03_how-to-annotate-using-in-idea/" class="md-tabs__link">
           
   
   
@@ -325,7 +325,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     IDEA Graph Framework
@@ -1043,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../docs/03_how-to-annotate-using-idea/" class="md-nav__link">
+      <a href="../../../docs/03_how-to-annotate-using-in-idea/" class="md-nav__link">
         
   
   
@@ -1517,10 +1517,10 @@
 
 
 
-<h1 id="idea-fixtures-sandbox-documentation">IDEA Fixtures: Sandbox Documentation</h1>
-<p>This document describes the test datasets (fixtures) provided in the IDEA Core Docker container. These examples are designed to demonstrate the framework's ability to model <strong>epistemic uncertainty</strong>, <strong>multimodal interpretations</strong>, and <strong>complex scene structures</strong>. If you want to know more about the annotation process, see <a href="../../../docs/03_how-to-annotate-using-idea/">how-to-annotate-using-idea</a>.</p>
+<h1 id="inidea-fixtures-sandbox-documentation">IN.IDEA Fixtures: Sandbox Documentation</h1>
+<p>This document describes the test datasets (fixtures) provided in the IN.IDEA Core Docker container. These examples are designed to demonstrate the framework's ability to model <strong>epistemic uncertainty</strong>, <strong>multimodal interpretations</strong>, and <strong>complex scene structures</strong>. If you want to know more about the annotation process, see <a href="../../../docs/03_how-to-annotate-using-in-idea/">how-to-annotate-using-in-idea</a>.</p>
 <h2 id="1-documentation-assets">1. Documentation Assets</h2>
-<p>To understand the structural logic of IDEA, we provide both static visual examples and interactive model diagrams.</p>
+<p>To understand the structural logic of IN.IDEA, we provide both static visual examples and interactive model diagrams.</p>
 <p><img alt="Fixture-Images showing two compositions: a hand holding an apple-tomato and a hand holding a billiard-ball" src="../assets/core-fixture-compositions-merged.jpg" />
 Figure 1: Visual representation of the composition-apple-tomato and composition-billiard-ball test cases.</p>
 <p>The provided Neo4j Docker setup loads the fixtures directly into the database during startup. Alternatively, you can also find SVGs or JSON exports for <a href="https://arrows.app">Arrows.app</a> here. </p>
@@ -1536,10 +1536,10 @@ Figure 1: Visual representation of the composition-apple-tomato and composition-
 <ul>
 <li><strong>Pedagogical Simplification:</strong> The images are intentionally AI-generated and only partially annotated. We focus on specific challenges (ambiguity, OCR, AI-vs-Human perception) rather than exhaustive description.</li>
 <li><strong>Human-Readable IDs:</strong> In this sandbox, we use string-based identifiers (e.g., <code>unit-apple-tomato</code>) for easier navigation in the Neo4j Browser. In production, these are mapped to <code>INT</code> keys.</li>
-<li><strong>Domain Agnosticism:</strong> While IDEA is rooted in numismatics, these fixtures use everyday objects to ensure the architectural logic is understood by non-experts.</li>
+<li><strong>Domain Agnosticism:</strong> While IN.IDEA is rooted in numismatics, these fixtures use everyday objects to ensure the architectural logic is understood by non-experts.</li>
 </ul>
 <h2 id="3-case-study-a-the-apple-tomato-epistemic-ambiguity">3. Case Study A: The "Apple-Tomato" (Epistemic Ambiguity)</h2>
-<p>This case demonstrates how IDEA handles material ambiguity where an object cannot be clearly assigned to a single concept.</p>
+<p>This case demonstrates how IN.IDEA handles material ambiguity where an object cannot be clearly assigned to a single concept.</p>
 <h3 id="data-model-highlights">Data Model Highlights</h3>
 <ul>
 <li><strong>Entity Ambiguity:</strong> The object is interpreted as both an "Apple" and a "Tomato".</li>
@@ -1589,7 +1589,7 @@ Figure 1: Visual representation of the composition-apple-tomato and composition-
 <li>Both readings are linked to <code>architectonic-ambiguity</code>.</li>
 </ul>
 <h3 id="5-modeling-logic-the-human-holding-object-pattern">5. Modeling Logic: The "Human Holding Object" Pattern</h3>
-<p>IDEA distinguishes between what is <em>visible</em> and what is <em>represented</em> to maintain a clean ontological structure.</p>
+<p>IN.IDEA distinguishes between what is <em>visible</em> and what is <em>represented</em> to maintain a clean ontological structure.</p>
 <h4 id="the-pars-pro-toto-problem-visual-scope">The Pars-pro-Toto Problem &amp; Visual Scope</h4>
 <p>In both compositions, only a hand is visible. However, we do not model a standalone "Hand" entity. Instead:</p>
 <ul>

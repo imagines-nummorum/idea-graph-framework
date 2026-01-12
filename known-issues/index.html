@@ -20,7 +20,7 @@
         
       
       
-      <link rel="icon" href="../assets/idea-favicon.png">
+      <link rel="icon" href="../assets/in-idea-favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#idea-known-issues-and-limitations" class="md-skip">
+        <a href="#inidea-known-issues-and-limitations" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -289,7 +289,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../docs/03_how-to-annotate-using-idea/" class="md-tabs__link">
+        <a href="../docs/03_how-to-annotate-using-in-idea/" class="md-tabs__link">
           
   
   
@@ -325,7 +325,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     IDEA Graph Framework
@@ -1134,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/03_how-to-annotate-using-idea/" class="md-nav__link">
+      <a href="../docs/03_how-to-annotate-using-in-idea/" class="md-nav__link">
         
   
   
@@ -1305,7 +1305,7 @@
 
 
 
-<h1 id="idea-known-issues-and-limitations">IDEA: Known Issues and Limitations</h1>
+<h1 id="inidea-known-issues-and-limitations">IN.IDEA: Known Issues and Limitations</h1>
 <p>This document tracks identified architectural inconsistencies, simplified data representations in the fixtures, and planned structural refinements for future releases.</p>
 <h2 id="1-non-exhaustive-fixture-annotation">1. Non-Exhaustive Fixture Annotation</h2>
 <ul>
@@ -1327,9 +1327,9 @@
 </ul>
 <h2 id="3-modeling-competing-interpretations">3. Modeling Competing Interpretations</h2>
 <ul>
-<li><strong>Description:</strong> While IDEA allows for multiple <code>Interpretation</code> nodes, the explicit relationship between <em>competing</em> hypotheses is currently handled only via the <code>status</code> property ("Primary", "Alternative", "Rejected" etc.).</li>
+<li><strong>Description:</strong> While IN.IDEA allows for multiple <code>Interpretation</code> nodes, the explicit relationship between <em>competing</em> hypotheses is currently handled only via the <code>status</code> property ("Primary", "Alternative", "Rejected" etc.).</li>
 <li><strong>Planned Research:</strong> We are monitoring whether the current "status-only" approach is sufficient or if a dedicated edge type (e.g., <code>CONFLICTS_WITH</code>) is required to explicitly link mutually exclusive interpretations.</li>
-<li><strong>Current Strategy:</strong> To avoid "schema-less sprawl," we will observe this situation in controlled test cases before introducing new edge types to the IDEA Core.</li>
+<li><strong>Current Strategy:</strong> To avoid "schema-less sprawl," we will observe this situation in controlled test cases before introducing new edge types to the IN.IDEA Core.</li>
 </ul>
 <h2 id="4-normalization-of-chromaticity">4. Normalization of Chromaticity</h2>
 <ul>

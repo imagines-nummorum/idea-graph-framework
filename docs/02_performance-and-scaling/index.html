@@ -20,7 +20,7 @@
         
       
       
-      <link rel="icon" href="../../assets/idea-favicon.png">
+      <link rel="icon" href="../../assets/in-idea-favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#idea-performance-and-scaling" class="md-skip">
+        <a href="#inidea-performance-and-scaling" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -289,7 +289,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../03_how-to-annotate-using-idea/" class="md-tabs__link">
+        <a href="../03_how-to-annotate-using-in-idea/" class="md-tabs__link">
           
   
   
@@ -325,7 +325,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     IDEA Graph Framework
@@ -1190,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_how-to-annotate-using-idea/" class="md-nav__link">
+      <a href="../03_how-to-annotate-using-in-idea/" class="md-nav__link">
         
   
   
@@ -1417,13 +1417,13 @@
 
 
 
-<h1 id="idea-performance-and-scaling">IDEA: Performance and Scaling</h1>
+<h1 id="inidea-performance-and-scaling">IN.IDEA: Performance and Scaling</h1>
 <blockquote>
 <p>[!IMPORTANT]
 <strong>Architectural Status:</strong> The infrastructure described in this document—specifically the <strong>Postgres-as-Single-Source-of-Truth (SSoT)</strong> and the automated <strong>ETL Pipeline</strong> — is currently a <strong>conceptual design</strong>. It serves as a roadmap for implementation and is not yet part of the active codebase.</p>
 </blockquote>
 <h2 id="1-core-objectives">1. Core Objectives</h2>
-<p>The <strong>IDEA</strong> graph model employs a deep layered architecture to preserve epistemic nuance. While this is ideal for data integrity, it introduces high "hop-counts" for standard queries. This strategy defines how we <strong>denormalize</strong> specific paths during the transfer from the relational SSoT to the Graph DB to achieve:</p>
+<p>The <strong>IN.IDEA</strong> graph model employs a deep layered architecture to preserve epistemic nuance. While this is ideal for data integrity, it introduces high "hop-counts" for standard queries. This strategy defines how we <strong>denormalize</strong> specific paths during the transfer from the relational SSoT to the Graph DB to achieve:</p>
 <ul>
 <li><strong>O(1) Hierarchy Lookups:</strong> Bypassing recursive traversals in the Tree of Concepts.</li>
 <li><strong>Low-Latency Standard Views:</strong> Providing direct access to high-certainty data for front-end consumers.</li>

@@ -20,7 +20,7 @@
         
       
       
-      <link rel="icon" href="../../assets/idea-favicon.png">
+      <link rel="icon" href="../../assets/in-idea-favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#idea-ai-assisted-annotation-pipeline-blueprint" class="md-skip">
+        <a href="#inidea-ai-assisted-annotation-pipeline-blueprint" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="IDEA Graph Framework" class="md-header__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -289,7 +289,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../03_how-to-annotate-using-idea/" class="md-tabs__link">
+        <a href="../03_how-to-annotate-using-in-idea/" class="md-tabs__link">
           
   
   
@@ -325,7 +325,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="IDEA Graph Framework" class="md-nav__button md-logo" aria-label="IDEA Graph Framework" data-md-component="logo">
       
-  <img src="../../assets/idea-logo-no-bg.svg" alt="logo">
+  <img src="../../assets/in-idea-logo-no-bg.svg" alt="logo">
 
     </a>
     IDEA Graph Framework
@@ -1206,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03_how-to-annotate-using-idea/" class="md-nav__link">
+      <a href="../03_how-to-annotate-using-in-idea/" class="md-nav__link">
         
   
   
@@ -1449,9 +1449,9 @@
 
 
 
-<h1 id="idea-ai-assisted-annotation-pipeline-blueprint">IDEA: AI-Assisted Annotation Pipeline (Blueprint)</h1>
+<h1 id="inidea-ai-assisted-annotation-pipeline-blueprint">IN.IDEA: AI-Assisted Annotation Pipeline (Blueprint)</h1>
 <h2 id="1-executive-summary-breaking-the-cold-start-problem">1. Executive Summary: Breaking the "Cold Start" Problem</h2>
-<p>The manual annotation of hundreds of thousands of cultural heritage objects using the <strong>IDEA Four-Layer Architecture</strong> is a high-precision but resource-intensive task. To achieve critical mass data, we need an AI-assisted pipeline.</p>
+<p>The manual annotation of hundreds of thousands of cultural heritage objects using the <strong>IN.IDEA Four-Layer Architecture</strong> is a high-precision but resource-intensive task. To achieve critical mass data, we need an AI-assisted pipeline.</p>
 <p>This pipeline is designed to solve the <strong>Cold Start Problem</strong>: transforming legacy text-based descriptions into structured graph data. By utilizing Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG), we shift the expert's role from <strong>data entry</strong> to <strong>data validation</strong> (Human-in-the-loop).</p>
 <blockquote>
 <p><strong>Note:</strong> This pipeline is currently a conceptual blueprint and is in the early stages of implementation.</p>
@@ -1484,7 +1484,7 @@
 <h3 id="phase-4-expert-in-the-loop-epistemic-enrichment">Phase 4: Expert-in-the-Loop (Epistemic Enrichment)</h3>
 <p>The crucial step where "data" becomes "scholarly knowledge."</p>
 <ul>
-<li><strong>Process:</strong> Experts review the AI-generated drafts via the future IDEA Web Frontend.</li>
+<li><strong>Process:</strong> Experts review the AI-generated drafts via the future IN.IDEA Web Frontend.</li>
 <li><strong>Action:</strong></li>
 <li>Validate or reject the <code>Interpretation</code> Nodes (no deletion to get feedback for the AI).</li>
 <li>create new <code>Interpretation</code> nodes and link Methodology/Sources for complex interpretations.</li>
@@ -1522,7 +1522,7 @@
 <tr>
 <td><strong>Graph DB</strong></td>
 <td>Neo4j</td>
-<td>The queryable projection of the IDEA model.</td>
+<td>The queryable projection of the IN.IDEA model.</td>
 </tr>
 <tr>
 <td><strong>Single Source of Truth</strong></td>
@@ -1544,7 +1544,7 @@
 <li><strong>Legacy Data Valorization:</strong> It turns decades of unstructured text-based research into a machine-readable training set for future models.</li>
 </ol>
 <h2 id="5-future-outlook-from-text-to-graph-to-image-to-graph">5. Future Outlook: From Text-to-Graph to Image-to-Graph</h2>
-<p>While the current pipeline focuses on <strong>Natural Language Processing (NLP)</strong> to leverage existing legacy descriptions, the IDEA architecture is inherently <strong>medium-agnostic</strong>. The long-term objective is a <strong>hybrid analysis model</strong> or a direct <strong>Computer Vision (CV)</strong> approach:</p>
+<p>While the current pipeline focuses on <strong>Natural Language Processing (NLP)</strong> to leverage existing legacy descriptions, the IN.IDEA architecture is inherently <strong>medium-agnostic</strong>. The long-term objective is a <strong>hybrid analysis model</strong> or a direct <strong>Computer Vision (CV)</strong> approach:</p>
 <ul>
 <li><strong>Direct Image Annotation:</strong> Future iterations will utilize AI models to perform instance segmentation directly on coin images, identifying and labeling segments as <code>CompositionEntity</code> nodes.</li>
 <li><strong>Hybrid Multimodal Analysis:</strong> By combining visual segment analysis with free-text descriptions, the system can cross-validate findings, further increasing the <code>certainty</code> of interpretations in the Epistemic Layer.</li>
