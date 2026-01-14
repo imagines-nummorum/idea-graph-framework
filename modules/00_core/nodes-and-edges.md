@@ -246,6 +246,9 @@ This documentation deals exclusively with the basic structure, not with possible
 | Property | Type | Unique | Description |
 | --- | --- | --- | --- |
 | `concept_id` | INT | Yes | Semantic URI or ID. |
+| `concept_path_ids` | ARRAY | Yes | Array containing the concept_id of the current node and all parent nodes |
+
+**Note:** `concept_path_ids` is already a performance optimization
 
 **Outgoing Edges:**
 | Type | Target Node | Cardinality | Description |

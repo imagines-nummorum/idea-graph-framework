@@ -8,7 +8,7 @@ This document outlines the development milestones for the IN.IDEA framework in 2
 The first quarter focuses on stabilizing the core architecture and expanding the framework into specific scientific domains.
 
 * **January: Community Review**
-  * Open feedback loop and peer review phase following the initial GitHub release. Sie [CONTRIBUTING.md](CONTRIBUTING.md)
+  * Open feedback loop and peer review phase following the initial GitHub release. See [CONTRIBUTING.md](CONTRIBUTING.md)
   * Refinement of the **Four-Layer Architecture** (Object, Formal Analysis, Epistemic, and Ontological).
 
 * **February: Module Expansion**
@@ -32,15 +32,14 @@ In the second quarter, IN.IDEA transitions from a conceptual model into a functi
   * Implementation of the **Schema-on-Write** ETL process to ensure data remains strictly typed and verifiable.
 
 * **June: Internal Editor Prototype**
-  * Development of a **Vue.js** based Single Page Application (SPA).
-  * The editor will enforce the "Golden Rule" of modular design, ensuring extensions never alter core edge directionality.
+  * Development of a **Vue.js** based Single Page Application (SPA) to enter and edit data.
 
 
 ## Future Outlook: Public Engagement (Late 2026 & Beyond)
 
 * **Prototype: ThING Public Portal**
   * Development of a public-facing website with graph-based search capabilities.
-  * Implementation of performance-optimized design patterns, such as **materialized hierarchy paths**, to ensure  or  performance for complex ancestral lookups.
+  * Implementation of additional performance-optimized design patterns.
 
 
 > **Note on Capacity**: IN.IDEA is an academic research project driven by a small, dedicated team with limited personnel resources. Please be aware that even short-term absences or unforeseen events can lead to significant delays in this roadmap. We prioritize intellectual honesty and data integrity over rapid implementation.

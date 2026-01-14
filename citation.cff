@@ -6,8 +6,8 @@ authors:
     affiliation: "Berlin-Brandenburg Academy of Sciences and Humanities"
     orcid: "https://orcid.org/0000-0002-1825-0097"
 title: "IN.IDEA: A Graph Framework for Describing Visual Compositions and Modelling Uncertainty"
-version: 0.9.3
-date-released: 2026-01-12
+version: 0.9.4
+date-released: 2026-01-14
 license: Apache-2.0
 repository-code: "https://github.com/imagines-nummorum/idea-graph-framework"
 keywords:

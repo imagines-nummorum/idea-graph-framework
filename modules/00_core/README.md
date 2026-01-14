@@ -17,5 +17,6 @@ To initialize a Neo4j instance with the IN.IDEA Core, execute the Cypher scripts
 1. [`00_constraints.cypher`](00_constraints.cypher): Enforces uniqueness and required properties.
 2. [`01_index.cypher`](01_index.cypher): Optimizes lookup performance.
 3. [`99_fixtures.cypher`](99_fixtures.cypher): Ingests the sample graph data described in [`fixtures.md`](fixtures.md).
+3. [`99a_materialization.cypher`](99a_materialization.cypher): Adds **Materialized Path Arrays** described in [`performance-and-scaling.md`](../../docs/02_performance-and-scaling.md).
 
 **Note:** As per the [Golden Rule of Extension](../../docs/01_architecture.md), any other module must build upon this Core without altering its four-layer logic.

@@ -1,8 +1,63 @@
 # IN.IDEA: Example Queries
 
-This document provides example Cypher queries to demonstrate the investigative potential of the **IN.IDEA** framework. These queries are designed to run against the **IN.IDEA Core** (as defined in `99_fixtures.cypher`), utilizing standard graph traversals without performance-optimized materialized paths.
+This document provides example Cypher queries to demonstrate the investigative potential of the **IN.IDEA** framework. These queries are designed to run against the **IN.IDEA Core** (as defined in `99_fixtures.cypher`). Performance optimization is not applied, except for `concept_path_ids` on `Concept` nodes as **Materialized Path Arrays**.
 
-## 1. Ontology Overview (Recursive Hierarchy)
+
+## 1. Look for identified Concepts in Units:
+
+**Scenario:** Show all units with entities identified as "Object" and the certainty of identification.
+
+### Traditional approch:
+
+This approach navigates the physical layers and then performs a recursive search up the taxonomic tree to identify objects.
+
+```cypher
+MATCH (u:Unit)-[:HAS_COMPOSITION]->(:Composition)-[:HAS_COMPOSITION_ENTITY]->(ce:CompositionEntity)
+MATCH (ce)-[:HAS_INTERPRETATION]->(i:Interpretation)-[:IDENTIFIED_AS_CONCEPT]->(baseConcept:Concept)
+MATCH (baseConcept)-[:IS_A*0..]->(target:Concept {concept_id: 'concept-object'})
+RETURN 
+    u.unit_id AS Unit, 
+    ce.composition_entity_id AS CompositionEntity, 
+    i.certainty AS IdentificationCertainty, 
+    baseConcept.concept_id AS IdentifiedConcept;
+```
+
+**Expected Output:**
+* unit-apple-tomato, entity-at-apple-tomato, 0.5, concept-tomato
+* unit-apple-tomato, entity-at-apple-tomato, 0.4, concept-apple
+* unit-billiard-ball, entity-bb-billiard-ball-sphere, 1.0, concept-billiard-ball-7
+
+> [!NOTE]
+> **Performance:** The critical bottleneck is the `IS_A`-relation. This forces the database to perform a live, recursive search through the ontology for every potential result. While functional for small fixtures, this  operation scales poorly; as the taxonomy grows deeper, query latency increases linearly with each additional level in the hierarchy.
+
+### Optimized Query (Materialized Path)
+
+This approach leverages the **Hierarchical Flattening** strategy by checking a pre-calculated array of all ancestors stored on each concept node.
+
+```cypher
+MATCH (c:Concept)
+WHERE 'concept-object' IN c.concept_path_ids
+MATCH (c)<-[:IDENTIFIED_AS_CONCEPT]-(i:Interpretation)
+MATCH (i)<-[:HAS_INTERPRETATION]-(ce:CompositionEntity)
+MATCH (ce)<-[:HAS_COMPOSITION_ENTITY]-(comp:Composition)<-[:HAS_COMPOSITION]-(u:Unit)
+RETURN 
+    u.unit_id AS Unit, 
+    ce.composition_entity_id AS CompositionEntity, 
+    i.certainty AS IdentificationCertainty, 
+    c.concept_id AS IdentifiedConcept;
+
+```
+
+**Expected Output:**
+* unit-apple-tomato, entity-at-apple-tomato, 0.5, concept-tomato
+* unit-apple-tomato, entity-at-apple-tomato, 0.4, concept-apple
+* unit-billiard-ball, entity-bb-billiard-ball-sphere, 1.0, concept-billiard-ball-7
+
+> [!NOTE]
+> **Performance:** The recursive expander has been replaced by a local **Filter**. This constitutes an ** hierarchy lookup**; the cost to verify if a concept is an "object" is now constant and independent of the taxonomy's depth.
+
+
+## 2. Ontology Overview (Recursive Hierarchy)
 
 **Scenario:** Show all concepts descending from concept-object as paths.
 
@@ -23,7 +78,7 @@ These nodes represent the strictly acyclic hierarchy of the model. Concept relat
 They can be further enriched with domain-specific modules (e.g., Numismatics) to provide detailed descriptions of ancient iconography.
 
 
-## 2. Semantic Context: "Human holding Fruit"
+## 3. Semantic Context: "Human holding Fruit"
 
 **Scenario:** Find compositions where a human (Entity) is holding (Relation) as fruit (Entity), not just keywords.
 
@@ -46,7 +101,7 @@ RETURN DISTINCT comp.composition_id
 * composition-apple-tomato
 
 
-## 3. High-Certainty Fact Extraction
+## 4. High-Certainty Fact Extraction
 
 **Scenario:** Retrieve only the "Gold Standard" identifications of entities where the certainty is high and the status is primary.
 
@@ -65,7 +120,7 @@ RETURN ce.composition_entity_id, con.concept_id, i.certainty
 * entity-bb-billiard-ball-sphere, concept-billiard-ball-7, 1.0
 
 
-## 4. Human-in-the-Loop: Rejected Interpretations
+## 5. Human-in-the-Loop: Rejected Interpretations
 
 **Scenario:** Identify entity interpretations that were proposed (e.g., by an AI) but explicitly rejected by a human expert. This is essential for identifying AI bias or outdated scholarly opinions
 
@@ -80,7 +135,7 @@ RETURN ce.composition_entity_id, con.concept_id, i.reasoning_statement
 * entity-bb-glyph, concept-letter-l, "Commen Scheme, but ambiguous"
 
 
-## 5. Conflict Analysis: Interpretations vs. Sources
+## 6. Conflict Analysis: Interpretations vs. Sources
 
 **Scenario:** Find cases where an expert's interpretation is in direct conflict with the cited reference material. This is important to understand the low certainty or to check the references.
 
@@ -95,7 +150,7 @@ RETURN i.interpretation_id, agent.agent_id, sr.reference, sr.refrence_statement,
 * interpretation-at-apple, agent-human, img-at-apple-conflicting, "apple reference image shows stem", source-at-reference-catalogue
 
 
-## 6. Pattern-Based Rapid Access
+## 7. Pattern-Based Rapid Access
 
 **Scenario:** Quickly identify all Compositions that match a standardized iconographical scene, such as "Human holding object". This is faster than going into the formal analysis.
 
