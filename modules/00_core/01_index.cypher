@@ -10,3 +10,6 @@ CREATE INDEX reading_status_certainty IF NOT EXISTS FOR (n:Reading) ON (n.status
 
 // --- Comparisons ---
 CREATE INDEX comparison_similarity IF NOT EXISTS FOR (n:CompositionComparison) ON (n.similarity);
+
+// --- Concepts ---
+CREATE INDEX concept_path_lookup IF NOT EXISTS FOR (n:Concept) ON (n.concept_path_ids);

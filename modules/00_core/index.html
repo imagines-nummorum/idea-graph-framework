@@ -1305,7 +1305,8 @@
 <p>To initialize a Neo4j instance with the IN.IDEA Core, execute the Cypher scripts in the following order (or let the seeder in our docker-compose.yml do its job):
 1. <a href="00_constraints.cypher"><code>00_constraints.cypher</code></a>: Enforces uniqueness and required properties.
 2. <a href="01_index.cypher"><code>01_index.cypher</code></a>: Optimizes lookup performance.
-3. <a href="99_fixtures.cypher"><code>99_fixtures.cypher</code></a>: Ingests the sample graph data described in <a href="fixtures/"><code>fixtures.md</code></a>.</p>
+3. <a href="99_fixtures.cypher"><code>99_fixtures.cypher</code></a>: Ingests the sample graph data described in <a href="fixtures/"><code>fixtures.md</code></a>.
+3. <a href="99a_materialization.cypher"><code>99a_materialization.cypher</code></a>: Adds <strong>Materialized Path Arrays</strong> described in <a href="../../docs/02_performance-and-scaling/"><code>performance-and-scaling.md</code></a>.</p>
 <p><strong>Note:</strong> As per the <a href="../../docs/01_architecture/">Golden Rule of Extension</a>, any other module must build upon this Core without altering its four-layer logic.</p>
 
 

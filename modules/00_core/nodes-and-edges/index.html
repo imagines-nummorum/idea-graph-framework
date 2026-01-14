@@ -2198,8 +2198,15 @@ This documentation deals exclusively with the basic structure, not with possible
 <td>Yes</td>
 <td>Semantic URI or ID.</td>
 </tr>
+<tr>
+<td><code>concept_path_ids</code></td>
+<td>ARRAY</td>
+<td>Yes</td>
+<td>Array containing the concept_id of the current node and all parent nodes</td>
+</tr>
 </tbody>
 </table>
+<p><strong>Note:</strong> <code>concept_path_ids</code> is already a performance optimization</p>
 <p><strong>Outgoing Edges:</strong>
 | Type | Target Node | Cardinality | Description |
 | :--- | :--- | :--- | :--- |

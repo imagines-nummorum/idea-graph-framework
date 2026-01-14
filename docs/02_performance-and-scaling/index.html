@@ -571,6 +571,45 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#query-performance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Performance Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Performance Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-traditional-query-recursive-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Traditional Query (Recursive Traversal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-optimized-query-materialized-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Optimized Query (Materialized Path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1334,6 +1373,45 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#query-performance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Performance Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query Performance Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-traditional-query-recursive-traversal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Traditional Query (Recursive Traversal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-optimized-query-materialized-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Optimized Query (Materialized Path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1430,15 +1508,313 @@
 <li><strong>Reduced Computational Overhead:</strong> Shifting complex logic from query-time to ingest-time.</li>
 </ul>
 <h2 id="2-hierarchical-flattening-materialized-paths">2. Hierarchical Flattening (Materialized Paths)</h2>
-<p>To avoid expensive recursive <code>:IS_A</code> traversals within the <code>Concept</code> hierarchy, we will implement <strong>Materialized Path Arrays</strong>.</p>
+<p>To avoid expensive recursive <code>:IS_A</code> traversals within the <code>Concept</code> hierarchy, we implemented <strong>Materialized Path Arrays</strong>.</p>
 <h3 id="implementation-concept_path_ids">Implementation: <code>concept_path_ids</code></h3>
-<p>Each <code>Concept</code> node will be enriched with a property containing its entire ancestral lineage.</p>
+<p>Each <code>Concept</code> node is enriched with a property containing its entire ancestral lineage.</p>
 <ul>
-<li><strong>Property:</strong> <code>concept_path_ids</code> (Type: <code>LIST&lt;STRING&gt;</code> or <code>LIST&lt;INT&gt;</code>).</li>
-<li><strong>Content:</strong> An ordered array starting from the root concept down to the node's own ID (e.g., <code>["root-id", "parent-id", "self-id"]</code>).</li>
+<li><strong>Property:</strong> <code>concept_path_ids</code>, Type: <code>LIST&lt;INT&gt;</code> (production) / <code>LIST&lt;STRING&gt;</code> (fixtures).</li>
+<li><strong>Content:</strong> An array of all concept_ids in the path, including the node's own ID (e.g., <code>["self-id", "parent-id", "root-id"]</code>).</li>
 <li><strong>Technical Benefit:</strong> Enables high-performance filtering using Neo4j's array indexing.</li>
-<li><em>Query Example:</em> <code>MATCH (n:Concept) WHERE 'target-concept-id' IN n.concept_path_ids</code> instead of <code>MATCH (n:Concept)-[:IS_A*]-&gt;(t:Concept {concept_id: 'target-concept-id'})</code>.</li>
 </ul>
+<h3 id="query-performance-analysis">Query Performance Analysis</h3>
+<blockquote>
+<p>[!NOTE]
+<strong>Benchmarking Disclaimer:</strong> The millisecond values recorded here reflect the current fixture set and are intended solely to show relative acceleration. In a production environment, the execution plan structure is the primary indicator of performance rather than these specific timings.</p>
+</blockquote>
+<hr />
+<h4 id="1-traditional-query-recursive-traversal">1. Traditional Query (Recursive Traversal)</h4>
+<p>This approach navigates the physical layers and then performs a recursive search up the taxonomic tree to identify objects.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// TRADITIONAL APPROACH: Use recursive IS_A relationships</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="p">:</span><span class="n">Unit</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION</span><span class="o">]-&gt;</span><span class="p">(:</span><span class="n">Composition</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION_ENTITY</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">ce</span><span class="p">:</span><span class="n">CompositionEntity</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">ce</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_INTERPRETATION</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">Interpretation</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">IDENTIFIED_AS_CONCEPT</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">baseConcept</span><span class="p">:</span><span class="n">Concept</span><span class="p">)</span>
+
+<span class="c1">// UPWARDS NAVIGATION: Traverse the hierarchy upwards to find the target ancestor</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">baseConcept</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">IS_A</span><span class="p">*</span><span class="m">0</span><span class="p">..</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">target</span><span class="p">:</span><span class="n">Concept</span><span class="w"> </span><span class="p">{</span><span class="n">concept_id</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;concept-object&#39;</span><span class="p">})</span>
+
+<span class="c1">// OUTPUT: Retrieve the desired identification details</span>
+<span class="k">RETURN</span><span class="w"> </span>
+<span class="w">    </span><span class="n">u</span><span class="p">.</span><span class="n">unit_id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Unit</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">ce</span><span class="p">.</span><span class="n">composition_entity_id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">CompositionEntity</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">i</span><span class="p">.</span><span class="n">certainty</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">IdentificationCertainty</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">baseConcept</span><span class="p">.</span><span class="n">concept_id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">IdentifiedConcept</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Result Set</strong> </p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>CompositionEntity</th>
+<th>IdentificationCertainty</th>
+<th>IdentifiedConcept</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"unit-apple-tomato"</td>
+<td>"entity-at-apple-tomato"</td>
+<td>0.5</td>
+<td>"concept-tomato"</td>
+</tr>
+<tr>
+<td>"unit-apple-tomato"</td>
+<td>"entity-at-apple-tomato"</td>
+<td>0.4</td>
+<td>"concept-apple"</td>
+</tr>
+<tr>
+<td>"unit-billiard-ball"</td>
+<td>"entity-bb-billiard-ball-sphere"</td>
+<td>1.0</td>
+<td>"concept-billiard-ball-7"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Full Execution Profile</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Id</th>
+<th>Details</th>
+<th>Rows</th>
+<th>DB Hits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ProduceResults</td>
+<td>0</td>
+<td>Unit, CompositionEntity, Certainty, IdentifiedConcept</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Projection</td>
+<td>1</td>
+<td>u.unit_id, ce.composition_entity_id, i.certainty, baseConcept.concept_id</td>
+<td>3</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>2</td>
+<td>u:Unit</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Expand(All)</td>
+<td>3</td>
+<td>(anon_1)&lt;-[:HAS_COMPOSITION]-(u)</td>
+<td>3</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>4</td>
+<td>anon_1:Composition</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Expand(All)</td>
+<td>5</td>
+<td>(ce)&lt;-[:HAS_COMPOSITION_ENTITY]-(anon_1)</td>
+<td>3</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>6</td>
+<td>ce:CompositionEntity</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Expand(All)</td>
+<td>7</td>
+<td>(i)&lt;-[:HAS_INTERPRETATION]-(ce)</td>
+<td>3</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>8</td>
+<td>i:Interpretation</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Expand(All)</td>
+<td>9</td>
+<td>(baseConcept)&lt;-[:IDENTIFIED_AS_CONCEPT]-(i)</td>
+<td>3</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>10</td>
+<td>baseConcept:Concept</td>
+<td>7</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>VarLengthExpand(All)</strong></td>
+<td><strong>11</strong></td>
+<td><strong>(target)&lt;-[:IS_A*0..]-(baseConcept)</strong></td>
+<td><strong>7</strong></td>
+<td><strong>13</strong></td>
+</tr>
+<tr>
+<td>NodeUniqueIndexSeek</td>
+<td>12</td>
+<td>UNIQUE target:Concept(concept_id) WHERE concept_id = 'concept-object'</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total database accesses: 131</strong> | <strong>Execution time: ~63 ms</strong></p>
+<p><strong>Commentary</strong></p>
+<p>The critical bottleneck in this plan is the <strong>VarLengthExpand(All)</strong> operator (Id 11). This forces the database to perform a live, recursive search through the ontology for every potential result. While functional for small fixtures, this  operation scales poorly; as the taxonomy grows deeper, query latency increases linearly with each additional level in the hierarchy.</p>
+<hr />
+<h4 id="2-optimized-query-materialized-path">2. Optimized Query (Materialized Path)</h4>
+<p>This approach leverages the <strong>Hierarchical Flattening</strong> strategy by checking a pre-calculated array of all ancestors stored on each concept node.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// OPTIMIZED APPROACH: Use the index to find all concepts belonging to &#39;concept-object&#39;</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">:</span><span class="n">Concept</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="s">&#39;concept-object&#39;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">concept_path_ids</span>
+
+<span class="c1">// BACKWARDS NAVIGATION: Move from the semantic layer back to the physical data</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">&lt;-[</span><span class="p">:</span><span class="n">IDENTIFIED_AS_CONCEPT</span><span class="o">]-</span><span class="p">(</span><span class="n">i</span><span class="p">:</span><span class="n">Interpretation</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">&lt;-[</span><span class="p">:</span><span class="n">HAS_INTERPRETATION</span><span class="o">]-</span><span class="p">(</span><span class="n">ce</span><span class="p">:</span><span class="n">CompositionEntity</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">ce</span><span class="p">)</span><span class="o">&lt;-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION_ENTITY</span><span class="o">]-</span><span class="p">(</span><span class="n">comp</span><span class="p">:</span><span class="n">Composition</span><span class="p">)</span><span class="o">&lt;-[</span><span class="p">:</span><span class="n">HAS_COMPOSITION</span><span class="o">]-</span><span class="p">(</span><span class="n">u</span><span class="p">:</span><span class="n">Unit</span><span class="p">)</span>
+
+<span class="c1">// OUTPUT: Retrieve the desired identification details</span>
+<span class="k">RETURN</span><span class="w"> </span>
+<span class="w">    </span><span class="n">u</span><span class="p">.</span><span class="n">unit_id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Unit</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">ce</span><span class="p">.</span><span class="n">composition_entity_id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">CompositionEntity</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">i</span><span class="p">.</span><span class="n">certainty</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">IdentificationCertainty</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">c</span><span class="p">.</span><span class="n">concept_id</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">IdentifiedConcept</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Result Set</strong> </p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>CompositionEntity</th>
+<th>IdentificationCertainty</th>
+<th>IdentifiedConcept</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"unit-apple-tomato"</td>
+<td>"entity-at-apple-tomato"</td>
+<td>0.5</td>
+<td>"concept-tomato"</td>
+</tr>
+<tr>
+<td>"unit-apple-tomato"</td>
+<td>"entity-at-apple-tomato"</td>
+<td>0.4</td>
+<td>"concept-apple"</td>
+</tr>
+<tr>
+<td>"unit-billiard-ball"</td>
+<td>"entity-bb-billiard-ball-sphere"</td>
+<td>1.0</td>
+<td>"concept-billiard-ball-7"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Full Execution Profile</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Id</th>
+<th>Details</th>
+<th>Rows</th>
+<th>DB Hits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ProduceResults</td>
+<td>0</td>
+<td>Unit, CompositionEntity, Certainty, IdentifiedConcept</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Projection</td>
+<td>1</td>
+<td>u.unit_id, ce.composition_entity_id, i.certainty, baseConcept.concept_id</td>
+<td>3</td>
+<td>12</td>
+</tr>
+<tr>
+<td><strong>Filter</strong></td>
+<td><strong>2</strong></td>
+<td><strong>'concept-object' IN baseConcept.concept_path_ids AND baseConcept:Concept</strong></td>
+<td><strong>3</strong></td>
+<td><strong>12</strong></td>
+</tr>
+<tr>
+<td>Expand(All)</td>
+<td>3</td>
+<td>(i)-[:IDENTIFIED_AS_CONCEPT]-&gt;(baseConcept)</td>
+<td>9</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>4</td>
+<td>i:Interpretation</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Expand(All)</td>
+<td>5</td>
+<td>(ce)-[:HAS_INTERPRETATION]-&gt;(i)</td>
+<td>9</td>
+<td>36</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>6</td>
+<td>ce:CompositionEntity</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Expand(All)</td>
+<td>7</td>
+<td>(anon_1)-[:HAS_COMPOSITION_ENTITY]-&gt;(ce)</td>
+<td>6</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>8</td>
+<td>(u:Unit AND anon_1:Composition)</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>DirectedRelationshipTypeScan</td>
+<td>9</td>
+<td>(u)-[:HAS_COMPOSITION]-&gt;(anon_1)</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total database accesses: 150</strong> | <strong>Execution time: ~12 ms</strong></p>
+<p><strong>Commentary</strong></p>
+<p>The recursive expander has been replaced by a local <strong>Filter</strong> (Id 2). This constitutes a <strong>hierarchy lookup</strong>; the cost to verify if a concept is an "object" is now constant and independent of the taxonomy's depth.</p>
+<p>Although the total DB hits are slightly higher (150 vs 131), this is a deliberate choice by the <strong>Cost-Based Optimizer (CBO)</strong> for small datasets. Because the fixture set is tiny, the CBO determines that a full relationship scan (Id 9) is more efficient than the overhead of an index seek. In production environments with &gt; 100k of <code>Unit</code> nodes, the CBO would pivot to an <strong>Index Seek</strong>, ensuring high-speed access that scales horizontally.</p>
 <h2 id="3-the-epistemic-bypass-shortcut-relations">3. The Epistemic Bypass (Shortcut Relations)</h2>
 <p>The Epistemic Layer uses <code>Interpretation</code> nodes to model uncertainty. For the majority of end-user queries, we can bypass this layer when the data meets specific "Gold Standard" criteria.</p>
 <h3 id="31-entity-to-concept-shortcut">3.1 Entity-to-Concept Shortcut</h3>
