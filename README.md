@@ -160,7 +160,7 @@ It is coordinated by the [Union of German Academies of Sciences and Humanities](
   month        = jan,
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v0.9.3},
+  version      = {v0.9.4},
   doi          = {10.5281/zenodo.18160255},
   url          = {https://doi.org/10.5281/zenodo.18160255}
 }
