@@ -20,5 +20,8 @@ WITH c, collect(DISTINCT ancestor.concept_id) AS all_ancestor_ids
 // This allows bypassing recursive JOINs/Traversals during query time.
 SET c.concept_path_ids = all_ancestor_ids
 
-// 5. Provide feedback for the Seeder log
-// RETURN count(c) AS MaterializedConcepts;
+// Do the same again for Architectonics
+MATCH (a:Architectonic)
+MATCH (a)-[:IS_A*0..]->(ancestor:Architectonic)
+WITH a, collect(DISTINCT ancestor.architectonic_id) AS all_ancestor_ids
+SET a.architectonic_path_ids = all_ancestor_ids;
